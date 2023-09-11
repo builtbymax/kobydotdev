@@ -1,0 +1,17 @@
+{
+  "common": {
+    "navigation": {
+      "home": "Startseite",
+      "projects": "Projekte",
+      "interview": "Interview",
+      "contact": "Kontakt"
+    }
+  },
+  "home": {
+    "header": {
+      "headline-1": "Hi, ich heiße Maximilian.",
+      "headline-2": "Ich arbeite als Front-End Entwickler & Digital Designer.",
+      "available": "Verfügbar für Projekte."
+    }
+  }
+}
