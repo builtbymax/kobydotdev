@@ -1,0 +1,66 @@
+//
+//  TeaserBorderGradient.module.scss
+//  ------------------------------------------------------
+
+$border-radius: 8px;
+$text__color-0: var(--project__color-1);
+$text__color-1: var(--project__color-2);
+$teaser__background-color: var(--base__color-4); // rgba(var(--project__color-2__rgb), .05);
+
+$border-color-0: rgba(var(--project__color-2__rgb), .8);
+$border-color-1: rgba(var(--project__color-2__rgb), .5);
+
+$teaser-element__headline__font: 'ClashDisplay-Variable', serif;
+
+.teaser-element {
+  --teaser__icon__color: #{$text__color-1};
+  width: 100%;
+  flex: 1;
+  padding: 35px 30px;
+  position: relative;
+  border-radius: $border-radius;
+  background-color: $teaser__background-color;
+  transition: background 0.45s;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h3 {
+    margin-bottom: 22px;
+    color: $text__color-0;
+    font-family: $teaser-element__headline__font;
+  }
+  p {
+    width: 85%;
+    font-weight: 400;
+    color: $text__color-0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height: calc(100% + 2px);
+    width: calc(100% + 2px);
+    border-radius: $border-radius;
+    inset: -1px;
+    position: absolute;
+    z-index: -2;
+    right: -1px;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    user-select: none;
+    pointer-events: none;
+
+    transition: background 0.2s;
+    will-change: background;
+    contain: size;
+    background: radial-gradient(
+      300px circle at var(--x__mouse__coordinate) var(--y__mouse__coordinate),
+      $border-color-1 0,
+      $border-color-0 50%,
+      transparent 100%
+    );
+  }
+}

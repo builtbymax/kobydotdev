@@ -37,6 +37,12 @@
           "text": "Ich entwickle WordPress Themes und Plugins."
         }
       ]
+    },
+    "projects": {
+      "headline": {
+        "headline": "Projekte",
+        "subline": "Ich arbeite in Professionellen Kundenprojekten seit mehr als 10 Jahren."
+      }
     }
   }
 }

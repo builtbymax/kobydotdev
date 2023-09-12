@@ -3,6 +3,7 @@ import { getDictionary } from '/dictionary';
 import Headline from '@/components/content-elements/HeadlineContainer';
 import Section from '@/components/common/Section';
 import TextMedia from '@/components/content-elements/TextMedia';
+import TeaserBorderGradient from '@/components/content-elements/TeaserBorderGradient';
 
 export default async function Home({ params: { lang } }) {
   const dict = await getDictionary(lang);
@@ -47,6 +48,14 @@ export default async function Home({ params: { lang } }) {
                 </div>
               )
             })}
+          </div>
+        </div>
+      </Section>
+      <Section>
+        <Headline headline={dict.home['projects'].headline.headline} subline={dict.home['projects'].headline.subline}/>
+        <div className="teaser-element-section">
+          <div className="grid-row">
+            <TeaserBorderGradient lang={lang} />
           </div>
         </div>
       </Section>
