@@ -45,28 +45,36 @@
 // $cta__layout-1__icon__hover: base(2);
 // $cta__layout-1__border__hover: 1px solid base(1);
 
-// $cta__layout-2__background: transparent;
-// $cta__layout-2__text: base(1);
-// $cta__layout-2__icon: base(1);
-// $cta__layout-2__border: 0 none;
-// $cta__layout-2__background__hover: transparent;
-// $cta__layout-2__text__hover: base(3);
-// $cta__layout-2__icon__hover: base(3);
-// $cta__layout-2__border__hover: 0 none;
+$cta__layout-2__background: rgba(var(--base__color-1__rgb), 1.5%);
+$cta__layout-2__text: var(--font-color__base);
+$cta__layout-2__icon: var(--font-color__base);
+$cta__layout-2__border: 0 none;
+$cta__layout-2__background__hover: rgba(var(--base__color-1__rgb), 3%);
+$cta__layout-2__text__hover: var(--font-color__base);
+$cta__layout-2__icon__hover: var(--font-color__base);
+$cta__layout-2__border__hover: 0 none;
 
 
 //  Maps
 //  ---------------------------------------------
 
+$cta__general__default__icon-properties: (
+  width: 12px,
+  height: 12px,
+  margin: 15px,
+  position: 'right',
+  alignment: 'center',
+  transition: all 0.3s ease-in-out,
+);
 
-// $cta__general__default__icon-properties: (
-//   width: 20px,
-//   height: 20px,
-//   margin: 15px,
-//   position: 'left',
-//   alignment: 'center',
-//   transition: all 0.3s ease-in-out,
-// );
+
+$cta__default__properties: (
+  layouts: (
+    2: (
+      border-radius: 4px,
+    ),
+  ),
+);
 
 // $cta__default__properties: (
 //   general: (

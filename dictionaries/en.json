@@ -17,6 +17,26 @@
       "headline": "Interview",
       "text": "My name is Maximilian. I work as a front-end developer and web designer at SNK in Munich.",
       "link": "Read more"
+    },
+    "services": {
+      "headline": {
+        "headline": "Services",
+        "subline": "I create professional experiences now for more than 10 years."
+      },
+      "teaser": [
+        {
+          "headline": "Development",
+          "text": "Creating your User Interface designs, Marketing- and Landingpages or CMS-based company website would be a blast for me. I love to create websites with small tweaks like animations or 3D samples."
+        },
+        {
+          "headline": "Digital Design",
+          "text": "I am a Front-End Developer since more than 10 years, worked on more than enough projects with small, medium sized and large group of businesses to get feeling what the user expects from these."
+        },
+        {
+          "headline": "UX & Solutions",
+          "text": "Over the years I saw many things that were going into the wrong direction from the early beginning of a project. I saw many things going right and many projects which lacked on the ‘small things to compete’. I want that yours can learn from that experience."
+        }
+      ]
     }
   }
 }

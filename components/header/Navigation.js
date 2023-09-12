@@ -1,8 +1,26 @@
-import Link from "next/link";
 import Logo from "./Logo";
 import LangSwitcher from "./LangSwitcher";
 
 export default function Navigation({ dict, lang }) {
+  return (
+    <nav>
+      <div className="content-size-sl">
+        <div className="navigation-container">
+          <Logo color="light" />
+          <ul className="additional-menu">
+            <li>
+              <LangSwitcher />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  )
+};
+
+/*
+import Link from "next/link";
+const NavigationMenu = () => {
   const navLinks = [
     {
       href: `/${lang}/`,
@@ -21,28 +39,16 @@ export default function Navigation({ dict, lang }) {
       title: dict.common.navigation['contact'],
     },
   ];
-
   return (
-    <nav>
-      <div className="content-size-sl">
-        <div className="navigation-container">
-          <Logo color="light" />
-          <ul className="navigation-menu">
-            {navLinks.map((link, index) => (
-              <li key={index}>
-                <Link href={link.href} title={link.title}>
-                  {link.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <ul className="additional-menu">
-            <li>
-              <LangSwitcher />
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <ul className="navigation-menu">
+      {navLinks.map((link, index) => (
+        <li key={index}>
+          <Link href={link.href} title={link.title}>
+            {link.title}
+          </Link>
+        </li>
+      ))}
+    </ul>
   )
 };
+*/

@@ -1,6 +1,6 @@
-const Section = ({ children, spacingTop = true, spacingBottom = true }) => {
+const Section = ({ children, spacingTop = true, spacingBottom = true, spacingSize = "l" }) => {
   return (
-    <section className={`section-container ${spacingTop ? 'spacing-above-m' : 'spacing-above-remove'} ${spacingBottom ? 'spacing-below-m' : 'spacing-below-remove'}`}>
+    <section className={`section-container ${spacingTop ? `spacing-above-${spacingSize}` : 'spacing-above-remove'} ${spacingBottom ? `spacing-below-${spacingSize}` : 'spacing-below-remove'}`}>
       <div className="content-size-sl">
         {children}
       </div>

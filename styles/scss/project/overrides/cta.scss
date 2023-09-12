@@ -1,0 +1,21 @@
+//
+//  CTA
+//  ---------------------------------------------
+
+//  Styles
+//  ---------------------------------------------
+
+@include media('tablet-wide') {
+
+  .cta{
+    &.layout-2{
+      svg{ transition: transform 0.3s ease-in-out; }
+      &:hover{
+        svg{
+          transform: translateX(4px);
+        }
+      }
+    }
+  }
+
+}

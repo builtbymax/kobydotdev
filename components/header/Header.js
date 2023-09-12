@@ -7,7 +7,7 @@ export default function Header({ dict, lang }) {
     <header>
       <Navigation dict={dict} lang={lang} />
       <div className="header-background">
-        <Image src="/images/header-background.min.svg" width={982} height={517} alt="Header Background"/>
+        <Image src="/images/header-background.min.svg" width={982} height={517} alt="Header Background" priority />
       </div>
       <div className="content-size-sl header-content-size">
         <div className="header-content">

@@ -13,7 +13,21 @@
 
 @mixin text-media-element() {
 
-  @include media('mobile') {
+  @include media('tablet') {
+
+    .text-media-element-container{
+      .content-block{
+        gap: 50px;
+        padding-right: 50px;
+      }
+      .media-block{
+        .media{
+          align-items: flex-end;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
 
   }
 

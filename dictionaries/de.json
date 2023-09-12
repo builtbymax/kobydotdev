@@ -17,6 +17,26 @@
       "headline": "Interview",
       "text": "Mein Name ist Maximilian. Ich arbeite als Front-End Entwickler und Web-Designer in München bei SNK.",
       "link": "Mehr erfahren"
+    },
+    "services": {
+      "headline": {
+        "headline": "Leistungen",
+        "subline": "Ich arbeite in Professionellen Kundenprojekten seit mehr als 10 Jahren."
+      },
+      "teaser": [
+        {
+          "headline": "Entwicklung",
+          "text": "Ich entwickle moderne Webseiten und Web-Apps mit HTML, CSS und JavaScript."
+        },
+        {
+          "headline": "Digital Design",
+          "text": "Ich gestalte moderne und ansprechende Webseiten und Web-Apps."
+        },
+        {
+          "headline": "UX & Solutions",
+          "text": "Ich entwickle WordPress Themes und Plugins."
+        }
+      ]
     }
   }
 }

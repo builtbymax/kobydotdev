@@ -13,7 +13,37 @@
 
 @mixin teaser-element() {
 
-  @include media('mobile') {
+  @include media('tablet-down') {
+
+    .teaser-element-section{ padding-top: 30px; }
+
+    .teaser-element-container{
+      background-color: rgba(var(--base__color-3__rgb), 25%);
+      border-radius: 4px;
+      padding: 20px;
+    }
+
+  }
+
+  @include media('tablet') {
+
+    .teaser-element-section{ padding-top: 60px; }
+
+    .teaser-element-container{
+      .content-block{
+        padding-right: 10%;
+      }
+    }
+
+  }
+
+  @include media('tablet-wide') {
+
+    .teaser-element-container{
+      .content-block{
+        padding-right: 20%;
+      }
+    }
 
   }
 

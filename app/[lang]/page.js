@@ -20,12 +20,35 @@ export default async function Home({ params: { lang } }) {
             title: dict.home['interview-teaser'].link,
           }}
           img={{
-            src: '/assets/content-interview-teaser-image.jpg',
+            src: '/assets/content-interview-teaser-image-2.jpg',
             alt: 'Interview Teaser',
-            width: 500,
-            height: 500,
+            width: 700,
+            height: 700,
+            priority: true,
+            quality: 100,
           }}
         />
+      </Section>
+      <Section>
+        <Headline headline={dict.home['services'].headline.headline} subline={dict.home['services'].headline.subline}/>
+        <div className="teaser-element-section">
+          <div className="grid-row">
+            {dict.home['services'].teaser.map((service, index) => {
+              return (
+                <div className="grid-col gd-xs-12 gd-m-4" key={index}>
+                  <div className="teaser-element-container">
+                    <div className="content-block">
+                      <div className="copy-text">
+                        <h3>{service.headline}</h3>
+                        <p>{service.text}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
       </Section>
     </>
   )
