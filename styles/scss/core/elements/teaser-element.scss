@@ -1,0 +1,133 @@
+//
+//  Element: "Teaser"
+//  ---------------------------------------------
+
+@if (map-get(map-get($appConfiguration, elements), 'teaser-element') == true) {
+
+  //  Variables
+  //  ---------------------------------------------
+
+  $teaser-element__container__class: 'teaser-element-container' !default;
+  $teaser-element__container__width: 100% !default;
+
+  $teaser-element__container__media__margin-bottom: 20px !default;
+  $teaser-element__container__media__width: 100% !default;
+  $teaser-element__container__media__overflow: hidden !default;
+  $teaser-element__container__media__position: relative !default;
+  $teaser-element__container__media__border-radius: 8px !default;
+  $teaser-element__container__media__figure__display: flex !default;
+  $teaser-element__container__media__figure__flex-direction: column !default;
+
+  $teaser-element__container__content-block__padding: 0 !default;
+
+  $teaser-element__container__content-block__copy-text__padding: 0 !default;
+  $teaser-element__container__content-block__copy-text__margin: 0 !default;
+  $teaser-element__container__content-block__copy-text__font-size: $font-size__base !default;
+  $teaser-element__container__content-block__copy-text__line-height: $line-height__base !default;
+  $teaser-element__container__content-block__copy-text__font-weight: false !default;
+  $teaser-element__container__content-block__copy-text__font-family: false !default;
+  $teaser-element__container__content-block__copy-text__text-color: false !default;
+
+  $teaser-element__container__content-block__cta-container__margin: 30px 0 0 0 !default;
+
+  $teaser-element__container__content-block__headline__margin-bottom__tablet-down: 8px !default;
+  $teaser-element__container__content-block__headline__font-size__tablet-down: 18 !default;
+  $teaser-element__container__content-block__headline__line-height__tablet-down: 26 !default;
+  $teaser-element__container__content-block__headline__font-weight__tablet-down: false !default;
+  $teaser-element__container__content-block__headline__font-family__tablet-down: false !default;
+  $teaser-element__container__content-block__headline__text-color__tablet-down: false !default;
+
+  $teaser-element__container__content-block__headline__margin-bottom__tablet: 15px !default;
+  $teaser-element__container__content-block__headline__font-size__tablet: 24 !default;
+  $teaser-element__container__content-block__headline__line-height__tablet: 32 !default;
+  $teaser-element__container__content-block__headline__font-weight__tablet: false !default;
+  $teaser-element__container__content-block__headline__font-family__tablet: false !default;
+  $teaser-element__container__content-block__headline__text-color__tablet: false !default;
+
+  //  Styles
+  //  ---------------------------------------------
+
+  @include media('mobile') {
+
+    .#{$teaser-element__container__class}{
+      width: $teaser-element__container__width;
+
+      .media{
+        margin-bottom: $teaser-element__container__media__margin-bottom;
+        overflow: $teaser-element__container__media__overflow;
+        position: $teaser-element__container__media__position;
+        width: $teaser-element__container__media__width;
+        border-radius: $teaser-element__container__media__border-radius;
+
+        picture, figure {
+          display: $teaser-element__container__media__figure__display;
+          flex-direction: $teaser-element__container__media__figure__flex-direction;
+        }
+      }
+
+      .content-block{
+        padding: $teaser-element__container__content-block__padding;
+
+        .copy-text{
+          p{
+            padding: $teaser-element__container__content-block__copy-text__padding;
+            margin: $teaser-element__container__content-block__copy-text__margin;
+            @include typo(
+              $fontSizeValue: $teaser-element__container__content-block__copy-text__font-size,
+              $lineHeightValue: $teaser-element__container__content-block__copy-text__line-height,
+              $fontWeightValue: $teaser-element__container__content-block__copy-text__font-weight,
+              $fontFamilyValue: $teaser-element__container__content-block__copy-text__font-family,
+              $textColor: $teaser-element__container__content-block__copy-text__text-color,
+            )
+          }
+        }
+
+        .cta-container{
+          margin: $teaser-element__container__content-block__cta-container__margin;
+        }
+      }
+    }
+
+  }
+
+  // max-767
+  @include media('tablet-down') {
+
+    .#{$teaser-element__container__class}{
+      .content-block{
+        h2, h3, h4, h5, h6 {
+          margin-bottom: $teaser-element__container__content-block__headline__margin-bottom__tablet-down;
+          @include typo(
+            $fontSizeValue: $teaser-element__container__content-block__headline__font-size__tablet-down, 
+            $lineHeightValue: $teaser-element__container__content-block__headline__line-height__tablet-down,
+            $fontWeightValue: $teaser-element__container__content-block__headline__font-weight__tablet-down,
+            $fontFamilyValue: $teaser-element__container__content-block__headline__font-family__tablet-down,
+            $textColor: $teaser-element__container__content-block__headline__text-color__tablet-down,
+          )
+        }
+      }
+    }
+
+  }
+
+  // min-768
+  @include media('tablet') {
+
+    .#{$teaser-element__container__class}{
+      .content-block{
+        h2, h3, h4, h5, h6 {
+          margin-bottom: $teaser-element__container__content-block__headline__margin-bottom__tablet;
+          @include typo(
+            $fontSizeValue: $teaser-element__container__content-block__headline__font-size__tablet,
+            $lineHeightValue: $teaser-element__container__content-block__headline__line-height__tablet,
+            $fontWeightValue: $teaser-element__container__content-block__headline__font-weight__tablet,
+            $fontFamilyValue: $teaser-element__container__content-block__headline__font-family__tablet,
+            $textColor: $teaser-element__container__content-block__headline__text-color__tablet,
+          )
+        }
+      }
+    }
+
+  }
+
+}

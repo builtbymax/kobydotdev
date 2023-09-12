@@ -1,0 +1,42 @@
+//
+//  Utilities: Typo
+//  ---------------------------------------------
+
+@mixin font-size($fontSizeValue: 16) {
+  font-size: $fontSizeValue + px;
+  font-size: (0.0625 * $fontSizeValue) + rem;
+}
+
+@mixin line-height($lineHeightValue: 22) {
+  line-height: $lineHeightValue + px;
+  line-height: (0.0625 * $lineHeightValue) + rem;
+}
+
+@mixin font($fontSizeValue: 12, $lineHeightValue: 20) {
+  @include font-size($fontSizeValue);
+  @include line-height($lineHeightValue);
+}
+
+@mixin typo(
+  $fontSizeValue: false, 
+  $lineHeightValue: false, 
+  $fontWeightValue: false, 
+  $fontFamilyValue: false,
+  $textColor: false,
+){
+  @if ($fontSizeValue != false) {
+    @include font-size($fontSizeValue);
+  }
+  @if ($lineHeightValue != false) {
+    @include line-height($lineHeightValue);
+  }
+  @if ($fontWeightValue != false) {
+    font-weight: $fontWeightValue;
+  }
+  @if ($fontFamilyValue != false) {
+    font-family: $fontFamilyValue;
+  }
+  @if ($textColor != false) {
+    color: $textColor;
+  }
+}

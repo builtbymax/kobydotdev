@@ -1,0 +1,161 @@
+//
+//  Element: "Headline"
+//  ---------------------------------------------
+
+@if (map-get(map-get($appConfiguration, elements), 'headline-element') == true) {
+
+  //  Variables
+  //  ---------------------------------------------
+
+  $headline-element__container__width: 100% !default;
+  $headline-element__container__max-width: 100% !default;
+  $headline-element__container__display: flex !default;
+  $headline-element__container__flex-direction: column !default;
+  $headline-element__container__align-items: flex-start !default;
+  $headline-element__container__justify-content: flex-start !default;
+  $headline-element__container__text-align: left !default;
+  $headline-element__container__inline-element__margin__tablet-down: 0 0 35px !default;
+  $headline-element__container__inline-element__margin__tablet: 0 0 60px !default;
+
+  $headline-element__default__empty__display: none !default;
+
+  $headline-element__roofline__width: 100% !default;
+  $headline-element__roofline__max-width: 100% !default;
+  $headline-element__roofline__margin: 0 0 15px !default;
+  $headline-element__roofline__padding: 0 !default;
+  $headline-element__roofline__order: 1 !default;
+  $headline-element__roofline__font-size: $font-size__xs !default;
+  $headline-element__roofline__line-height: $line-height__xs !default;
+  $headline-element__roofline__font-weight: $font-weight__bold !default;
+  $headline-element__roofline__font-family: $font-family__base !default;
+  $headline-element__roofline__font-color: var(--font-color__base) !default;
+
+  $headline-element__headline__order: 2 !default;
+
+  $headline-element__subline__width: 100% !default;
+  $headline-element__subline__max-width: 100% !default;
+  $headline-element__subline__margin: 15px 0 0 !default;
+  $headline-element__subline__padding: 0 !default;
+  $headline-element__subline__order: 3 !default;
+  $headline-element__subline__font-size: $font-size__base !default;
+  $headline-element__subline__line-height: $line-height__base !default;
+  $headline-element__subline__font-weight: $font-weight__regular !default;
+  $headline-element__subline__font-family: $font-family__base !default;
+  $headline-element__subline__font-color: var(--font-color__base) !default;
+
+  $headline-element__default__cta-container__order: 4 !default;
+  $headline-element__default__cta-container__margin: 30px 0 0 !default;
+
+  $headline-element__alignment-center__align-items: center !default;
+  $headline-element__alignment-center__justify-content: center !default;
+  $headline-element__alignment-center__text-align: center !default;
+  $headline-element__alignment-right__align-items: flex-end !default;
+  $headline-element__alignment-right__justify-content: flex-end !default;
+  $headline-element__alignment-right__text-align: right !default;
+
+
+  //  Styles
+  //  ---------------------------------------------
+
+  @include media('mobile') {
+
+    .headline-element-container{
+      width: $headline-element__container__width;
+      max-width: $headline-element__container__max-width;
+      display: $headline-element__container__display;
+      flex-direction: $headline-element__container__flex-direction;
+      align-items: $headline-element__container__align-items;
+      justify-content: $headline-element__container__justify-content;
+      text-align: $headline-element__container__text-align;
+
+      .roofline{
+        max-width: $headline-element__roofline__max-width;
+        width: $headline-element__roofline__width;
+        margin: $headline-element__roofline__margin;
+        order: $headline-element__roofline__order;
+        padding: $headline-element__roofline__padding;
+
+        @include typo(
+          $headline-element__roofline__font-size,
+          $headline-element__roofline__line-height,
+          $headline-element__roofline__font-weight,
+          $headline-element__roofline__font-family,
+          $headline-element__roofline__font-color,
+        );
+
+        &:empty{ display: $headline-element__default__empty__display; }
+      }
+
+      h1,h2,h3,h4,h5,h6 { order: $headline-element__headline__order; }
+
+      .subline, p.subline, p:not(.roofline){
+        width: $headline-element__subline__width;
+        max-width: $headline-element__subline__max-width;
+        margin: $headline-element__subline__margin;
+        padding: $headline-element__subline__padding;
+        order: $headline-element__subline__order;
+
+        @include typo(
+          $headline-element__subline__font-size,
+          $headline-element__subline__line-height,
+          $headline-element__subline__font-weight,
+          $headline-element__subline__font-family,
+          $headline-element__subline__font-color,
+        );
+
+        &:empty{ display: $headline-element__default__empty__display; }
+      }
+
+      .cta-container{
+        order: $headline-element__default__cta-container__order;
+        margin: $headline-element__default__cta-container__margin;
+      } 
+
+      &.alignment-center{
+        align-items: $headline-element__alignment-center__align-items;
+        justify-content: $headline-element__alignment-center__justify-content;
+        text-align: $headline-element__alignment-center__text-align;
+
+        .cta-container{
+          align-items: $headline-element__alignment-center__align-items;
+          justify-content: $headline-element__alignment-center__justify-content;
+        }
+      }
+
+      &.alignment-right{
+        align-items: $headline-element__alignment-right__align-items;
+        justify-content: $headline-element__alignment-right__justify-content;
+        text-align: $headline-element__alignment-right__text-align;
+
+        .cta-container{
+          align-items: $headline-element__alignment-right__align-items;
+          justify-content: $headline-element__alignment-right__justify-content;
+        }
+      }
+    }
+
+  }
+
+  // max-767
+  @include media('tablet-down') {
+
+    .headline-element-container{
+      &.inline-component{
+        margin: $headline-element__container__inline-element__margin__tablet-down;
+      }
+    }
+
+  }
+
+  // min-768
+  @include media('tablet') {
+
+    .headline-element-container{
+      &.inline-component{
+        margin: $headline-element__container__inline-element__margin__tablet;
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,27 @@
+//
+//  Overrides Variables
+//  ---------------------------------------------
+
+//  Imports of important variables
+//  (Do not remove or change the order of the imports)
+//  ---------------------------------------------
+
+@import 'colors.scss';
+@import 'typo.scss';
+
+//  Imports mix and match Core Variables
+@import '../../../core/base/variables/helper.scss';
+
+
+//  Custom Project Variables
+//  (Feel free to add/remove your own variables / files)
+//  ---------------------------------------------
+
+@import 'components/_components.scss';
+
+@import 'headlines.scss';
+@import 'container.scss';
+@import 'grid.scss';
+@import 'cta.scss';
+
+

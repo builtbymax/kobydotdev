@@ -1,0 +1,20 @@
+//
+//  Accordion Element
+//  ---------------------------------------------
+
+//  Variables
+//  ----------------------------------
+
+@import 'variables.scss';
+
+
+//  Styles
+//  ----------------------------------
+
+@mixin accordion-element() {
+
+  @include media('mobile') {
+
+  }
+
+}

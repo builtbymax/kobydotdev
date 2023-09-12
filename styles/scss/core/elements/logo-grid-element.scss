@@ -1,0 +1,79 @@
+//
+//  Element: "Logo Grid"
+//  ---------------------------------------------
+
+@if (map-get(map-get($appConfiguration, elements), 'logo-grid-element') == true) {
+
+  //  Variables
+  //  ---------------------------------------------
+
+  $logo-grid-element__container__width: 100% !default;
+
+  $logo-grid-element__logo-grid__display: grid !default;
+  $logo-grid-element__logo-grid__grid-template-row: 1fr !default;
+  $logo-grid-element__logo-grid__grid-column-gap: 30px !default;
+  $logo-grid-element__logo-grid__grid-row-gap: 30px !default;
+
+  $logo-grid-element__logo-grid__grid-template-columns__tablet-down: repeat(2, 1fr) !default;
+  $logo-grid-element__logo-grid__grid-template-columns__tablet: repeat(6, 1fr) !default;
+
+  $logo-grid-element__logo-element__display: flex !default;
+  $logo-grid-element__logo-element__flex-direction: column !default;
+  $logo-grid-element__logo-element__align-items: center !default;
+  $logo-grid-element__logo-element__justify-content: center !default;
+  $logo-grid-element__logo-element__text-align: center !default;
+
+  $logo-grid-element__logo-element__a__display: block !default;
+
+
+  //  Styles
+  //  ---------------------------------------------
+
+  @include media('mobile') {
+
+    .logo-grid-element-container{
+      width: $logo-grid-element__container__width;
+
+      .logo-grid{
+        display: $logo-grid-element__logo-grid__display;
+        grid-template-rows: $logo-grid-element__logo-grid__grid-template-row;
+        grid-column-gap: $logo-grid-element__logo-grid__grid-column-gap;
+        grid-row-gap: $logo-grid-element__logo-grid__grid-row-gap;
+
+        .logo-element{
+          display: $logo-grid-element__logo-element__display;
+          flex-direction: $logo-grid-element__logo-element__flex-direction;
+          align-items: $logo-grid-element__logo-element__align-items;
+          justify-content: $logo-grid-element__logo-element__justify-content;
+          text-align: $logo-grid-element__logo-element__text-align;
+
+          > a{ display: $logo-grid-element__logo-element__a__display; }
+        }
+      }
+    }
+
+  }
+
+  // max-767
+  @include media('tablet-down') {
+
+    .logo-grid-element-container{
+      .logo-grid{
+        grid-template-columns: $logo-grid-element__logo-grid__grid-template-columns__tablet-down;
+      }
+    }
+
+  }
+
+  // min-768
+  @include media('tablet') {
+
+    .logo-grid-element-container{
+      .logo-grid{
+        grid-template-columns: $logo-grid-element__logo-grid__grid-template-columns__tablet;
+      }
+    }
+
+  }
+
+}

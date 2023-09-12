@@ -1,0 +1,93 @@
+//
+//  Utilities: Colors
+//  ---------------------------------------------
+
+// Get RGB from #HEX function
+@function hexToRGB($inputColor) {
+  // check if it's a hex value / else just return a string with the value (e.g. 'transparent')
+  @if (str-slice('#{$inputColor}', 1, 1) != '#') {
+    @return $inputColor;
+  }
+  @return red($inputColor), green($inputColor), blue($inputColor);
+}
+
+// RGB from #HEX with rgb() outer
+@function hexToRGBWithFunc($inputColor) {
+  // check if it's a hex value / else just return a string with the value (e.g. 'transparent')
+  @if (str-slice('#{$inputColor}', 1, 1) != '#') {
+    @return $inputColor;
+  }
+  @return rgb(red($inputColor) green($inputColor) blue($inputColor));
+}
+
+//  Get XML from #HEX function
+@function hexToXML($inputColor) {
+  // check if it's a hex value / else just return a string with the value (e.g. 'transparent')
+  @if (str-slice('#{$inputColor}', 1, 1) == '#') {
+    $xml: '%23' + str-slice('#{$inputColor}', 2);
+    @return '#{$xml}';
+  }
+  @return '#{$inputColor}';
+}
+
+//  Create CSS Variable set out of SCSS Variables
+@mixin createCSSVariableSet($list-name, $list: false, $list-rgb: false, $list-xml: false) {
+  @if $list {
+    @each $name, $color in $list {
+      $i: index($list, $name $color);
+      --#{$list-name}__color-#{$i}: #{$color};
+    }
+  }
+  @if $list-rgb {
+    @each $name, $color in $list-rgb {
+      $i: index($list-rgb, $name $color);
+      --#{$list-name}__color-#{$i}__rgb: #{$color};
+    }
+  }
+  @if $list-xml {
+    @each $name, $color in $list-xml {
+      $i: index($list-xml, $name $color);
+      --#{$list-name}__color-#{$i}__xml: '#{$color}';
+    }
+  }
+}
+
+// simple function to get a color from a map
+@function color($list, $key) {
+  @return map-get($list, $key);
+}
+
+// simple shorthand for CSS color variables
+@function colorCSS($name, $key) { 
+  @return var(--#{$name}__color-#{$key}); 
+} 
+
+//  Create a color map with all RGB colors of your original map
+@function getMapWithRGB($list) {
+  $map: ();
+  @each $color in $list {
+    $i: index($list, $color);
+    $map: map-merge(
+      $map1: ($map),
+      $map2: (
+        $i: hexToRGB(map-get($list, $i)),
+      ),
+    );
+  }
+  @return $map;
+}
+
+//  Create a color map with all XML colors of your original map
+@function getMapWithXML($list) {
+  $map: ();
+  @each $color in $list {
+    $i: index($list, $color);
+    $map: map-merge(
+      $map1: ($map),
+      $map2: (
+        $i: hexToXML(map-get($list, $i)),
+      ),
+    );
+  }
+  @return $map;
+}

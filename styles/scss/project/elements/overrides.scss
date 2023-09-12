@@ -1,0 +1,75 @@
+//
+//  Override core elements
+//  ---------------------------------------------
+
+//  Headline Element
+//  ---------------------------------------------
+@if map-get($elements, 'headline-element') == true {
+  @include headline-element();
+}
+
+//  Text Media Element
+//  ---------------------------------------------
+@if map-get($elements, 'text-media-element') == true {
+  @include text-media-element();
+}
+
+//  Media Element
+//  ---------------------------------------------
+@if map-get($elements, 'media-element') == true {
+  @include media-element();
+}
+
+//  Accordion Element
+//  ---------------------------------------------
+@if map-get($elements, 'accordion-element') == true {
+  @include accordion-element();
+}
+
+//  Banner Element
+//  ---------------------------------------------
+@if map-get($elements, 'banner-element') == true {
+  @include banner-element();
+}
+
+//  Counter Element
+//  ---------------------------------------------
+@if map-get($elements, 'counter-element') == true {
+  @include counter-element();
+}
+
+//  Teaser Element
+//  ---------------------------------------------
+@if map-get($elements, 'teaser-element') == true {
+  @include teaser-element();
+}
+
+//  Card Element
+//  ---------------------------------------------
+@if map-get($elements, 'card-element') == true {
+  @include card-element();
+}
+
+//  Download Element
+//  ---------------------------------------------
+@if map-get($elements, 'download-element') == true {
+  @include download-element();
+}
+
+//  Text Element
+//  ---------------------------------------------
+@if map-get($elements, 'text-element') == true {
+  @include text-element();
+}
+
+//  Logo Grid Element
+//  ---------------------------------------------
+@if map-get($elements, 'logo-grid-element') == true {
+  @include logo-grid-element();
+}
+
+//  Stage Element
+//  ---------------------------------------------
+@if map-get($elements, 'stage-element') == true {
+  @include stage-element();
+}

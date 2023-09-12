@@ -1,0 +1,240 @@
+//
+//  Headlines
+//  ---------------------------------------------
+
+//  Variables
+//  ---------------------------------------------
+
+// General
+//  ---------------------------------------------
+
+// $headline__default__additional__class-name: 'heading-style'; 
+// $headline__default__font-weight: $font-weight__regular;
+// $headline__default__font-family: $font-family__variant-1;
+// $headline__default__color: $font-color__base;
+
+// H1
+//  ---------------------------------------------
+
+$headline__h1__default__font-size__tablet-down: 38;
+$headline__h1__default__line-height__tablet-down: 46;
+$headline__h1__default__font-size__tablet: 54;
+$headline__h1__default__line-height__tablet: 64;
+
+
+// H2
+//  ---------------------------------------------
+
+// $headline__h2__default__font-size__tablet-down: 20;
+// $headline__h2__default__line-height__tablet-down: 28;
+// $headline__h2__default__font-size__tablet: 28;
+// $headline__h2__default__line-height__tablet: 36;
+
+// H3
+//  ---------------------------------------------
+
+// $headline__h3__default__font-size__tablet-down: 18;
+// $headline__h3__default__line-height__tablet-down: 26;
+// $headline__h3__default__font-size__tablet: 24;
+// $headline__h3__default__line-height__tablet: 32;
+
+
+// H4
+//  ---------------------------------------------
+
+// $headline__h4__default__font-size__tablet-down: 16;
+// $headline__h4__default__line-height__tablet-down: 24;
+// $headline__h4__default__font-size__tablet: 20;
+// $headline__h4__default__line-height__tablet: 28;
+
+// H5
+//  ---------------------------------------------
+
+// $headline__h5__default__font-size__tablet-down: 14;
+// $headline__h5__default__line-height__tablet-down: 22;
+// $headline__h5__default__font-size__tablet: 18;
+// $headline__h5__default__line-height__tablet: 24;
+
+// H6
+//  ---------------------------------------------
+
+// $headline__h6__default__font-size__tablet-down: 12;
+// $headline__h6__default__line-height__tablet-down: 20;
+// $headline__h6__default__font-size__tablet: 16;
+// $headline__h6__default__line-height__tablet: 22;
+
+//  Maps
+//  ---------------------------------------------
+
+//  General
+//  ---------------------------------------------
+
+// $headlines__general: (
+//   font-weight: $headline__default__font-weight,
+//   font-family: $headline__default__font-family,
+//   color: $headline__default__color,
+// );
+
+//  H1
+//  ---------------------------------------------
+
+// $h1: (
+//   tablet-down: (
+//     font-size: $headline__h1__default__font-size__tablet-down,
+//     line-height: $headline__h1__default__line-height__tablet-down,
+//   ),
+//   tablet: (
+//     font-size: $headline__h1__default__font-size__tablet,
+//     line-height: $headline__h1__default__line-height__tablet,
+//   ),
+// );
+
+//  H2
+//  ---------------------------------------------
+
+// $h2: (
+//   tablet-down: (
+//     font-size: $headline__h2__default__font-size__tablet-down,
+//     line-height: $headline__h2__default__line-height__tablet-down,
+//   ),
+//   tablet: (
+//     font-size: $headline__h2__default__font-size__tablet,
+//     line-height: $headline__h2__default__line-height__tablet,
+//   ),
+// );
+
+//  H3
+//  ---------------------------------------------
+
+// $h3: (
+//   tablet-down: (
+//     font-size: $headline__h3__default__font-size__tablet-down,
+//     line-height: $headline__h3__default__line-height__tablet-down,
+//   ),
+//   tablet: (
+//     font-size: $headline__h3__default__font-size__tablet,
+//     line-height: $headline__h3__default__line-height__tablet,
+//   ),
+// );
+
+//  H4
+//  ---------------------------------------------
+
+// $h4:(
+//   tablet-down: (
+//     font-size: $headline__h4__default__font-size__tablet-down,
+//     line-height: $headline__h4__default__line-height__tablet-down,
+//   ),
+//   tablet: (
+//     font-size: $headline__h4__default__font-size__tablet,
+//     line-height: $headline__h4__default__line-height__tablet,
+//   ),
+// );
+
+//  H5
+//  ---------------------------------------------
+
+// $h5: (
+//   tablet-down: (
+//     font-size: $headline__h5__default__font-size__tablet-down,
+//     line-height: $headline__h5__default__line-height__tablet-down,
+//   ),
+//   tablet: (
+//     font-size: $headline__h5__default__font-size__tablet,
+//     line-height: $headline__h5__default__line-height__tablet,
+//   ),
+// );
+
+//  H6
+//  ---------------------------------------------
+
+// $h6: (
+//   tablet-down: (
+//     font-size: $headline__h6__default__font-size__tablet-down,
+//     line-height: $headline__h6__default__line-height__tablet-down,
+//   ),
+//   tablet: (
+//     font-size: $headline__h6__default__font-size__tablet,
+//     line-height: $headline__h6__default__line-height__tablet,
+//   ),
+// );
+
+//  ---------------------------------------------
+//
+//
+//  🛑 EXAMPLES 🛑
+//
+//
+//  ---------------------------------------------
+
+// Override the core general variables
+
+// $headline__default__additional__class-name: 'style'; 
+// $headline__default__font-weight: $font-weight__black;
+// $headline__default__font-family: 'Arial';
+// $headline__default__color: base(1);
+// $headline__default__font-weight: null; // disable the font-weight for example
+
+
+// you can also add or override the general variables with a map (text-transform is a new key)
+
+// $headlines__general: (
+//   text-transform: uppercase,
+//   font-weight: 100,
+// );
+
+
+// $headlines__general: false; // disable the general generated styles for all headlines
+
+
+//  headline overrides
+//  ---------------------------------------------
+
+// override only the core variables to change the values
+
+// $headline__h3__default__font-size__tablet-down: 11;
+// $headline__h3__default__line-height__tablet-down: 11;
+// $headline__h3__default__font-size__tablet: 122;
+// $headline__h3__default__line-height__tablet: 122;
+
+//  ---------------------------------------------
+
+// only override some keys of the original map + adding new / leaving the rest of the original map untouched
+// add new keys to the map
+// f.ex 'tablet-down' is part of the original map but not 'desktop' & 'mobile' -> so 'tablet-down' will not be overridden here, 
+// desktop & mobile will be added and tablet will be overridden because it is part of the original map
+
+// $h1: (
+//   mobile: ( // new key -> will be added to the original map
+//     font-weight: 100,
+//   ),
+//   tablet: ( // existing key -> will override the original map
+//     font-size: 99,
+//     line-height: 99,
+//   ),
+//   desktop: ( // new key -> will be added to the original map
+//     font-size: 99,
+//     line-height: 99,
+//   ),
+// );
+
+// $h1: false; // disable the generated styles for h1
+
+//  ---------------------------------------------
+
+// full override of the map
+// you need to have the same keys as in the original map to override these values
+// also you can add new keys to the map but keep in mind that you need to add all keys of the original map or you will loose them
+
+// complete override / replace the original map
+
+// $h2: (
+//   tablet-down: (
+//     font-size: 55,
+//     line-height: 55,
+//   ),
+//   tablet: (
+//     font-size: 55,
+//     line-height: 55,
+//   ),
+// );

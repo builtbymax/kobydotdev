@@ -1,0 +1,19 @@
+//
+//  Content Sizes
+//  ---------------------------------------------
+
+$content-sizes: (
+  content-size-xs: 320px,
+  content-size-s: 430px,
+  content-size-sm: 640px,
+  content-size-m: 1140px,
+  content-size-sl: 1220px,
+  content-size-l: 1440px,
+  content-size-xl: 1640px,
+  content-size-xxl: 1920px,
+) !default;
+
+$content-size__gap__tablet-down: 20px !default;
+$content-size__gap__tablet: 30px !default;
+$content-size__margin: 0 auto !default;
+$content-size__width: 100% !default;

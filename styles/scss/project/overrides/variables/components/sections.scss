@@ -1,0 +1,83 @@
+//
+//  Sections
+//  ---------------------------------------------
+
+
+//  Variables
+//  ---------------------------------------------
+
+// $component__sections__default__display: block;
+// $component__sections__default__width: 100%;
+// $component__sections__default__position: relative;
+
+// $component__sections__default__spacing-above__remove: 0;
+// $component__sections__default__spacing-below__remove: 0;
+
+// $component__sections__default__margin__tablet-down: 40px 0;
+// $component__sections__default__spacing-above__s__tablet-down: 20px;
+// $component__sections__default__spacing-above__m__tablet-down: 40px;
+// $component__sections__default__spacing-above__l__tablet-down: 60px;
+
+// $component__sections__default__spacing-below__s__tablet-down: 20px;
+// $component__sections__default__spacing-below__m__tablet-down: 40px;
+// $component__sections__default__spacing-below__l__tablet-down: 60px;
+
+// $component__sections__default__margin__tablet: 60px 0;
+// $component__sections__default__spacing-above__s__tablet: 30px;
+// $component__sections__default__spacing-above__m__tablet: 60px;
+// $component__sections__default__spacing-above__l__tablet: 90px;
+
+// $component__sections__default__spacing-below__s__tablet: 30px;
+// $component__sections__default__spacing-below__m__tablet: 60px;
+// $component__sections__default__spacing-below__l__tablet: 90px;
+
+// $component__sections__default__anchor-target__position: relative;
+// $component__sections__default__anchor-target__z-index: -1;
+// $component__sections__default__anchor-target__top__tablet-down: $component__general__default__body__padding__xs + 30px;
+// $component__sections__default__anchor-target__top__tablet: $component__general__default__body__padding__l + 30px;
+
+// $component__sections__default__background__class: 'background-color-';
+// $component__sections__default__background__color__1: var(--base__color-1);
+// $component__sections__default__background__color__1__font-color__base: var(--base__color-2);
+
+//
+// The following button variables are only used if "default-cta" configuration is set to true
+// So the buttons will have inverted styling on background-1 sections (dark color)
+//  -----------------------------------------------------------------
+
+// You need to set the the same names here as in 'cta.scss' to override the default values
+// If you want to use the default values, you can ignore this section
+
+// $component__sections__default__background__color__1__cta__general__basic__class: 'cta';
+// $component__sections__default__background__color__1__cta__general__layout__class: 'layout';
+
+// Override the default values for the different colors on "background-color-1" sections
+// If you have more than 3 buttons, or more than 1 section you need to add more variables here
+// and also add the corresponding classes in a custom sections & cta.scss file
+
+// $component__sections__default__background__color__1__cta__background__layout-0: var(--base__color-2);
+// $component__sections__default__background__color__1__cta__text__layout-0: var(--base__color-1);
+// $component__sections__default__background__color__1__cta__icon__layout-0: var(--base__color-1);
+// $component__sections__default__background__color__1__cta__border__layout-0: 0 none;
+// $component__sections__default__background__color__1__cta__background__layout-0__hover: var(--project__color-1);
+// $component__sections__default__background__color__1__cta__text__layout-0__hover: var(--base__color-2);
+// $component__sections__default__background__color__1__cta__icon__layout-0__hover: var(--base__color-2);
+// $component__sections__default__background__color__1__cta__border__layout-0__hover: 0 none;
+
+// $component__sections__default__background__color__1__cta__background__layout-1: transparent;
+// $component__sections__default__background__color__1__cta__text__layout-1: var(--base__color-2);
+// $component__sections__default__background__color__1__cta__icon__layout-1: var(--base__color-2);
+// $component__sections__default__background__color__1__cta__border__layout-1: 1px solid var(--base__color-2);
+// $component__sections__default__background__color__1__cta__background__layout-1__hover: var(--base__color-2);
+// $component__sections__default__background__color__1__cta__text__layout-1__hover: var(--base__color-1);
+// $component__sections__default__background__color__1__cta__icon__layout-1__hover: var(--base__color-1);
+// $component__sections__default__background__color__1__cta__border__layout-1__hover: 1px solid var(--base__color-1);
+
+// $component__sections__default__background__color__1__cta__background__layout-2: transparent;
+// $component__sections__default__background__color__1__cta__text__layout-2: var(--base__color-2);
+// $component__sections__default__background__color__1__cta__icon__layout-2: var(--base__color-2);
+// $component__sections__default__background__color__1__cta__border__layout-2: 0 none;
+// $component__sections__default__background__color__1__cta__background__layout-2__hover: transparent;
+// $component__sections__default__background__color__1__cta__text__layout-2__hover: var(--project__color-1);
+// $component__sections__default__background__color__1__cta__icon__layout-2__hover: var(--project__color-1);
+// $component__sections__default__background__color__1__cta__border__layout-2__hover: 0 none;

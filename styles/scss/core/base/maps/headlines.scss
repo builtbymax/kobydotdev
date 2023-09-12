@@ -1,0 +1,117 @@
+//
+//  Headlines
+// ---------------------------------------------
+
+//  General
+//  ---------------------------------------------
+
+$headlines__general: map-deep-merge(
+  (
+    font-weight: $headline__default__font-weight,
+    font-family: $headline__default__font-family,
+    color: $headline__default__color,
+  ), 
+  $headlines__general,
+);
+
+//  H1
+//  ---------------------------------------------
+
+$h1: map-deep-merge(
+  (
+    tablet-down: (
+      font-size: $headline__h1__default__font-size__tablet-down,
+      line-height: $headline__h1__default__line-height__tablet-down,
+    ),
+    tablet: (
+      font-size: $headline__h1__default__font-size__tablet,
+      line-height: $headline__h1__default__line-height__tablet,
+    ),
+  ), 
+  $h1,
+);
+
+//  H2
+//  ---------------------------------------------
+
+$h2: map-deep-merge(
+  (
+    tablet-down: (
+      font-size: $headline__h2__default__font-size__tablet-down,
+      line-height: $headline__h2__default__line-height__tablet-down,
+    ),
+    tablet: (
+      font-size: $headline__h2__default__font-size__tablet,
+      line-height: $headline__h2__default__line-height__tablet,
+    ),
+  ), 
+  $h2,
+);
+
+//  H3
+//  ---------------------------------------------
+
+$h3: map-deep-merge(
+  (
+    tablet-down: (
+      font-size: $headline__h3__default__font-size__tablet-down,
+      line-height: $headline__h3__default__line-height__tablet-down,
+    ),
+    tablet: (
+      font-size: $headline__h3__default__font-size__tablet,
+      line-height: $headline__h3__default__line-height__tablet,
+    ),
+  ), 
+  $h3,
+);
+
+//  H4
+//  ---------------------------------------------
+
+$h4: map-deep-merge(
+  (
+    tablet-down: (
+      font-size: $headline__h4__default__font-size__tablet-down,
+      line-height: $headline__h4__default__line-height__tablet-down,
+    ),
+    tablet: (
+      font-size: $headline__h4__default__font-size__tablet,
+      line-height: $headline__h4__default__line-height__tablet,
+    ),
+  ), 
+  $h4,
+);
+
+//  H5
+//  ---------------------------------------------
+
+$h5: map-deep-merge(
+  (
+    tablet-down: (
+      font-size: $headline__h5__default__font-size__tablet-down,
+      line-height: $headline__h5__default__line-height__tablet-down,
+    ),
+    tablet: (
+      font-size: $headline__h5__default__font-size__tablet,
+      line-height: $headline__h5__default__line-height__tablet,
+    ),
+  ), 
+  $h5,
+);
+
+//  H6
+//  ---------------------------------------------
+
+$h6: map-deep-merge(
+  (
+    tablet-down: (
+      font-size: $headline__h6__default__font-size__tablet-down,
+      line-height: $headline__h6__default__line-height__tablet-down,
+    ),
+    tablet: (
+      font-size: $headline__h6__default__font-size__tablet,
+      line-height: $headline__h6__default__line-height__tablet,
+    ),
+  ), 
+  $h6,
+);

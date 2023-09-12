@@ -1,0 +1,150 @@
+//
+//  Element: "Counter"
+//  ---------------------------------------------
+
+@if (map-get(map-get($appConfiguration, elements), 'counter-element') == true) {
+
+  //  Variables
+  //  ---------------------------------------------
+
+  $counter-element__container__class: 'counter-element-container' !default;
+  $counter-element__item__class: 'counter-item' !default;
+  $counter-element__value__class: 'value' !default;
+  $counter-element__value__prefix__class: 'prefix' !default;
+  $counter-element__value__num__class: 'num' !default;
+  $counter-element__value__suffix__class: 'suffix' !default;
+  
+  $counter-element__container__width: 100% !default;
+
+  $counter-element__item__display: flex !default;
+  $counter-element__item__flex-direction: column !default;
+  $counter-element__item__align-items: flex-start !default;
+
+  $counter-element__value__display: flex !default;
+  $counter-element__value__flex-flow: row wrap !default;
+  $counter-element__value__column-gap: 10px !default;
+  $counter-element__value__row-gap: 2px !default;
+  $counter-element__value__align-items: center !default;
+  $counter-element__value__justify-content: flex-start !default;
+  $counter-element__value__margin: 0 0 30px 0 !default;
+
+  $counter-element__value__num__font-size: 40 !default;
+  $counter-element__value__num__line-height: 48 !default;
+  $counter-element__value__num__font-weight: $font-weight__bold !default;
+  $counter-element__value__num__font-family: $font-family__base !default;
+  $counter-element__value__num__color: var(--font-color__base) !default;
+
+  $counter-element__value__prefix__font-size: $counter-element__value__num__font-size !default;
+  $counter-element__value__prefix__line-height: $counter-element__value__num__line-height !default;
+  $counter-element__value__prefix__font-weight: $counter-element__value__num__font-weight !default;
+  $counter-element__value__prefix__font-family: $counter-element__value__num__font-family !default;
+  $counter-element__value__prefix__color: $counter-element__value__num__color !default;
+
+  $counter-element__value__suffix__font-size: $counter-element__value__num__font-size !default;
+  $counter-element__value__suffix__line-height: $counter-element__value__num__line-height !default;
+  $counter-element__value__suffix__font-weight: $counter-element__value__num__font-weight !default;
+  $counter-element__value__suffix__font-family: $counter-element__value__num__font-family !default;
+  $counter-element__value__suffix__color: $counter-element__value__num__color !default;
+
+  $counter-element__item__headline__font-size: 24 !default;
+  $counter-element__item__headline__line-height: 30 !default;
+  $counter-element__item__headline__font-weight: $font-weight__bold !default;
+  $counter-element__item__headline__font-family: $font-family__variant-1 !default;
+  $counter-element__item__headline__color: var(--font-color__base) !default;
+  $counter-element__item__headline__margin: 0 0 15px 0 !default;
+
+  $counter-element__item__paragraph__font-size: 18 !default;
+  $counter-element__item__paragraph__line-height: 24 !default;
+  $counter-element__item__paragraph__font-weight: $font-weight__regular !default;
+  $counter-element__item__paragraph__font-family: $font-family__base !default;
+  $counter-element__item__paragraph__color: rgba(#{var(--base__color-1__rgb)}, .6) !default;
+
+
+
+  //  Styles
+  //  ---------------------------------------------
+
+  @include media('mobile') {
+
+    // container
+    .#{$counter-element__container__class}{
+      width: $counter-element__container__width;
+
+      // item
+      .#{$counter-element__item__class}{
+        display: $counter-element__item__display;
+        flex-direction: $counter-element__item__flex-direction;
+        align-items: $counter-element__item__align-items;
+
+        // value
+        .#{$counter-element__value__class}{
+          display: $counter-element__value__display;
+          flex-flow: $counter-element__value__flex-flow;
+          column-gap: $counter-element__value__column-gap;
+          row-gap: $counter-element__value__row-gap;
+          align-items: $counter-element__value__align-items;
+          justify-content: $counter-element__value__justify-content;
+          margin: $counter-element__value__margin;
+
+          // prefix, suffix, num
+          > span.#{$counter-element__value__prefix__class}{
+            @include font(
+              $counter-element__value__prefix__font-size,
+              $counter-element__value__prefix__line-height
+            );
+            font-weight: $counter-element__value__prefix__font-weight;
+            color: $counter-element__value__prefix__color;
+            font-family: $counter-element__value__prefix__font-family;
+          }
+          > span.#{$counter-element__value__suffix__class} {
+            @include font(
+              $counter-element__value__suffix__font-size,
+              $counter-element__value__suffix__line-height
+            );
+            font-weight: $counter-element__value__suffix__font-weight;
+            color: $counter-element__value__suffix__color;
+            font-family: $counter-element__value__suffix__font-family;
+          }
+          > span.#{$counter-element__value__num__class}{
+            @include font(
+              $counter-element__value__num__font-size,
+              $counter-element__value__num__line-height
+            );
+            font-weight: $counter-element__value__num__font-weight;
+            color: $counter-element__value__num__color;
+            font-family: $counter-element__value__num__font-family;
+          }
+        }
+
+        h2, h3, h4, h5, h6{
+          color: $counter-element__item__headline__color;
+          margin: $counter-element__item__headline__margin;
+          @include font(
+            $counter-element__item__headline__font-size,
+            $counter-element__item__headline__line-height
+          );
+          font-weight: $counter-element__item__headline__font-weight;
+          font-family: $counter-element__item__headline__font-family;
+        }
+
+        p{
+          color: $counter-element__item__paragraph__color;
+          @include font(
+            $counter-element__item__paragraph__font-size,
+            $counter-element__item__paragraph__line-height  
+          );
+          font-weight: $counter-element__item__paragraph__font-weight;
+          font-family: $counter-element__item__paragraph__font-family;
+        }
+      }
+    }
+
+  }
+
+  // max-767
+  @include media('tablet-down') {}
+
+  // min-768
+  @include media('tablet') {}
+
+}

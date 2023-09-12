@@ -1,0 +1,167 @@
+//
+//  Lists
+//  ---------------------------------------------
+
+
+//  Variables
+//  ---------------------------------------------
+
+$component__list__default__wrapper__class: 'list-default' !default;
+$list__copy-text__default: true !default;
+
+// Parameter defaults
+$component__list__default__text__color: $font-color__base !default;
+$component__list__default__font-size: $font-size__base !default;
+$component__list__default__line-height: $line-height__base !default;
+$component__list__default__font-weight: $font-weight__base !default;
+$component__list__default__font-family: $font-family__base !default;
+$component__list__default__list-style-reset: true !default;
+$component__list__default__list-spacing: 10px 0 !default;
+$component__list__default__list-element-spacing: 0 0 10px !default;
+$component__list__default__list-intend: false !default;
+$component__list__default__list-point-color: $font-color__base !default;
+$component__list__default__list-leading-zero: true !default;
+
+// Mixin defaults
+$component__list__default__display: flex !default;
+$component__list__default__flex-direction: column !default;
+$component__list__default__list-element__margin__last-child: 0 !default;
+
+$component__list__default__intend__position: relative !default;
+$component__list__default__intend__padding-left: 15px !default;
+$component__list__default__intend__point__content: '' !default;
+$component__list__default__intend__point__display: block !default;
+$component__list__default__intend__point__position: absolute !default;
+$component__list__default__intend__point__left: 0 !default;
+$component__list__default__intend__point__top: 8px !default;
+$component__list__default__intend__point__width: 5px !default;
+$component__list__default__intend__point__height: 5px !default;
+$component__list__default__intend__point__border-radius: 15px !default;
+
+$component__list__default__point__content: '•' !default;
+$component__list__default__point__margin: 0 10px 0 0 !default;
+
+$component__list__default__ordered__list__counter-incement: item !default;
+$component__list__default__ordered__list__counter-style: decimal-leading-zero !default;
+$component__list__default__ordered__list__counter-suffix: '.' !default;
+$component__list__default__ordered__list__point__margin: 0 5px 0 0 !default;
+
+$component__list__default__ordered__list__intend__position: relative !default;
+$component__list__default__ordered__list__intend__padding-left: 28px !default;
+$component__list__default__ordered__list__intend__point__content: '' !default;
+$component__list__default__ordered__list__intend__point__display: block !default;
+$component__list__default__ordered__list__intend__point__position: absolute !default;
+$component__list__default__ordered__list__intend__point__left: 0 !default;
+$component__list__default__ordered__list__intend__point__top: 0 !default;
+
+
+//  Mixins & Functions
+//  ---------------------------------------------
+
+@mixin list-reset() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin create-list(
+  $text-color: $component__list__default__text__color, 
+  $font-size: $component__list__default__font-size,
+  $line-height: $component__list__default__line-height,
+  $font-weight: $component__list__default__font-weight,
+  $font-family: $component__list__default__font-family,
+  $list-style-reset: $component__list__default__list-style-reset,
+  $list-spacing: $component__list__default__list-spacing,
+  $list-element-spacing: $component__list__default__list-element-spacing,
+  $list-intend: $component__list__default__list-intend,
+  $list-point-color: $component__list__default__list-point-color,
+  $list-leading-zero: $component__list__default__list-leading-zero,
+  $list-wrapper-class: null,
+) {
+
+  $wrapper-class: '.' + $list-wrapper-class;
+  @if ($list-wrapper-class == null or $list-wrapper-class == false or $list-wrapper-class == '') {
+    $wrapper-class: '';
+  }
+  
+  ol#{$wrapper-class}, ul#{$wrapper-class} {
+    @if ($list-style-reset == true) {
+      @include list-reset();
+    }
+    padding: $list-spacing;
+    display: $component__list__default__display;
+    flex-direction: $component__list__default__flex-direction;
+    li {
+      margin: $list-element-spacing;
+      &:last-child { margin: $component__list__default__list-element__margin__last-child; }
+
+      @include typo(
+        $font-size,
+        $line-height,
+        $font-weight,
+        $font-family,
+        $text-color,
+      );
+    }
+  }
+
+  @if ($list-intend == true) {
+    ul#{$wrapper-class}{
+      li{
+        position: $component__list__default__intend__position;
+        padding-left: $component__list__default__intend__padding-left;
+        &::before {
+          content: '';
+          display: $component__list__default__intend__point__display;
+          position: $component__list__default__intend__point__position;
+          left: $component__list__default__intend__point__left;
+          top: $component__list__default__intend__point__top;
+          width: $component__list__default__intend__point__width;
+          height: $component__list__default__intend__point__height;
+          border-radius: $component__list__default__intend__point__border-radius;
+          background-color: $list-point-color;
+        }
+      }
+    }
+  } @else {
+    ul#{$wrapper-class} {
+      li {
+        &:before {
+          content: $component__list__default__point__content;
+          color: $list-point-color;
+          margin: $component__list__default__point__margin;
+        }
+      }
+    }
+  }
+
+  ol#{$wrapper-class}  {
+    li {
+      counter-increment: $component__list__default__ordered__list__counter-incement;
+      &:before {
+        margin: $component__list__default__ordered__list__point__margin;
+
+        @if ($list-leading-zero == true) {
+          content: counter(
+            $component__list__default__ordered__list__counter-incement, 
+            $component__list__default__ordered__list__counter-style
+          ) $component__list__default__ordered__list__counter-suffix;
+        } @else {
+          content: counter(
+            $component__list__default__ordered__list__counter-incement
+          ) $component__list__default__ordered__list__counter-suffix;
+        }
+      }
+      @if ($list-intend == true) {
+        position: $component__list__default__ordered__list__intend__position;
+        padding-left: $component__list__default__ordered__list__intend__padding-left;
+        &:before {
+          display: $component__list__default__ordered__list__intend__point__display;
+          position: $component__list__default__ordered__list__intend__point__position;
+          left: $component__list__default__ordered__list__intend__point__left;
+          top: $component__list__default__ordered__list__intend__point__top;
+        }
+      }
+    }
+  }
+}

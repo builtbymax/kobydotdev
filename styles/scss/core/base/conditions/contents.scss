@@ -1,0 +1,350 @@
+//
+//  Contents
+//  ---------------------------------------------
+
+@if (map-get($appConfiguration, contents) != true) {
+
+  $contents: map-get($appConfiguration, contents);
+
+  //  General
+  //  ---------------------------------------------
+
+  @if (map-get($contents, general) == true) {
+
+    @include media('mobile') {
+
+      * {
+        box-sizing: $component__general__default__all__box-sizing;
+        margin: $component__general__default__all__margin;
+        padding: $component__general__default__all__padding;
+        -webkit-font-smoothing: $component__general__default__all__webkit-font-smoothing;
+        -moz-osx-font-smoothing: $component__general__default__all__moz-osx-font-smoothing;
+        -webkit-text-size-adjust: $component__general__default__all__webkit-text-size-adjust;
+      }
+    
+      html {
+        overflow: $component__general__default__html__overflow;
+        scroll-behavior: $component__general__default__html__scroll-behavior;
+        font-size: $component__general__default__html__font-size;
+      }
+  
+      body{
+        @include typo(
+          $component__general__default__body__font-size,
+          $component__general__default__body__line-height,
+          $component__general__default__body__font-weight,
+          $component__general__default__body__font-family,
+          $component__general__default__body__text-color,
+        );
+  
+        background-color: $component__general__default__body__background-color;
+        height: $component__general__default__body__height;
+        min-width: $component__general__default__body__min-width;
+      }
+
+    }
+
+    @include media('tablet-wide-down') {
+
+      body{
+        padding-top: $component__general__default__body__padding__xs;
+      }
+
+    }
+
+    @include media('tablet-wide') {
+
+      body{
+        padding-top: $component__general__default__body__padding__l;
+      }
+
+    }
+
+  }
+
+  //  Lists
+  //  ---------------------------------------------
+
+  @if (map-get($contents, lists) == true) {
+
+    @include media('mobile') {
+
+      @include create-list(
+        $list-wrapper-class: $component__list__default__wrapper__class,
+      );
+
+      @if ($list__copy-text__default == true) {
+        .copy-text{
+          @include create-list(
+            $list-wrapper-class: null,
+          );
+        }
+      }
+
+    }
+
+  }
+
+  //  CTA Container
+  //  ---------------------------------------------
+
+  @if (map-get($contents, cta-container) == true) {
+
+    @include media('mobile') {
+
+      .cta-container{
+        width: $component__cta-container__default__width;
+        margin: $component__cta-container__default__margin;
+        display: $component__cta-container__default__display;
+        flex-flow: $component__cta-container__default__flex-flow;
+        align-items: $component__cta-container__default__align-items;
+        justify-content: $component__cta-container__default__justify-content;
+        gap: $component__cta-container__default__gap;
+  
+        &.alignment-center{
+          justify-content: $component__cta-container__default__align-center__justify-content;
+        }
+  
+        &.alignment-right{
+          justify-content: $component__cta-container__default__align-right__justify-content;
+        }
+      }
+
+    }
+
+  }
+
+  //  Sections
+  //  ---------------------------------------------
+
+  @if (map-get($contents, sections) == true) {
+
+    @include media('mobile') {
+
+      // Section Container
+      // ---------------------------------------------
+
+      section.section-container{
+        display: $component__sections__default__display;
+        width: $component__sections__default__width;
+        position: $component__sections__default__position;
+
+        &.spacing-above-remove{ padding-top: $component__sections__default__spacing-above__remove; }
+        &.spacing-below-remove{ padding-bottom: $component__sections__default__spacing-below__remove; }
+        
+        &[class*="#{$component__sections__default__background__class}1"] {
+          background-color: $component__sections__default__background__color__1;
+          --font-color__base: #{$component__sections__default__background__color__1__font-color__base};
+          --headline-color__base: #{$component__sections__default__background__color__1__font-color__base};
+
+          // If default-cta configuration is true
+          // set default cta elements with new colors to prevent color conflicts with background color
+          // ---------------------------------------------
+
+          @if (map-get($appConfiguration, default-cta) == true) {
+            .#{$component__sections__default__background__color__1__cta__general__basic__class}{
+              &.#{$component__sections__default__background__color__1__cta__general__layout__class}-0 {
+                --cta__background__color:#{$component__sections__default__background__color__1__cta__background__layout-0};
+                --cta__text__color: #{$component__sections__default__background__color__1__cta__text__layout-0};
+                --cta__icon__color: #{$component__sections__default__background__color__1__cta__icon__layout-0};
+                --cta__border: #{$component__sections__default__background__color__1__cta__border__layout-0};
+                &:hover{
+                  --cta__background__color__hover: #{$component__sections__default__background__color__1__cta__background__layout-0__hover};
+                  --cta__text__color__hover: #{$component__sections__default__background__color__1__cta__text__layout-0__hover};
+                  --cta__icon__color__hover: #{$component__sections__default__background__color__1__cta__icon__layout-0__hover};
+                  --cta__icon__color: var(--cta__icon__color__hover);
+                  --cta__border__hover: #{$component__sections__default__background__color__1__cta__border__layout-0__hover};
+                }
+              }
+              &.#{$component__sections__default__background__color__1__cta__general__layout__class}-1 {
+                --cta__background__color:#{$component__sections__default__background__color__1__cta__background__layout-1};
+                --cta__text__color: #{$component__sections__default__background__color__1__cta__text__layout-1};
+                --cta__icon__color: #{$component__sections__default__background__color__1__cta__icon__layout-1};
+                --cta__border: #{$component__sections__default__background__color__1__cta__border__layout-1};
+                &:hover{
+                  --cta__background__color__hover: #{$component__sections__default__background__color__1__cta__background__layout-1__hover};
+                  --cta__text__color__hover: #{$component__sections__default__background__color__1__cta__text__layout-1__hover};
+                  --cta__icon__color__hover: #{$component__sections__default__background__color__1__cta__icon__layout-1__hover};
+                  --cta__icon__color: var(--cta__icon__color__hover);
+                  --cta__border__hover: #{$component__sections__default__background__color__1__cta__border__layout-1__hover};
+                }
+              }
+              &.#{$component__sections__default__background__color__1__cta__general__layout__class}-2 {
+                --cta__background__color:#{$component__sections__default__background__color__1__cta__background__layout-2};
+                --cta__text__color: #{$component__sections__default__background__color__1__cta__text__layout-2};
+                --cta__icon__color: #{$component__sections__default__background__color__1__cta__icon__layout-2};
+                --cta__border: #{$component__sections__default__background__color__1__cta__border__layout-2};
+                &:hover{
+                  --cta__background__color__hover: #{$component__sections__default__background__color__1__cta__background__layout-2__hover};
+                  --cta__text__color__hover: #{$component__sections__default__background__color__1__cta__text__layout-2__hover};
+                  --cta__icon__color__hover: #{$component__sections__default__background__color__1__cta__icon__layout-2__hover};
+                  --cta__icon__color: var(--cta__icon__color__hover);
+                  --cta__border__hover: #{$component__sections__default__background__color__1__cta__border__layout-2__hover};
+                }
+              }
+            }
+          }
+        }
+      }
+
+
+      // Anchor Target (for fixed header)
+      // ---------------------------------------------
+
+      .anchor-target{
+        position: $component__sections__default__anchor-target__position;
+        z-index: $component__sections__default__anchor-target__z-index;
+      }
+
+    }
+
+
+    // max 1024
+    @include media('tablet-wide-down') {
+
+      section.section-container{
+        padding: $component__sections__default__margin__tablet-down;
+
+        &.spacing-above-s{ padding-top: $component__sections__default__spacing-above__s__tablet-down; }
+        &.spacing-above-m{ padding-top: $component__sections__default__spacing-above__m__tablet-down; }
+        &.spacing-above-l{ padding-top: $component__sections__default__spacing-above__l__tablet-down; }
+
+        &.spacing-below-s{ padding-bottom: $component__sections__default__spacing-below__s__tablet-down; }
+        &.spacing-below-m{ padding-bottom: $component__sections__default__spacing-below__m__tablet-down; }
+        &.spacing-below-l{ padding-bottom: $component__sections__default__spacing-below__l__tablet-down; }
+      }
+
+      .anchor-target{ 
+        scroll-margin-top: $component__sections__default__anchor-target__top__tablet-down;
+      }
+
+    }
+
+    // min 1024
+    @include media('tablet-wide') {
+
+      section.section-container{
+        padding: $component__sections__default__margin__tablet;
+
+        &.spacing-above-s{ padding-top: $component__sections__default__spacing-above__s__tablet; }
+        &.spacing-above-m{ padding-top: $component__sections__default__spacing-above__m__tablet; }
+        &.spacing-above-l{ padding-top: $component__sections__default__spacing-above__l__tablet; }
+
+        &.spacing-below-s{ padding-bottom: $component__sections__default__spacing-below__s__tablet; }
+        &.spacing-below-m{ padding-bottom: $component__sections__default__spacing-below__m__tablet; }
+        &.spacing-below-l{ padding-bottom: $component__sections__default__spacing-below__l__tablet; }
+      }
+
+      .anchor-target{ 
+        scroll-margin-top: $component__sections__default__anchor-target__top__tablet;
+      }
+
+    }
+
+  }
+
+  //  Media
+  //  ---------------------------------------------
+
+  @if (map-get($contents, media-element) == true) {
+    
+    @include media('mobile') {
+
+      @include create-media-element(
+        $image: $component__media__default__image,
+        $video: $component__media__default__video,
+        $iframe: $component__media__default__iframe,
+        $audio: $component__media__default__audio,
+      );
+
+    }
+
+  }
+
+  //  Accessibility
+  //  ---------------------------------------------
+
+  @if (map-get($contents, accessibility) == true) {
+      
+      @include media('tablet-wide') {
+
+        body.#{$component__accessibility__default__body__class} {
+          a, button, input, select, textarea, [tabindex] {
+            &:focus {
+              outline: $component__accessibility__default__focus__outline;
+              outline-offset: $component__accessibility__default__focus__outline__offset;
+              // reset border color for focus
+              border-color: $component__accessibility__default__focus__border__color__reset;
+            }
+          }
+        }
+
+      }
+  
+  }
+
+  //  Default Typo
+  //  ---------------------------------------------
+
+  @if (map-get($contents, default-typo) == true) {
+
+    @include media('mobile') {
+
+      p{
+        @include typo(
+          $component__typo-default__paragraph__font-size,
+          $component__typo-default__paragraph__line-height,
+          $component__typo-default__paragraph__font-weight,
+          $component__typo-default__paragraph__font-family,
+          $component__typo-default__paragraph__font-color
+        );
+    
+        &:empty{ display: none; }
+      }
+    
+      blockquote{
+        text-transform: $component__typo-default__blockquote__text-transform;
+        font-style: $component__typo-default__blockquote__font-style;
+    
+        @include typo(
+          $component__typo-default__blockquote__font-size,
+          $component__typo-default__blockquote__line-height,
+          $component__typo-default__blockquote__font-weight,
+          $component__typo-default__blockquote__font-family,
+          $component__typo-default__blockquote__font-color
+        );
+      }
+
+      // Default RTE Styles
+      // ---------------------------------------------
+
+      .copy-text{
+        h2, h3, h4, h5, h6{
+          margin: $component__typo-default__rte__heading__margin;
+        }
+
+        p{
+          padding: $component__typo-default__paragraph__padding;
+          margin: $component__typo-default__paragraph__margin;
+        }
+    
+        p, li{
+          > a{
+            text-decoration: $component__typo-default__inline-link__text-decoration;
+            transition: $component__typo-default__inline-link__transition;
+            color: $component__typo-default__inline-link__font-color;
+            font-weight: $component__typo-default__inline-link__font-weight;
+      
+            &:hover{
+              color: $component__typo-default__inline-link__font-color__hover;
+              text-decoration: $component__typo-default__inline-link__text-decoration__hover;
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+
+}

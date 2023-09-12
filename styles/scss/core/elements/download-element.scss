@@ -1,0 +1,127 @@
+//
+//  Element: "Download"
+//  ---------------------------------------------
+
+@if (map-get(map-get($appConfiguration, elements), 'download-element') == true) {
+
+  //  Variables
+  //  ---------------------------------------------
+
+  $download-element__container__class: 'download-element-container' !default;
+  $download-element__container__list__class: 'download-element-list' !default;
+  $download-element__container__list__item__class: 'download-element-item' !default;
+
+  $download-element__container__width: 100% !default;
+
+  $download-element__container__list__list-style: none !default;
+
+  $download-element__container__list__item__width: 100% !default;
+  $download-element__container__list__item__padding: 20px 0 !default;
+  $download-element__container__list__item__border-bottom: 1px solid var(--base__color-1) !default;
+  $download-element__container__list__item__display: flex !default;
+  $download-element__container__list__item__flex-flow: row wrap !default;
+  $download-element__container__list__item__justify-content: space-between !default;
+  $download-element__container__list__item__align-items: center !default;
+  $download-element__container__list__item__gap: 25px !default;
+
+  $download-element__container__list__item__cta__padding: 0 !default;
+
+  $download-element__container__list__item__content-block__flex: 1 !default;
+  $download-element__container__list__item__content-block__display: flex !default;
+  $download-element__container__list__item__content-block__flex-direction: column !default;
+  $download-element__container__list__item__content-block__min-width: 400px !default;
+  $download-element__container__list__item__content-block__gap: 10px !default;
+
+  $download-element__container__list__item__content-block__title__font-size: 16 !default;
+  $download-element__container__list__item__content-block__title__line-height: 18 !default;
+  $download-element__container__list__item__content-block__title__font-weight: $font-weight__bold !default;
+  $download-element__container__list__item__content-block__title__font-family: false !default;
+  $download-element__container__list__item__content-block__title__text-color: var(--font-color__base) !default;
+
+  $download-element__container__list__item__content-block__description__font-size: 14 !default;
+  $download-element__container__list__item__content-block__description__line-height: 16 !default;
+  $download-element__container__list__item__content-block__description__font-weight: false !default;
+  $download-element__container__list__item__content-block__description__font-family: false !default;
+  $download-element__container__list__item__content-block__description__text-color: rgba(var(--font-color__base__rgb), 60%) !default;
+
+  $download-element__container__list__item__content-block__size__font-size: 12 !default;
+  $download-element__container__list__item__content-block__size__line-height: 14 !default;
+  $download-element__container__list__item__content-block__size__font-weight: $font-weight__bold !default;
+  $download-element__container__list__item__content-block__size__font-family: false !default;
+  $download-element__container__list__item__content-block__size__text-color: var(--font-color__base) !default;
+
+
+  //  Styles
+  //  ---------------------------------------------
+
+  @include media('mobile') {
+
+    .#{$download-element__container__class}{
+      width: $download-element__container__width;
+
+      ul.#{$download-element__container__list__class}{
+        list-style: $download-element__container__list__list-style;
+        li.#{$download-element__container__list__item__class}{
+          width: $download-element__container__list__item__width;
+          padding: $download-element__container__list__item__padding;
+          border-bottom: $download-element__container__list__item__border-bottom;
+          display: $download-element__container__list__item__display;
+          flex-flow: $download-element__container__list__item__flex-flow;
+          justify-content: $download-element__container__list__item__justify-content;
+          align-items: $download-element__container__list__item__align-items;
+          gap: $download-element__container__list__item__gap;
+
+          // reset cta padding
+          a.cta{
+            padding: $download-element__container__list__item__cta__padding;
+          }
+
+          .content-block{
+            flex: $download-element__container__list__item__content-block__flex;
+            display: $download-element__container__list__item__content-block__display;
+            flex-direction: $download-element__container__list__item__content-block__flex-direction;
+            min-width: $download-element__container__list__item__content-block__min-width;
+            gap: $download-element__container__list__item__content-block__gap;
+
+            span.title{
+              @include typo(
+                $fontSizeValue: $download-element__container__list__item__content-block__title__font-size,
+                $lineHeightValue: $download-element__container__list__item__content-block__title__line-height,
+                $fontWeightValue: $download-element__container__list__item__content-block__title__font-weight,
+                $fontFamilyValue: $download-element__container__list__item__content-block__title__font-family,
+                $textColor: $download-element__container__list__item__content-block__title__text-color,
+              )
+            }
+
+            span.description{
+              @include typo(
+                $fontSizeValue: $download-element__container__list__item__content-block__description__font-size,
+                $lineHeightValue: $download-element__container__list__item__content-block__description__line-height,
+                $fontWeightValue: $download-element__container__list__item__content-block__description__font-weight,
+                $fontFamilyValue: $download-element__container__list__item__content-block__description__font-family,
+                $textColor: $download-element__container__list__item__content-block__description__text-color,
+              )
+            }
+
+            span.size{
+              @include typo(
+                $fontSizeValue: $download-element__container__list__item__content-block__size__font-size,
+                $lineHeightValue: $download-element__container__list__item__content-block__size__line-height,
+                $fontWeightValue: $download-element__container__list__item__content-block__size__font-weight,
+                $fontFamilyValue: $download-element__container__list__item__content-block__size__font-family,
+                $textColor: $download-element__container__list__item__content-block__size__text-color,
+              )
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // max-767
+  @include media('tablet-down') {}
+
+  // min-768
+  @include media('tablet') {}
+
+}

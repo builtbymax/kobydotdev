@@ -1,0 +1,60 @@
+//
+//  CTA (Buttons, Links)
+//  -------------------------
+
+//  Variables
+//  ---------------------------------------------
+
+$cta__general__default__basic__class: 'cta' !default;
+$cta__general__default__layout__class: 'layout' !default;
+$cta__general__default__icon__class: 'has-icon' !default;
+
+$cta__general__border-radius: 0 !default;
+$cta__general__padding: 14px 22px !default;
+$cta__general__text-transform: none !default;
+$cta__general__text-decoration: none !default;
+$cta__general__transition: all .25s ease-in-out !default;
+$cta__general__width: auto !default;
+$cta__general__height: auto !default;
+$cta__general__display: flex !default;
+$cta__general__flex-direction: row !default;
+$cta__general__justify-content: center !default;
+$cta__general__align-items: center !default;
+
+$cta__general__font-size: $font-size__s !default;
+$cta__general__line-height: $line-height__s !default;
+$cta__general__font-weight: $font-weight__semi-bold !default;
+$cta__general__font-family: $font-family__base !default;
+
+$cta__layout-0__background: base(1) !default;
+$cta__layout-0__text: base(2) !default;
+$cta__layout-0__icon: base(2) !default;
+$cta__layout-0__border: 0 none !default;
+$cta__layout-0__background__hover: project(1) !default;
+$cta__layout-0__text__hover: base(2) !default;
+$cta__layout-0__icon__hover: base(2) !default;
+$cta__layout-0__border__hover: 0 none !default;
+
+$cta__layout-1__background: transparent !default;
+$cta__layout-1__text: base(1) !default;
+$cta__layout-1__icon: base(1) !default;
+$cta__layout-1__border: 1px solid base(1) !default;
+$cta__layout-1__background__hover: base(1) !default;
+$cta__layout-1__text__hover: base(2) !default;
+$cta__layout-1__icon__hover: base(2) !default;
+$cta__layout-1__border__hover: 1px solid base(1) !default;
+
+$cta__layout-2__background: transparent !default;
+$cta__layout-2__text: base(1) !default;
+$cta__layout-2__icon: base(1) !default;
+$cta__layout-2__border: 0 none;
+$cta__layout-2__background__hover: transparent !default;
+$cta__layout-2__text__hover: base(3) !default;
+$cta__layout-2__icon__hover: base(3) !default;
+$cta__layout-2__border__hover: 0 none;
+
+//  Maps
+//  ---------------------------------------------
+
+$cta__general__default__icon-properties: empty-map() !default;
+$cta__default__properties: empty-map() !default;

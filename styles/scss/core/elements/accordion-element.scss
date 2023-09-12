@@ -1,0 +1,122 @@
+//
+//  Element: "Accordion"
+//  ---------------------------------------------
+
+@if (map-get(map-get($appConfiguration, elements), 'accordion-element') == true) {
+
+  //  Variables
+  //  ---------------------------------------------
+
+  $accordion-element__container__class: 'accordion-element-container' !default;
+  $accordion-element__ul__class: 'accordion-list' !default;
+  $accordion-element__li__class: 'accordion-item' !default;
+  $accordion-element__active__class: 'open' !default;
+
+  $accordion-element__container__width: 100% !default;
+
+  $accordion-element__ul__list-style: none !default;
+  $accordion-element__ul__padding: 0 !default;
+  $accordion-element__ul__margin: 0 !default;
+
+  $accordion-element__li__margin: 0 0 10px !default;
+  $accordion-element__li__last-child__margin: 0 !default;
+
+  $accordion-element__button__background: none !default;
+  $accordion-element__button__cursor: pointer !default;
+  $accordion-element__button__width: 100% !default;
+  $accordion-element__button__padding: 10px 0 !default;
+  $accordion-element__button__display: flex !default;
+  $accordion-element__button__flex-direction: row !default;
+  $accordion-element__button__align-items: center !default;
+  $accordion-element__button__justify-content: space-between !default;
+  $accordion-element__button__border-color: base(1) !default;
+  $accordion-element__button__border-style: solid !default;
+  $accordion-element__button__border-width: 0 0 1px 0 !default;
+
+  $accordion-element__button-text__font-size: 20 !default;
+  $accordion-element__button-text__line-height: 28 !default;
+  $accordion-element__button-text__font-weight: $font-weight__bold !default;
+  $accordion-element__button-text__font-family: $font-family__base !default;
+
+  $accordion-element__button-icon__transition: transform .25s ease-in-out !default;
+  $accordion-element__button-icon__width: 20px !default;
+  $accordion-element__button-icon__height: 20px !default;
+  $accordion-element__button-icon__svg__width: 100% !default;
+  $accordion-element__button-icon__svg__height: 100% !default;
+
+  $accordion-element__content__display: none !default;
+  $accordion-element__content__padding: 15px 0 !default;
+
+  $accordion-element__li__open__button-icon__transform: rotate(180deg) !default;
+  $accordion-element__li__open__content__display: block !default;
+
+
+  //  Styles
+  //  ---------------------------------------------
+
+  @include media('mobile') {
+
+    .#{$accordion-element__container__class}{
+      width: $accordion-element__container__width;
+      ul.#{$accordion-element__ul__class}{
+        list-style: $accordion-element__ul__list-style;
+        padding: $accordion-element__ul__padding;
+        margin: $accordion-element__ul__margin;
+        li.#{$accordion-element__li__class}{
+          margin: $accordion-element__li__margin;
+          &:last-child{ margin: $accordion-element__li__last-child__margin; }
+          .accordion-button{
+            background: $accordion-element__button__background; 
+            cursor: $accordion-element__button__cursor;
+            width: $accordion-element__button__width;
+            padding: $accordion-element__button__padding;
+            display: $accordion-element__button__display;
+            flex-direction: $accordion-element__button__flex-direction;
+            align-items: $accordion-element__button__align-items;
+            justify-content: $accordion-element__button__justify-content;
+            border-color: $accordion-element__button__border-color;
+            border-style: $accordion-element__button__border-style;
+            border-width: $accordion-element__button__border-width;
+            &-text{
+              @include typo(
+                $accordion-element__button-text__font-size,
+                $accordion-element__button-text__line-height
+              );
+              font-weight: $accordion-element__button-text__font-weight;
+              font-family: $accordion-element__button-text__font-family;
+            }
+            &-icon{
+              transition: $accordion-element__button-icon__transition;
+              width: $accordion-element__button-icon__width;
+              height: $accordion-element__button-icon__height;
+              svg{
+                width: $accordion-element__button-icon__svg__width;
+                height: $accordion-element__button-icon__svg__height;
+              }
+            }
+          }
+          .accordion-content{
+            display: $accordion-element__content__display;
+            padding: $accordion-element__content__padding;
+          }
+          &.#{$accordion-element__active__class}{
+            .accordion-button{
+              &-icon{ transform: $accordion-element__li__open__button-icon__transform; }
+            }
+            .accordion-content{ 
+              display: $accordion-element__li__open__content__display; 
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  // max-767
+  @include media('tablet-down') {}
+
+  // min-768
+  @include media('tablet') {}
+
+}

@@ -11,7 +11,12 @@
     "header": {
       "headline-1": "Hi, I'm Maximilian.",
       "headline-2": "I work as a Front-End Developer & Digital Designer.",
-      "available": "Available for freelance work."
+      "available": "Available for freelance work"
+    },
+    "interview-teaser": {
+      "headline": "Interview",
+      "text": "My name is Maximilian. I work as a front-end developer and web designer at SNK in Munich.",
+      "link": "Read more"
     }
   }
 }

@@ -1,0 +1,418 @@
+//
+//  Element: "Stage"
+//  ---------------------------------------------
+
+//  Background Image Layout Mixin
+//  ---------------------------------------------
+
+@mixin stage-element-background-image-layout( 
+  $stage-mixin__class, 
+  $stage-mixin__media__overlay,
+  $stage-mixin__height,
+  $stage-mixin__display,
+  $stage-mixin__flex-direction,
+  $stage-mixin__content-size__flex,
+  $stage-mixin__content-size__height,
+  $stage-mixin__content-size__display,
+  $stage-mixin__content-size__flex-direction,
+  $stage-mixin__content-block__position,
+  $stage-mixin__content-block__z-index,
+  $stage-mixin__content-block__height,
+  $stage-mixin__content-block__font-color,
+  $stage-mixin__media-block__position,
+  $stage-mixin__media-block__left,
+  $stage-mixin__media-block__top,
+  $stage-mixin__media-block__width,
+  $stage-mixin__media-block__height,
+  $stage-mixin__media-block__flex,
+  $stage-mixin__media-block__display,
+  $stage-mixin__media-block__flex-direction,
+  $stage-mixin__media-block__picture-figure__flex,
+  $stage-mixin__media-block__picture-figure__height,
+  $stage-mixin__media-block__image__width,
+  $stage-mixin__media-block__image__height,
+  $stage-mixin__media-block__image__object-fit,
+  $stage-mixin__media-block__overlay__content,
+  $stage-mixin__media-block__overlay__position,
+  $stage-mixin__media-block__overlay__left,
+  $stage-mixin__media-block__overlay__top,
+  $stage-mixin__media-block__overlay__width,
+  $stage-mixin__media-block__overlay__height,
+  $stage-mixin__media-block__overlay__background-color,
+  $stage-mixin__media-block__overlay__z-index,
+)
+{
+  &.#{$stage-mixin__class} {
+    height: $stage-mixin__height;
+    display: $stage-mixin__display;
+    flex-direction: $stage-mixin__flex-direction;
+
+    .stage-content-size{
+      flex: $stage-mixin__content-size__flex;
+      height: $stage-mixin__content-size__height;
+      display: $stage-mixin__content-size__display;
+      flex-direction: $stage-mixin__content-size__flex-direction;
+    }
+
+    .stage-content-block{
+      position: $stage-mixin__content-block__position;
+      z-index: $stage-mixin__content-block__z-index;
+      height: $stage-mixin__content-block__height;
+      --font-color__base: #{$stage-mixin__content-block__font-color};
+    }
+
+    .stage-media-block{
+      position: $stage-mixin__media-block__position;
+      left: $stage-mixin__media-block__left;
+      top: $stage-mixin__media-block__top;
+      width: $stage-mixin__media-block__width;
+      height: $stage-mixin__media-block__height;
+      flex: $stage-mixin__media-block__flex;
+      display: $stage-mixin__media-block__display;
+      flex-direction: $stage-mixin__media-block__flex-direction;
+      .image, picture, figure{
+        flex: $stage-mixin__media-block__picture-figure__flex;
+        height: $stage-mixin__media-block__picture-figure__height;
+      }
+      img{
+        width: $stage-mixin__media-block__image__width;
+        height: $stage-mixin__media-block__image__height;
+        object-fit: $stage-mixin__media-block__image__object-fit;
+      }
+
+      @if ($stage-mixin__media__overlay == true) {
+        &::after{
+          content: $stage-mixin__media-block__overlay__content;
+          position: $stage-mixin__media-block__overlay__position;
+          left: $stage-mixin__media-block__overlay__left;
+          top: $stage-mixin__media-block__overlay__top;
+          width: $stage-mixin__media-block__overlay__width;
+          height: $stage-mixin__media-block__overlay__height;
+          background-color: $stage-mixin__media-block__overlay__background-color;
+          z-index: $stage-mixin__media-block__overlay__z-index;
+        }
+      }
+    }
+  }
+}
+
+@if (map-get(map-get($appConfiguration, elements), 'stage-element') == true) {
+
+  //  Variables
+  //  ---------------------------------------------
+
+  $stage-element__container__width: 100% !default;
+
+  $stage-element__background-image-layout__class: 'is-background-image' !default;
+
+  // set both below to false if you don't want to use the background image layout at all
+
+  // set to true if you want to use the background image layout on desktop
+  $stage-element__background-image-layout__mobile-view: false !default;
+  // set to true if you want to use the background image layout on mobile
+  $stage-element__background-image-layout__desktop-view: false !default;
+  
+  // set to true if you want to use an overlay on the background image
+  $stage-element__background-image-layout__media__overlay: false !default;
+
+  $stage-element__content-size__display: flex !default;
+
+  $stage-element__content-block__width: 100% !default;
+
+  $stage-element__media-block__display: flex !default;
+  $stage-element__media-block__flex-direction: column !default;
+
+  $stage-element__media-block__picture-figure__display: flex !default;
+  $stage-element__media-block__picture-figure__flex-direction: column !default;
+  $stage-element__media-block__picture-figure__height: 100% !default;
+  
+  $stage-element__media-block__image__height: 100% !default;
+  $stage-element__media-block__image__object-fit: cover !default;
+
+  // tablet-down
+  $stage-element__content-size__flex-direction__tablet-down: column !default;
+  $stage-element__content-block__order__tablet-down: 2 !default;
+  $stage-element__content-block__margin__tablet-down: 20px 0 0 0 !default;
+  $stage-element__media-block__order__tablet-down: 1 !default;
+  $stage-element__media-block__height__tablet-down: 350px !default;
+
+  $stage-element__background-image-layout__min-height__tablet-down: 600px !default;
+  $stage-element__background-image-layout__content-size__justify-content__tablet-down: center !default;
+  $stage-element__background-image-layout__content-size__align-items__tablet-down: center !default;
+  $stage-element__background-image-layout__content-block__height__tablet-down: 100% !default;
+  $stage-element__background-image-layout__content-block__font-color__tablet-down: base(2) !default;
+
+  // tablet
+  $stage-element__content-size__flex-direction__tablet: column !default; // change to row for 50/50 layout (and change the max-width variables below to your needs)
+  $stage-element__content-size__align-items__tablet: center !default;
+  $stage-element__content-size__justify-content__tablet: center !default;
+  $stage-element__content-size__gap__tablet: 60px !default;
+  $stage-element__content-size__max-width__tablet: calc(get($content-sizes, 'content-size-xxl') + ($content-size__gap__tablet * 2)) !default;
+  $stage-element__content-size__padding__tablet: 0 $content-size__gap__tablet !default;
+  $stage-element__content-size__position__tablet: relative !default;
+
+  $stage-element__content-block__width__tablet: 100% !default;
+  $stage-element__content-block__margin__tablet: 0 auto !default;
+  $stage-element__content-block__padding__tablet: 0 $content-size__gap__tablet !default;
+  $stage-element__content-block__max-width__tablet: calc(get($content-sizes, 'content-size-sl') + ($content-size__gap__tablet * 2)) !default;
+
+  $stage-element__content-block__headline-element-container__width__tablet: 100% !default;
+  $stage-element__content-block__headline-element-container__max-width__tablet: 850px !default;
+
+  $stage-element__media-block__width__tablet: 100% !default;
+  $stage-element__media-block__height__tablet: 800px !default;
+
+  $stage-element__background-image-layout__min-height__tablet: 900px !default;
+  $stage-element__background-image-layout__content-size__justify-content__tablet: center !default;
+  $stage-element__background-image-layout__content-size__align-items__tablet: center !default;
+  $stage-element__background-image-layout__content-block__font-color__tablet: base(2) !default;
+
+  // background image layout variables
+
+  $stage-element__background-image-layout__height: auto !default;
+  $stage-element__background-image-layout__display: flex !default;
+  $stage-element__background-image-layout__flex-direction: column !default;
+
+  $stage-element__background-image-layout__content-size__flex: 1 !default;
+  $stage-element__background-image-layout__content-size__height: 100% !default;
+  $stage-element__background-image-layout__content-size__display: flex !default;
+  $stage-element__background-image-layout__content-size__flex-direction: column !default;
+  
+  $stage-element__background-image-layout__content-block__position: relative !default;
+  $stage-element__background-image-layout__content-block__z-index: 2 !default;
+  $stage-element__background-image-layout__content-block__height: 100% !default;
+  $stage-element__background-image-layout__content-block__font-color: base(2) !default;
+
+  $stage-element__background-image-layout__media-block__position: absolute !default;
+  $stage-element__background-image-layout__media-block__left: 0 !default;
+  $stage-element__background-image-layout__media-block__top: 0 !default;
+  $stage-element__background-image-layout__media-block__width: 100% !default;
+  $stage-element__background-image-layout__media-block__height: 100% !default;
+  $stage-element__background-image-layout__media-block__flex: 1 !default;
+  $stage-element__background-image-layout__media-block__display: flex !default;
+  $stage-element__background-image-layout__media-block__flex-direction: column !default;
+
+  $stage-element__background-image-layout__media-block__picture-figure__flex: 1 !default;
+  $stage-element__background-image-layout__media-block__picture-figure__height: 100% !default;
+
+  $stage-element__background-image-layout__media-block__image__width: 100% !default;
+  $stage-element__background-image-layout__media-block__image__height: 100% !default;
+  $stage-element__background-image-layout__media-block__image__object-fit: cover !default;
+
+  $stage-element__background-image-layout__media-block__overlay__content: '' !default;
+  $stage-element__background-image-layout__media-block__overlay__position: absolute !default;
+  $stage-element__background-image-layout__media-block__overlay__left: 0 !default;
+  $stage-element__background-image-layout__media-block__overlay__top: 0 !default;
+  $stage-element__background-image-layout__media-block__overlay__width: 100% !default;
+  $stage-element__background-image-layout__media-block__overlay__height: 100% !default;
+  $stage-element__background-image-layout__media-block__overlay__background-color: rgba(0,0,0,0.5) !default;
+  $stage-element__background-image-layout__media-block__overlay__z-index: 1 !default;
+
+
+  //  Styles
+  //  ---------------------------------------------
+
+  @include media('mobile') {
+
+    .stage-element-container{
+      width: $stage-element__container__width;
+      
+      .stage-content-size{
+        display: $stage-element__content-size__display;
+      }
+
+      .stage-content-block{
+        width: $stage-element__content-block__width;
+      }
+
+      .stage-media-block{
+        display: $stage-element__media-block__display;
+        flex-direction: $stage-element__media-block__flex-direction;
+        .image, picture, figure{
+          display: $stage-element__media-block__picture-figure__display;
+          flex-direction: $stage-element__media-block__picture-figure__flex-direction;
+          height: $stage-element__media-block__picture-figure__height;
+          img{
+            height: $stage-element__media-block__image__height;
+            object-fit: $stage-element__media-block__image__object-fit;
+          }
+        }
+      }
+
+      //  Background Image Layout
+      //  ---------------------------------------------
+
+      @if ($stage-element__background-image-layout__mobile-view == true and $stage-element__background-image-layout__desktop-view == true) {
+        @include stage-element-background-image-layout(
+          $stage-element__background-image-layout__class, 
+          $stage-element__background-image-layout__media__overlay,
+          $stage-element__background-image-layout__height,
+          $stage-element__background-image-layout__display,
+          $stage-element__background-image-layout__flex-direction,
+          $stage-element__background-image-layout__content-size__flex,
+          $stage-element__background-image-layout__content-size__height,
+          $stage-element__background-image-layout__content-size__display,
+          $stage-element__background-image-layout__content-size__flex-direction,
+          $stage-element__background-image-layout__content-block__position,
+          $stage-element__background-image-layout__content-block__z-index,
+          $stage-element__background-image-layout__content-block__height,
+          $stage-element__background-image-layout__content-block__font-color,
+          $stage-element__background-image-layout__media-block__position,
+          $stage-element__background-image-layout__media-block__left,
+          $stage-element__background-image-layout__media-block__top,
+          $stage-element__background-image-layout__media-block__width,
+          $stage-element__background-image-layout__media-block__height,
+          $stage-element__background-image-layout__media-block__flex,
+          $stage-element__background-image-layout__media-block__display,
+          $stage-element__background-image-layout__media-block__flex-direction,
+          $stage-element__background-image-layout__media-block__picture-figure__flex,
+          $stage-element__background-image-layout__media-block__picture-figure__height,
+          $stage-element__background-image-layout__media-block__image__width,
+          $stage-element__background-image-layout__media-block__image__height,
+          $stage-element__background-image-layout__media-block__image__object-fit,
+          $stage-element__background-image-layout__media-block__overlay__content,
+          $stage-element__background-image-layout__media-block__overlay__position,
+          $stage-element__background-image-layout__media-block__overlay__left,
+          $stage-element__background-image-layout__media-block__overlay__top,
+          $stage-element__background-image-layout__media-block__overlay__width,
+          $stage-element__background-image-layout__media-block__overlay__height,
+          $stage-element__background-image-layout__media-block__overlay__background-color,
+          $stage-element__background-image-layout__media-block__overlay__z-index,
+        );
+      }
+    }
+  }
+
+  // max-767
+  @include media('tablet-down') {
+
+    .stage-element-container{
+      .stage-content-size{
+        flex-direction: $stage-element__content-size__flex-direction__tablet-down;
+      }
+
+      .stage-content-block{
+        order: $stage-element__content-block__order__tablet-down;
+        margin: $stage-element__content-block__margin__tablet-down;
+      }
+
+      .stage-media-block{
+        height: $stage-element__media-block__height__tablet-down;
+        order: $stage-element__media-block__order__tablet-down;
+      }
+
+      //  Background Image Layout
+      //  ---------------------------------------------
+
+      @if ($stage-element__background-image-layout__mobile-view == true) {
+        &.#{$stage-element__background-image-layout__class} {
+          min-height: $stage-element__background-image-layout__min-height__tablet-down;
+  
+          .stage-content-size{
+            justify-content: $stage-element__background-image-layout__content-size__justify-content__tablet-down;
+            align-items: $stage-element__background-image-layout__content-size__align-items__tablet-down;
+          }
+  
+          .stage-content-block{
+            height: $stage-element__background-image-layout__content-block__height__tablet-down;
+            --font-color__base: #{$stage-element__background-image-layout__content-block__font-color__tablet-down};
+          }
+        }
+      }
+    }
+
+  }
+
+  // min-768
+  @include media('tablet') {
+
+    .stage-element-container{
+      .stage-content-size{
+        flex-direction: $stage-element__content-size__flex-direction__tablet;
+        align-items: $stage-element__content-size__align-items__tablet;
+        justify-content: $stage-element__content-size__justify-content__tablet;
+        gap: $stage-element__content-size__gap__tablet;
+        max-width: $stage-element__content-size__max-width__tablet;
+        padding: $stage-element__content-size__padding__tablet;
+        position: $stage-element__content-size__position__tablet;
+      }
+
+      .stage-content-block{
+        width: $stage-element__content-block__width__tablet;
+        margin: $stage-element__content-block__margin__tablet;
+        padding: $stage-element__content-block__padding__tablet;
+        max-width: $stage-element__content-block__max-width__tablet;
+
+        .headline-element-container{
+          width: $stage-element__content-block__headline-element-container__width__tablet;
+          max-width: $stage-element__content-block__headline-element-container__max-width__tablet;
+        }
+      }
+
+      .stage-media-block{
+        height: $stage-element__media-block__height__tablet;
+        width: $stage-element__media-block__width__tablet;
+      }
+
+      //  Background Image Layout
+      //  ---------------------------------------------
+
+      @if ($stage-element__background-image-layout__desktop-view == true and $stage-element__background-image-layout__mobile-view == false) {
+        @include stage-element-background-image-layout(
+          $stage-element__background-image-layout__class, 
+          $stage-element__background-image-layout__media__overlay,
+          $stage-element__background-image-layout__height,
+          $stage-element__background-image-layout__display,
+          $stage-element__background-image-layout__flex-direction,
+          $stage-element__background-image-layout__content-size__flex,
+          $stage-element__background-image-layout__content-size__height,
+          $stage-element__background-image-layout__content-size__display,
+          $stage-element__background-image-layout__content-size__flex-direction,
+          $stage-element__background-image-layout__content-block__position,
+          $stage-element__background-image-layout__content-block__z-index,
+          $stage-element__background-image-layout__content-block__height,
+          $stage-element__background-image-layout__content-block__font-color,
+          $stage-element__background-image-layout__media-block__position,
+          $stage-element__background-image-layout__media-block__left,
+          $stage-element__background-image-layout__media-block__top,
+          $stage-element__background-image-layout__media-block__width,
+          $stage-element__background-image-layout__media-block__height,
+          $stage-element__background-image-layout__media-block__flex,
+          $stage-element__background-image-layout__media-block__display,
+          $stage-element__background-image-layout__media-block__flex-direction,
+          $stage-element__background-image-layout__media-block__picture-figure__flex,
+          $stage-element__background-image-layout__media-block__picture-figure__height,
+          $stage-element__background-image-layout__media-block__image__width,
+          $stage-element__background-image-layout__media-block__image__height,
+          $stage-element__background-image-layout__media-block__image__object-fit,
+          $stage-element__background-image-layout__media-block__overlay__content,
+          $stage-element__background-image-layout__media-block__overlay__position,
+          $stage-element__background-image-layout__media-block__overlay__left,
+          $stage-element__background-image-layout__media-block__overlay__top,
+          $stage-element__background-image-layout__media-block__overlay__width,
+          $stage-element__background-image-layout__media-block__overlay__height,
+          $stage-element__background-image-layout__media-block__overlay__background-color,
+          $stage-element__background-image-layout__media-block__overlay__z-index,
+        );
+      }
+
+      @if ($stage-element__background-image-layout__desktop-view == true) {
+        &.#{$stage-element__background-image-layout__class} {
+          min-height: $stage-element__background-image-layout__min-height__tablet;
+
+          .stage-content-size{
+            justify-content: $stage-element__background-image-layout__content-size__justify-content__tablet;
+            align-items: $stage-element__background-image-layout__content-size__align-items__tablet;
+          }
+
+          .stage-content-block{
+            --font-color__base: #{$stage-element__background-image-layout__content-block__font-color__tablet};
+          }
+        }
+      }
+
+    }
+  
+  }
+
+}

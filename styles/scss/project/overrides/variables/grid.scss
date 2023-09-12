@@ -1,0 +1,121 @@
+//
+//  Grid & Media Query Configuration
+//  ---------------------------------------------
+
+//
+//  All these following variables and maps can be 
+//  overriden to change your grid style 
+//  (depending if you have flex or css-grid)
+//
+//  ---------------------------------------------
+
+
+//
+//  General Grid & Media Query Configuration
+//  ---------------------------------------------
+
+//  Maps
+//  ---------------------------------------------
+
+//  Media Queries
+
+// $sizes: (
+//   mobile-down: 0,
+//   mobile: 0,
+//   smart-down: 419px,
+//   smart: 420px,
+//   tablet-down: 767px,
+//   tablet: 768px,
+//   tablet-wide-down: 1023px,
+//   tablet-wide: 1024px,
+//   desktop-down: 1219px,
+//   desktop: 1220px,
+//   desktop-m-down: 1439px,
+//   desktop-m: 1440px,
+//   desktop-wide-down: 1659px,
+//   desktop-wide: 1660px,
+// );
+
+//  Grid Classes
+
+// $grid-classes: (
+//   mobile: 'xs',
+//   smart: 's',
+//   tablet: 'm',
+//   tablet-wide: 'l',
+//   desktop: 'xl',
+//   desktop-m: 'xxl',
+//   desktop-wide: 'xxxl',
+// );
+
+
+//
+//  CSS Grid Configuration (Default)
+//  ---------------------------------------------
+
+//  Variables
+//  ---------------------------------------------
+
+
+// $css-grid__columns: 12;
+
+// $css-grid__gutter: 20px;
+// $css-grid__gap__row: $css-grid__gutter;
+// $css-grid__gap__col: $css-grid__gutter;
+
+// $css-grid__column-class__prefix: 'gd-';
+// $css-grid__row__class: 'grid-row';
+// $css-grid__col__class: 'grid-col';
+
+
+//  Maps
+//  ---------------------------------------------
+
+// $css-grid__row__properties: (
+//   display: grid,
+//   grid-template-columns: repeat($css-grid__columns, 1fr),
+//   grid-row-gap: $css-grid__gap__row,
+//   grid-column-gap: $css-grid__gap__col,
+// );
+
+// $css-grid__col__properties: (
+//   display: flex,
+//   flex-direction: column,
+// );
+
+
+//
+//  Flex Grid Configuration
+//  ---------------------------------------------
+
+//  Variables
+//  ---------------------------------------------
+
+// $flex-grid__columns: 12;
+// $flex-grid__column-class__prefix: 'fx-';
+
+// $flex-grid__row__class: 'flex-row';
+// $flex-grid__col__class: 'flex-col';
+
+// $flex-grid__col-display: flex;
+// $flex-grid__col-flex-wrap: wrap;
+
+// $flex-grid__gutter: 15px;
+// $flex-grid__gap__row: $flex-grid__gutter;
+// $flex-grid__gap__col: $flex-grid__gutter;
+
+
+// $flex-grid__column-alignment: true;
+// $flex-grid__col-start: flex-start;
+// $flex-grid__col-end: flex-end;
+// $flex-grid__col-center: center;
+// $flex-grid__col-align-center: center;
+// $flex-grid__col-align-start: flex-start;
+// $flex-grid__col-align-end: flex-end;
+
+
+//  Maps
+//  ---------------------------------------------
+
+// $flex-grid__column__properties: ();
+

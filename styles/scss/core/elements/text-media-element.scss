@@ -1,0 +1,83 @@
+//
+//  Element: "Text-Media"
+//  ---------------------------------------------
+
+@if (map-get(map-get($appConfiguration, elements), 'text-media-element') == true) {
+
+  //  Variables
+  //  ---------------------------------------------
+
+  $text-media-element__container__width: 100% !default;
+
+  $text-media-element__container__media-block__margin__tablet-down: 0 0 25px !default;
+  $text-media-element__container__media-block__order__tablet-down: 1 !default;
+  $text-media-element__container__content-block__order__tablet-down: 2 !default;
+
+  $text-media-element__container__media__figure__display: flex !default;
+  $text-media-element__container__media__figure__flex-direction: column !default;
+  $text-media-element__container__media__img__overflow: hidden !default;
+  $text-media-element__container__media__img__border-radius: 8px !default;
+
+  $text-media-element__container__content-block__justify-content__tablet: center !default;
+  $text-media-element__container__media-block__justify-content__tablet: center !default;
+
+  $text-media-element__container__grid-row__column-gap__tablet: calc(100% / 12 - 2%) !default;
+
+
+  //  Styles
+  //  ---------------------------------------------
+
+  @include media('mobile') {
+
+    .text-media-element-container{
+      width: $text-media-element__container__width;
+      .media-block{
+        figure, picture, .video-embed {
+          display: $text-media-element__container__media__figure__display;
+          flex-direction: $text-media-element__container__media__figure__flex-direction;
+        }
+
+        img, video{
+          overflow: $text-media-element__container__media__img__overflow;
+          border-radius: $text-media-element__container__media__img__border-radius;
+        }
+      }
+    }
+
+  }
+
+  // max-767
+  @include media('tablet-down') {
+
+    .text-media-element-container{
+      .media-block{
+        margin: $text-media-element__container__media-block__margin__tablet-down;
+        order: $text-media-element__container__media-block__order__tablet-down;
+      }
+      .content-block{
+        order: $text-media-element__container__content-block__order__tablet-down;
+      }
+    }
+
+  }
+
+  // min-768
+  @include media('tablet') {
+
+    .text-media-element-container{
+
+      // Add a large gap between the columns
+      .grid-row{
+        column-gap: $text-media-element__container__grid-row__column-gap__tablet;
+      }
+      .media-block{
+        justify-content: $text-media-element__container__media-block__justify-content__tablet;
+      }
+      .content-block{
+        justify-content: $text-media-element__container__content-block__justify-content__tablet;
+      }
+    }
+
+  }
+
+}

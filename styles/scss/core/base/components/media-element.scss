@@ -1,0 +1,94 @@
+//
+//  Media Elements
+//  ---------------------------------------------
+
+
+//  Variables
+//  ---------------------------------------------
+
+$component__media__default__image: true !default;
+$component__media__default__video: true !default;
+$component__media__default__iframe: true !default;
+$component__media__default__audio: true !default;
+$component__media__default__caption: true !default;
+
+$component__media__default__iframe__ratio: 56.25% !default;
+
+$component__media__figcaption__margin: 15px 0 0 !default;
+$component__media__figcaption__width: 100% !default;
+$component__media__figcaption__max-width: 750px !default;
+$component__media__figcaption__padding: 0 !default;
+$component__media__figcaption__font-size: $font-size__s !default;
+$component__media__figcaption__line-height: $line-height__s !default;
+$component__media__figcaption__font-weight: false !default;
+$component__media__figcaption__font-family: false !default;
+$component__media__figcaption__text-color: rgba(var(--base__color-1__rgb), 60%) !default;
+
+//  Mixins & Functions
+//  ---------------------------------------------
+
+@mixin create-media-element(
+  $image: $component__media__default__image,
+  $video: $component__media__default__video,
+  $iframe: $component__media__default__iframe,
+  $audio: $component__media__default__audio,
+  $caption: $component__media__default__caption,
+) {
+  .media{
+    width: 100%;
+    
+    @if ($image == true) {
+      img{
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    @if ($video == true) {
+      video{
+        width: 100%;
+      }
+    }
+
+    @if ($iframe == true) {
+      &.iframe{
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        padding-top: $component__media__default__iframe__ratio;
+        height: 0;
+        position: relative;
+        z-index: 1;
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+        }
+      }
+    }
+
+    @if ($audio == true) {
+      audio{
+        width: 100%;
+      }
+    }
+
+    figcaption, .media-caption {
+      margin: $component__media__figcaption__margin;
+      width: $component__media__figcaption__width;
+      padding: $component__media__figcaption__padding;
+      max-width: $component__media__figcaption__max-width;
+      @include typo(
+        $fontSizeValue: $component__media__figcaption__font-size,
+        $lineHeightValue: $component__media__figcaption__line-height,
+        $fontWeightValue: $component__media__figcaption__font-weight,
+        $fontFamilyValue: $component__media__figcaption__font-family,
+        $textColor: $component__media__figcaption__text-color,
+      );
+    }
+
+  }
+}

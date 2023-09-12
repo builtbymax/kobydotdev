@@ -1,0 +1,55 @@
+//
+//  Counter Element Variables
+//  ---------------------------------------------
+
+// $counter-element__container__class: 'counter-element-container';
+// $counter-element__item__class: 'counter-item';
+// $counter-element__value__class: 'value';
+// $counter-element__value__prefix__class: 'prefix';
+// $counter-element__value__num__class: 'num';
+// $counter-element__value__suffix__class: 'suffix';
+
+// $counter-element__container__width: 100%;
+
+// $counter-element__item__display: flex;
+// $counter-element__item__flex-direction: column;
+// $counter-element__item__align-items: flex-start;
+
+// $counter-element__value__display: flex;
+// $counter-element__value__flex-flow: row wrap;
+// $counter-element__value__column-gap: 10px;
+// $counter-element__value__row-gap: 2px;
+// $counter-element__value__align-items: center;
+// $counter-element__value__justify-content: flex-start;
+// $counter-element__value__margin: 0 0 30px 0;
+
+// $counter-element__value__num__font-size: 40;
+// $counter-element__value__num__line-height: 48;
+// $counter-element__value__num__font-weight: $font-weight__bold;
+// $counter-element__value__num__font-family: $font-family__base;
+// $counter-element__value__num__color: var(--font-color__base);
+
+// $counter-element__value__prefix__font-size: $counter-element__value__num__font-size;
+// $counter-element__value__prefix__line-height: $counter-element__value__num__line-height;
+// $counter-element__value__prefix__font-weight: $counter-element__value__num__font-weight;
+// $counter-element__value__prefix__font-family: $counter-element__value__num__font-family;
+// $counter-element__value__prefix__color: $counter-element__value__num__color;
+
+// $counter-element__value__suffix__font-size: $counter-element__value__num__font-size;
+// $counter-element__value__suffix__line-height: $counter-element__value__num__line-height;
+// $counter-element__value__suffix__font-weight: $counter-element__value__num__font-weight;
+// $counter-element__value__suffix__font-family: $counter-element__value__num__font-family;
+// $counter-element__value__suffix__color: $counter-element__value__num__color;
+
+// $counter-element__item__headline__font-size: 24;
+// $counter-element__item__headline__line-height: 30;
+// $counter-element__item__headline__font-weight: $font-weight__bold;
+// $counter-element__item__headline__font-family: $font-family__variant-1;
+// $counter-element__item__headline__color: var(--font-color__base);
+// $counter-element__item__headline__margin: 0 0 15px 0;
+
+// $counter-element__item__paragraph__font-size: 18;
+// $counter-element__item__paragraph__line-height: 24;
+// $counter-element__item__paragraph__font-weight: $font-weight__regular;
+// $counter-element__item__paragraph__font-family: $font-family__base;
+// $counter-element__item__paragraph__color: rgba(#{var(--base__color-1__rgb)}, .6);

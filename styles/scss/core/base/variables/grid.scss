@@ -1,0 +1,32 @@
+//
+//  Grid
+//  ---------------------------------------------
+
+// Responsive breakpoints
+$sizes: (
+  mobile-down: 0,
+  mobile: 0,
+  smart-down: 419px,
+  smart: 420px,
+  tablet-down: 767px,
+  tablet: 768px,
+  tablet-wide-down: 1023px,
+  tablet-wide: 1024px,
+  desktop-down: 1219px,
+  desktop: 1220px,
+  desktop-m-down: 1439px,
+  desktop-m: 1440px,
+  desktop-wide-down: 1659px,
+  desktop-wide: 1660px,
+) !default;
+
+// Grid classes
+$grid-classes: (
+  mobile: 'xs',
+  smart: 's',
+  tablet: 'm',
+  tablet-wide: 'l',
+  desktop: 'xl',
+  desktop-m: 'xxl',
+  desktop-wide: 'xxxl',
+) !default;

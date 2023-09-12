@@ -1,0 +1,93 @@
+//
+//  CTA
+// ---------------------------------------------
+
+$cta__general__default__icon-properties: map-deep-merge(
+  (
+    width: 20px,
+    height: 20px,
+    margin: 15px,
+    position: 'right',
+    alignment: 'center',
+    transition: all 0.3s ease-in-out,
+  ), 
+  $cta__general__default__icon-properties,
+);
+
+$cta__default__properties: map-deep-merge(
+  (
+    general: (
+      border-radius: $cta__general__border-radius,
+      padding: $cta__general__padding,
+      text-transform: $cta__general__text-transform,
+      text-decoration: $cta__general__text-decoration,
+      transition: $cta__general__transition,
+      width: $cta__general__width,
+      height: $cta__general__height,
+      display: $cta__general__display,
+      flex-direction: $cta__general__flex-direction,
+      justify-content: $cta__general__justify-content,
+      align-items: $cta__general__align-items,
+      font-size: $cta__general__font-size,
+      line-height: $cta__general__line-height,
+      font-weight: $cta__general__font-weight,
+      font-family: $cta__general__font-family,
+      background-color: var(--cta__background__color),
+      color: var(--cta__text__color),
+      border: var(--cta__border),
+    ),
+    layouts: (
+      0: (
+        --cta__background__color: #{$cta__layout-0__background},
+        --cta__text__color: #{$cta__layout-0__text},
+        --cta__icon__color: #{$cta__layout-0__icon},
+        --cta__border: #{$cta__layout-0__border},
+      ),
+      1: (
+        --cta__background__color: #{$cta__layout-1__background},
+        --cta__text__color: #{$cta__layout-1__text},
+        --cta__icon__color: #{$cta__layout-1__icon},
+        --cta__border: #{$cta__layout-1__border},
+      ),
+      2: (
+        --cta__background__color: #{$cta__layout-2__background},
+        --cta__text__color: #{$cta__layout-2__text},
+        --cta__icon__color: #{$cta__layout-2__icon},
+        --cta__border: #{$cta__layout-2__border},
+      ),
+    ),
+    hover: (
+      general: (
+        background-color: var(--cta__background__color__hover),
+        color: var(--cta__text__color__hover),
+        border: var(--cta__border__hover),
+        --cta__icon__color: var(--cta__icon__color__hover),
+      ),
+      layouts: (
+        0: (
+          --cta__background__color__hover: #{$cta__layout-0__background__hover},
+          --cta__text__color__hover: #{$cta__layout-0__text__hover},
+          --cta__icon__color__hover: #{$cta__layout-0__icon__hover},
+          --cta__icon__color: var(--cta__icon__color__hover),
+          --cta__border__hover: #{$cta__layout-0__border__hover},
+        ),
+        1: (
+          --cta__background__color__hover: #{$cta__layout-1__background__hover},
+          --cta__text__color__hover: #{$cta__layout-1__text__hover},
+          --cta__icon__color__hover: #{$cta__layout-1__icon__hover},
+          --cta__icon__color: var(--cta__icon__color__hover),
+          --cta__border__hover: #{$cta__layout-1__border__hover},
+        ),
+        2: (
+          --cta__background__color__hover: #{$cta__layout-2__background__hover},
+          --cta__text__color__hover: #{$cta__layout-2__text__hover},
+          --cta__icon__color__hover: #{$cta__layout-2__icon__hover},
+          --cta__icon__color: var(--cta__icon__color__hover),
+          --cta__border__hover: #{$cta__layout-2__border__hover},
+        ),
+      )
+    ),
+    has-icon: true,
+  ), 
+  $cta__default__properties,
+);

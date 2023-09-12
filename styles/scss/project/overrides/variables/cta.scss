@@ -1,0 +1,191 @@
+//
+//  CTA
+//  ---------------------------------------------
+
+
+//  Variables
+//  ---------------------------------------------
+
+// $cta__general__default__basic__class: 'cta';
+// $cta__general__default__layout__class: 'layout';
+// $cta__general__default__icon__class: 'has-icon';
+
+// $cta__general__border-radius: 0;
+// $cta__general__padding: 14px 22px;
+// $cta__general__text-transform: none;
+// $cta__general__text-decoration: none;
+// $cta__general__transition: all .25s ease-in-out;
+// $cta__general__width: auto;
+// $cta__general__height: auto;
+// $cta__general__display: flex;
+// $cta__general__flex-direction: row;
+// $cta__general__justify-content: center;
+// $cta__general__align-items: center;
+
+// $cta__general__font-size: $font-size__s;
+// $cta__general__line-height: $line-height__s;
+// $cta__general__font-weight: $font-weight__semi-bold;
+// $cta__general__font-family: $font-family__base;
+
+// $cta__layout-0__background: base(1);
+// $cta__layout-0__text: base(2);
+// $cta__layout-0__icon: base(2);
+// $cta__layout-0__border: 0 none;
+// $cta__layout-0__background__hover: project(1);
+// $cta__layout-0__text__hover: base(2);
+// $cta__layout-0__icon__hover: base(2);
+// $cta__layout-0__border__hover: 0 none;
+
+// $cta__layout-1__background: transparent;
+// $cta__layout-1__text: base(1);
+// $cta__layout-1__icon: base(1);
+// $cta__layout-1__border: 1px solid base(1);
+// $cta__layout-1__background__hover: base(1);
+// $cta__layout-1__text__hover: base(2);
+// $cta__layout-1__icon__hover: base(2);
+// $cta__layout-1__border__hover: 1px solid base(1);
+
+// $cta__layout-2__background: transparent;
+// $cta__layout-2__text: base(1);
+// $cta__layout-2__icon: base(1);
+// $cta__layout-2__border: 0 none;
+// $cta__layout-2__background__hover: transparent;
+// $cta__layout-2__text__hover: base(3);
+// $cta__layout-2__icon__hover: base(3);
+// $cta__layout-2__border__hover: 0 none;
+
+
+//  Maps
+//  ---------------------------------------------
+
+
+// $cta__general__default__icon-properties: (
+//   width: 20px,
+//   height: 20px,
+//   margin: 15px,
+//   position: 'left',
+//   alignment: 'center',
+//   transition: all 0.3s ease-in-out,
+// );
+
+// $cta__default__properties: (
+//   general: (
+//     border-radius: $cta__general__border-radius,
+//     padding: $cta__general__padding,
+//     text-transform: $cta__general__text-transform,
+//     text-decoration: $cta__general__text-decoration,
+//     transition: $cta__general__transition,
+//     width: $cta__general__width,
+//     height: $cta__general__height,
+//     display: $cta__general__display,
+//     flex-direction: $cta__general__flex-direction,
+//     justify-content: $cta__general__justify-content,
+//     align-items: $cta__general__align-items,
+//     font-size: $cta__general__font-size,
+//     line-height: $cta__general__line-height,
+//     font-weight: $cta__general__font-weight,
+//     font-family: $cta__general__font-family,
+//     background-color: var(--cta__background__color),
+//     color: var(--cta__text__color),
+//     border: var(--cta__border__color),
+//   ),
+//   layouts: (
+//     0: (
+//       --cta__background__color: #{$cta__layout-0__background},
+//       --cta__text__color: #{$cta__layout-0__text},
+//       --cta__icon__color: #{$cta__layout-0__icon},
+//       --cta__border__color: #{$cta__layout-0__border},
+//     ),
+//     1: (
+//       --cta__background__color: #{$cta__layout-1__background},
+//       --cta__text__color: #{$cta__layout-1__text},
+//       --cta__icon__color: #{$cta__layout-1__icon},
+//       --cta__border__color: #{$cta__layout-1__border},
+//     ),
+//     2: (
+//       --cta__background__color: #{$cta__layout-2__background},
+//       --cta__text__color: #{$cta__layout-2__text},
+//       --cta__icon__color: #{$cta__layout-2__icon},
+//       --cta__border__color: #{$cta__layout-2__border},
+//     ),
+//   ),
+//   hover: (
+//     general: (
+//       background-color: var(--cta__background__color),
+//       color: var(--cta__text__color),
+//       border: var(--cta__border__color),
+//     ),
+//     layouts: (
+//       0: (
+//         --cta__background__color: #{$cta__layout-0__background__hover},
+//         --cta__text__color: #{$cta__layout-0__text__hover},
+//         --cta__icon__color: #{$cta__layout-0__icon__hover},
+//         --cta__border__color: #{$cta__layout-0__border__hover},
+//       ),
+//       1: (
+//         --cta__background__color: #{$cta__layout-1__background__hover},
+//         --cta__text__color: #{$cta__layout-1__text__hover},
+//         --cta__icon__color: #{$cta__layout-1__icon__hover},
+//         --cta__border__color: #{$cta__layout-1__border__hover},
+//       ),
+//       2: (
+//         --cta__background__color: #{$cta__layout-2__background__hover},
+//         --cta__text__color: #{$cta__layout-2__text__hover},
+//         --cta__icon__color: #{$cta__layout-2__icon__hover},
+//         --cta__border__color: #{$cta__layout-2__border__hover},
+//       ),
+//     )
+//   ),
+//   has-icon: true,
+// );
+
+
+//  ---------------------------------------------
+//
+//
+//  🛑 EXAMPLES 🛑
+//
+//
+//  ---------------------------------------------
+
+// override the core variables
+
+// $cta__general__font-family: $font-family__base;
+// $cta__general__border-radius: 100px;
+// $cta__layout-0__background: blue;
+// $cta__layout-0__background__hover: pink;
+// $cta__layout-1__text: red;
+// $cta__layout-1__text__hover: green;
+
+// override the core maps
+
+// $cta__general__default__icon-properties: (
+//   width: 35px,
+//   position: 'left',
+//   alignment: 'center',
+// );
+
+// $cta__default__properties: (
+//   general: (
+//     transition: null, // disable transition from original map
+//     text-decoration: underline, // override text-decoration from original map
+//     text-transform: uppercase, // add text-transform to original map
+//   ),
+//   layouts: (
+//     0: (
+//       padding-left: 20px, // add padding-left to original map
+//     ),
+//     1: (
+//       padding-right: 25px, // add padding-right to original map
+//     ),
+//     2: (
+//       padding: 0, // override padding property from original map
+//     ),
+//   ),
+//   hover: (
+//     general: (
+//       border-style: dashed, // add border-style to original map
+//       border-color: red, // add border-color to original map
+//     ),
+//   ),
+// );

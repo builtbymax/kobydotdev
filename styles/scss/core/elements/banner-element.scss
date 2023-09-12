@@ -1,0 +1,151 @@
+//
+//  Element: "Banner"
+//  ---------------------------------------------
+
+@if (map-get(map-get($appConfiguration, elements), 'banner-element') == true) {
+
+  //  Variables
+  //  ---------------------------------------------
+
+  $banner-element__container__width: 100% !default;
+
+  $banner-element__copy-text__flex__tablet: 1 !default;
+  $banner-element__copy-text__display__tablet: flex !default;
+  $banner-element__copy-text__flex-direction__tablet: column !default;
+  $banner-element__copy-text__justify-content__tablet: center !default;
+  $banner-element__copy-text__align-items__tablet: flex-start !default;
+
+  $banner-element__media__flex__tablet: 1 !default;
+  $banner-element__media__padding__tablet: 0 0 0 15% !default;
+  $banner-element__media__display__tablet: flex !default;
+  $banner-element__media__flex-direction__tablet: column !default;
+  $banner-element__media__justify-content__tablet: center !default;
+  $banner-element__media__align-items__tablet: flex-start !default;
+
+
+  $banner-element__background-image-set__position: relative !default;
+  $banner-element__background-image-set__min-height: 560px !default;
+  $banner-element__background-image-set__display: flex !default;
+  $banner-element__background-image-set__flex-direction: column !default;
+
+  $banner-element__background-image-set__media__position: absolute !default;
+  $banner-element__background-image-set__media__z-index: 0 !default;
+  $banner-element__background-image-set__media__left: 0 !default;
+  $banner-element__background-image-set__media__top: 0 !default;
+  $banner-element__background-image-set__media__margin: 0 !default;
+  $banner-element__background-image-set__media__padding: 0 !default;
+  $banner-element__background-image-set__media__height: 100% !default;
+  $banner-element__background-image-set__media__width: 100% !default;
+
+  $banner-element__background-image-set__media__img__height: 100% !default;
+  $banner-element__background-image-set__media__img__width: 100% !default;
+  $banner-element__background-image-set__media__img__max-width: 100% !default;
+  $banner-element__background-image-set__media__img__object-fit: cover !default;
+  $banner-element__background-image-set__media__img__display: block !default;
+
+  $banner-element__background-image-set__content-container__position: relative !default;
+  $banner-element__background-image-set__content-container__z-index: 1 !default;
+  $banner-element__background-image-set__content-container__flex: 1 !default;
+  $banner-element__background-image-set__content-container__display: flex !default;
+  $banner-element__background-image-set__content-container__flex-direction: column !default;
+  $banner-element__background-image-set__content-container__justify-content: center !default;
+  $banner-element__background-image-set__content-container__align-items: flex-start !default;
+
+  $banner-element__background-image-set__overlay: false !default;
+  $banner-element__background-image-set__overlay__content: '' !default;
+  $banner-element__background-image-set__overlay__position: absolute !default;
+  $banner-element__background-image-set__overlay__left: 0 !default;
+  $banner-element__background-image-set__overlay__top: 0 !default;
+  $banner-element__background-image-set__overlay__width: 100% !default;
+  $banner-element__background-image-set__overlay__height: 100% !default;
+  $banner-element__background-image-set__overlay__background-color: rgba(0,0,0,0.25) !default;
+  $banner-element__background-image-set__overlay__z-index: 1 !default;
+
+  //  Styles
+  //  ---------------------------------------------
+
+  @include media('mobile') {
+
+    .banner-element-container{
+      width: $banner-element__container__width;
+
+      &.background-image-set{
+        position: $banner-element__background-image-set__position;
+        min-height: $banner-element__background-image-set__min-height;
+        display: $banner-element__background-image-set__display;
+        flex-direction: $banner-element__background-image-set__flex-direction;
+        .media{
+          width: $banner-element__background-image-set__media__width;
+          height: $banner-element__background-image-set__media__height;
+          position: $banner-element__background-image-set__media__position;
+          z-index: $banner-element__background-image-set__media__z-index;
+          left: $banner-element__background-image-set__media__left;
+          top: $banner-element__background-image-set__media__top;
+          margin: $banner-element__background-image-set__media__margin;
+          padding: $banner-element__background-image-set__media__padding;
+          img, figure, picture, video{
+            height: $banner-element__background-image-set__media__img__height;
+            width: $banner-element__background-image-set__media__img__width;
+            max-width: $banner-element__background-image-set__media__img__max-width;
+            object-fit: $banner-element__background-image-set__media__img__object-fit;
+            display: $banner-element__background-image-set__media__img__display;
+          }
+
+          @if ($banner-element__background-image-set__overlay) {
+            &::after{
+              content: $banner-element__background-image-set__overlay__content;
+              position: $banner-element__background-image-set__overlay__position;
+              left: $banner-element__background-image-set__overlay__left;
+              top: $banner-element__background-image-set__overlay__top;
+              width: $banner-element__background-image-set__overlay__width;
+              height: $banner-element__background-image-set__overlay__height;
+              background-color: $banner-element__background-image-set__overlay__background-color;
+              z-index: $banner-element__background-image-set__overlay__z-index;
+            }
+          }
+        }
+        .content-container{
+          position: $banner-element__background-image-set__content-container__position;
+          z-index: $banner-element__background-image-set__content-container__z-index;
+          flex: $banner-element__background-image-set__content-container__flex;
+          display: $banner-element__background-image-set__content-container__display;
+          flex-direction: $banner-element__background-image-set__content-container__flex-direction;
+          justify-content: $banner-element__background-image-set__content-container__justify-content;
+          align-items: $banner-element__background-image-set__content-container__align-items;
+        }
+      }
+    }
+
+  }
+
+  // max-767
+  @include media('tablet-down') {}
+
+  // min-768
+  @include media('tablet') {
+
+    .banner-element-container{
+      .content-block{
+        .copy-text{
+          flex: $banner-element__copy-text__flex__tablet;
+          display: $banner-element__copy-text__display__tablet;
+          flex-direction: $banner-element__copy-text__flex-direction__tablet;
+          justify-content: $banner-element__copy-text__justify-content__tablet;
+          align-items: $banner-element__copy-text__align-items__tablet;
+        }
+      }
+      .media-block{
+        .media{
+          padding: $banner-element__media__padding__tablet;
+          flex: $banner-element__media__flex__tablet;
+          display: $banner-element__media__display__tablet;
+          flex-direction: $banner-element__media__flex-direction__tablet;
+          justify-content: $banner-element__media__justify-content__tablet;
+          align-items: $banner-element__media__align-items__tablet;
+        }
+      }
+    }
+
+  }
+
+}

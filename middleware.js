@@ -1,38 +1,39 @@
 import { NextResponse } from 'next/server';
-import { match } from '@formatjs/intl-localematcher'
-import Negotiator from 'negotiator'
+import { i18n } from './i18n-config';
+import { match as matchLocale } from '@formatjs/intl-localematcher';
+import Negotiator from 'negotiator';
 
-let headers = { 'accept-language': 'en;q=0.5,de;q=0.5' };
-let languages = new Negotiator({ headers }).languages();
-let locales = ['en', 'de'];
-let defaultLocale = 'en';
+function getLocale(request) {
+  const negotiatorHeaders = {};
+  const locales = i18n.locales;
 
-function getLocale(request) { 
-  // TODO: get the locale from the request
-  
-  return match(languages, locales, defaultLocale);
+  request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
+
+  let languages = new Negotiator({ headers: negotiatorHeaders }).languages(
+    locales
+  );
+
+  const locale = matchLocale(languages, locales, i18n.defaultLocale);
+  return locale;
 }
 
 export function middleware(request) {
-  const pathname = request.nextUrl.pathname
-  const pathnameIsMissingLocale = locales.every(
+  const pathname = request.nextUrl.pathname;
+  const pathnameIsMissingLocale = i18n.locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
-  )
+  );
 
   if (pathnameIsMissingLocale) {
-    const locale = getLocale(request)
-
+    const locale = getLocale(request);
     return NextResponse.redirect(
-      new URL(`/${locale}/${pathname}`, request.url)
-    )
+      new URL(
+        `/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`,
+        request.url
+      )
+    );
   }
 }
 
 export const config = {
-  matcher: [
-    // Skip all internal paths (_next)
-    '/((?!_next).*)',
-    // Optional: only run on root (/) URL
-    '/'
-  ],
-}
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|public|images|assets).*)'],
+};

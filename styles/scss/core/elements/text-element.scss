@@ -1,0 +1,38 @@
+//
+//  Element: "Text"
+//  ---------------------------------------------
+
+@if (map-get(map-get($appConfiguration, elements), 'text-element') == true) {
+
+  //  Variables
+  //  ---------------------------------------------
+
+  $text-element__container__width: 100% !default;
+
+  $text-element__copy-text__p__first-child__padding-top: 0 !default;
+  $text-element__copy-text__p__empty__display: none !default;
+
+
+  //  Styles
+  //  ---------------------------------------------
+
+  @include media('mobile') {
+
+    .text-element-container{
+      width: $text-element__container__width;
+
+      .copy-text{
+        p:first-child{ padding-top: $text-element__copy-text__p__first-child__padding-top; }
+        p:empty{ display: $text-element__copy-text__p__empty__display; }
+      }
+    }
+
+  }
+
+  // max-767
+  @include media('tablet-down') {}
+
+  // min-768
+  @include media('tablet') {}
+
+}

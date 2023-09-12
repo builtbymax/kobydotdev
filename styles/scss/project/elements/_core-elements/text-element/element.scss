@@ -1,0 +1,20 @@
+//
+//  Text Element
+//  ---------------------------------------------
+
+//  Variables
+//  ----------------------------------
+
+@import 'variables.scss';
+
+
+//  Styles
+//  ----------------------------------
+
+@mixin text-element() {
+
+  @include media('mobile') {
+
+  }
+
+}

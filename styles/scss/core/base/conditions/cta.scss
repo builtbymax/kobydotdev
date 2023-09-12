@@ -1,0 +1,149 @@
+//
+//  CTA
+// ---------------------------------------------
+
+//  Mixins & Functions
+//  -------------------------
+
+@mixin create-icon-properties($icon-properties: false) {
+  @if ($icon-properties != false or $icon-properties != null or $icon-properties != '') {
+    @each $key, $value in $icon-properties {
+      @if ($key == font-size) {
+        @include font-size($value);
+      } @else if ($key == line-height) {
+        @include line-height($value);
+      } @else if ($key == alignment) {
+        @if map-get($icon-properties, alignment) == 'top' {
+          align-self: flex-start;
+        } @else if map-get($icon-properties, alignment) == 'bottom' {
+          align-self: flex-end;
+        } @else {
+          align-self: center;
+        }
+      } @else if ($key == position){
+        @if map-get($icon-properties, position) == 'left' {
+          order: 1;
+          margin-right: map-get($icon-properties, margin);
+        } @else if map-get($icon-properties, position) == 'right' {
+          order: 2;
+          margin-left: map-get($icon-properties, margin);
+        } @else {
+          margin: map-get($icon-properties, margin);
+        }
+      } @else if ($key != null or $key != false or $key != '' or $value != null or $value != false or $value != '') {
+        @if ($key != margin) {
+          #{$key}: $value;
+        }
+      } 
+    }
+  }
+}
+
+@mixin create-default-cta(
+  $cta__general__properties: false,
+  $cta__general__icon-properties: false,
+  $cta__general__basic__class: $cta__general__default__basic__class,
+  $cta__general__layout__class: $cta__general__default__layout__class,
+  $cta__general__icon_class: $cta__general__default__icon__class,
+) {
+
+  @if ($cta__general__properties != false or $cta__general__properties != null or $cta__general__properties != '') {
+    $general: map-get($cta__general__properties, general);
+    $layouts: map-get($cta__general__properties, layouts);
+    $hover: map-get($cta__general__properties, hover);
+    $icon: map-get($cta__general__properties, icon);
+
+    // Create General state
+    @include media('mobile') {
+      .#{$cta__general__basic__class}{
+        @each $key, $value in $general {
+          @if ($key == font-size) {
+            @include font-size($value);
+          } @else if ($key == line-height) {
+            @include line-height($value);
+          } @else if ($key != null or $key != false or $key != '' or $value != null or $value != false or $value != '') {
+            #{$key}: $value;
+          }
+        }
+
+        // Generate Layouts
+        @if ($layouts != null or $layouts != false or $layouts != '') {
+          @each $key, $value in $layouts {
+            &.#{$cta__general__layout__class}-#{$key} {
+              @each $key, $value in $value {
+                @if ($key == font-size) {
+                  @include font-size($value);
+                } @else if ($key == line-height) {
+                  @include line-height($value);
+                } @else if ($key != null or $key != false or $key != '' or $value != null or $value != false or $value != '') {
+                  #{$key}: $value;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Create Hover state
+    @if ($hover != false or $hover != null or $hover != '') {
+      $general: map-get($hover, general);
+      $layouts: map-get($hover, layouts);
+      @include media('tablet-wide') {
+        .#{$cta__general__basic__class}{
+          &:hover{
+            @each $key, $value in $general {
+              @if ($key == font-size) {
+                @include font-size($value);
+              } @else if ($key == line-height) {
+                @include line-height($value);
+              } @else if ($key != null or $key != false or $key != '' or $value != null or $value != false or $value != '') {
+                #{$key}: $value;
+              }
+            }
+
+            // Generate Layouts
+            @if ($layouts != null or $layouts != false or $layouts != '') {
+              @each $key, $value in $layouts {
+                &.#{$cta__general__layout__class}-#{$key} {
+                  @each $key, $value in $value {
+                    @if ($key == font-size) {
+                      @include font-size($value);
+                    } @else if ($key == line-height) {
+                      @include line-height($value);
+                    } @else if ($key != null or $key != false or $key != '' or $value != null or $value != false or $value != '') {
+                      #{$key}: $value;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Create Icon
+    @if ($icon != false or $icon != null or $icon != '') {
+      @include media('mobile') {
+        .#{$cta__general__icon_class} {
+          .icon, svg, img{
+            @include create-icon-properties($cta__general__icon-properties);
+          }
+        }
+      }
+    }
+  }
+};
+
+//  Condition
+//  -------------------------
+
+@if (map-get($appConfiguration, default-cta) == true) {
+
+  @include create-default-cta(
+    $cta__general__properties: $cta__default__properties,
+    $cta__general__icon-properties: $cta__general__default__icon-properties,
+  );
+
+}

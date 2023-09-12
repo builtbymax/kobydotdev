@@ -1,0 +1,27 @@
+//
+//  Container Sizes
+//  ---------------------------------------------
+
+@if (map-get($appConfiguration, container-sizes) == true) {
+  
+  @each $size, $width in $content-sizes {
+    @include media('tablet-down') {
+      .#{$size} {
+        max-width: calc($width + ($content-size__gap__tablet-down * 2));
+        margin: $content-size__margin;
+        width: $content-size__width;
+        padding: 0 $content-size__gap__tablet-down;
+      }
+    }
+    @include media('tablet') {
+      .#{$size} {
+        max-width: calc($width + ($content-size__gap__tablet * 2));
+        margin: $content-size__margin;
+        width: $content-size__width;
+        padding: 0 $content-size__gap__tablet;
+      }
+    }
+  }
+
+}
+

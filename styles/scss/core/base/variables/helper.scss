@@ -1,0 +1,21 @@
+//
+//  Helper Variables & Functions
+//  ---------------------------------------------
+
+//  These variables are imported after overrides to
+//  to provide the possibility to use them in core default values
+//  and still be overridable
+
+//  Font colors
+//  ---------------------------------------------
+
+$font-color__base: var(--font-color__base) !default;
+$font-color__variant-1: var(--font-color__variant-1) !default;
+$font-color__variant-2: var(--font-color__variant-2) !default;
+
+
+//  General properties
+//  ---------------------------------------------
+
+$component__general__default__body__padding__xs: 63px !default;
+$component__general__default__body__padding__l: 80px !default;

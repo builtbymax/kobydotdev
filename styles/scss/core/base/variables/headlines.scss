@@ -1,0 +1,72 @@
+//
+//  Headlines
+//  ---------------------------------------------
+
+$headline__default__additional__class-name: 'heading-style' !default; 
+$headline__default__font-weight: $font-weight__bold !default;
+$headline__default__font-family: $font-family__variant-1 !default;
+$headline__default__color: var(--font-color__base) !default;
+
+$headlines__general: empty-map() !default;
+
+// H1
+//  ---------------------------------------------
+
+$headline__h1__default__font-size__tablet-down: 24 !default;
+$headline__h1__default__line-height__tablet-down: 32 !default;
+$headline__h1__default__font-size__tablet: 32 !default;
+$headline__h1__default__line-height__tablet: 40 !default;
+
+$h1: empty-map() !default;
+
+
+// H2
+//  ---------------------------------------------
+
+$headline__h2__default__font-size__tablet-down: 20 !default;
+$headline__h2__default__line-height__tablet-down: 28 !default;
+$headline__h2__default__font-size__tablet: 28 !default;
+$headline__h2__default__line-height__tablet: 36 !default;
+
+$h2: empty-map() !default;
+
+// H3
+//  ---------------------------------------------
+
+$headline__h3__default__font-size__tablet-down: 18 !default;
+$headline__h3__default__line-height__tablet-down: 26 !default;
+$headline__h3__default__font-size__tablet: 24 !default;
+$headline__h3__default__line-height__tablet: 32 !default;
+
+$h3: empty-map() !default;
+
+
+// H4
+//  ---------------------------------------------
+
+$headline__h4__default__font-size__tablet-down: 16 !default;
+$headline__h4__default__line-height__tablet-down: 24 !default;
+$headline__h4__default__font-size__tablet: 20 !default;
+$headline__h4__default__line-height__tablet: 28 !default;
+
+$h4: empty-map() !default;
+
+// H5
+//  ---------------------------------------------
+
+$headline__h5__default__font-size__tablet-down: 14 !default;
+$headline__h5__default__line-height__tablet-down: 22 !default;
+$headline__h5__default__font-size__tablet: 18 !default;
+$headline__h5__default__line-height__tablet: 24 !default;
+
+$h5: empty-map() !default;
+
+// H6
+//  ---------------------------------------------
+
+$headline__h6__default__font-size__tablet-down: 12 !default;
+$headline__h6__default__line-height__tablet-down: 20 !default;
+$headline__h6__default__font-size__tablet: 16 !default;
+$headline__h6__default__line-height__tablet: 22 !default;
+
+$h6: empty-map() !default;

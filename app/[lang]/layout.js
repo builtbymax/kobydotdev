@@ -1,3 +1,6 @@
+import '../../styles/scss/project/app.scss';
+import '../../styles/fonts/fontface.css';
+
 export const metadata = {
   title: 'KOBY.DEV - Front-End Developer',
   description: 'bla bla',

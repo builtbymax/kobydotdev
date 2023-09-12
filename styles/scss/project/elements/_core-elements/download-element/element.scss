@@ -1,0 +1,20 @@
+//
+//  Download Element
+//  ---------------------------------------------
+
+//  Variables
+//  ----------------------------------
+
+@import 'variables.scss';
+
+
+//  Styles
+//  ----------------------------------
+
+@mixin download-element() {
+
+  @include media('mobile') {
+
+  }
+
+}

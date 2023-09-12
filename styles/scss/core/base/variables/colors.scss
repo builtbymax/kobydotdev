@@ -1,0 +1,65 @@
+//
+//  General Core Colors
+//  ---------------------------------------------
+
+// Base colors
+// ---------------------------------------------
+
+// Values can be hex or default colors
+// for example: '1: #000000' or '1: black'
+// rgb and xml values are generated automatically 
+
+$base: (
+  1: #000000,
+  2: #FFFFFF,
+  3: #0B0B0B,
+  4: #898989,
+  5: #252525,
+  6: #272727,
+  7: #1A1919,
+  8: #141414,
+) !default;
+
+//  Project colors
+//  ---------------------------------------------
+
+$project: (
+  1: #0062FF,
+  2: #CD0F48,
+) !default;
+
+//
+//  SCSS Map functions
+//  ----------------------------------------------
+
+//  Create SCSS Map aliases
+//  This is optional, only if you want to use SCSS Variables instead of CSS Variables
+//  Use like this f.ex. → color: base(1);
+
+@function base($key) { @return map-get($base, $key); } 
+// base(1) → #000000
+@function base-rgb($key) { @return map-get($base-rgb, $key); } 
+// base-rgb(1) → rgb(0, 0, 0)
+@function project($key) { @return map-get($project, $key); } 
+// project(1) → #000000
+@function project-rgb($key) { @return map-get($project-rgb, $key); } 
+// project-rgb(1) → rgb(0, 0, 0)
+
+//  Or if you want to use it generically, use the color() function
+//  f.ex. → color(base, 1); or color(project, 1);
+
+//  Also here are examples of how to get the same functions for CSS Variables
+//  This is also optional, only if you want to shorten the CSS Variable names
+//  Instead of using → var(--base__color-1) you can use → baseCSS(1)
+
+@function baseCSS($key) { @return var(--base__color-#{$key}); } 
+//  baseCSS(1) → #000000
+@function baseCSS-rgb($key) { @return var(--base__color-#{$key}__rgb); } 
+//  baseCSS-rgb(1) → rgb(0, 0, 0)
+@function projectCSS($key) { @return var(--project__color-#{$key}); } 
+//  projectCSS(1) → #000000
+@function projectCSS-rgb($key) { @return var(--project__color-#{$key}__rgb); } 
+//  projectCSS-rgb(1) → rgb(0, 0, 0)
+
+// Or if you want to use it generically, use the colorCSS() function
+// f.ex. → colorCSS(base, 1); or colorCSS(project, 1);

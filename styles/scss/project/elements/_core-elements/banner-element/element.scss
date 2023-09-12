@@ -1,0 +1,20 @@
+//
+//  Banner Element
+//  ---------------------------------------------
+
+//  Variables
+//  ----------------------------------
+
+@import 'variables.scss';
+
+
+//  Styles
+//  ----------------------------------
+
+@mixin banner-element() {
+
+  @include media('mobile') {
+
+  }
+
+}

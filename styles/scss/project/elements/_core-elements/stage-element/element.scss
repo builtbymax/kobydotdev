@@ -1,0 +1,20 @@
+//
+//  Stage Element
+//  ---------------------------------------------
+
+//  Variables
+//  ----------------------------------
+
+@import 'variables.scss';
+
+
+//  Styles
+//  ----------------------------------
+
+@mixin stage-element() {
+
+  @include media('mobile') {
+
+  }
+
+}

@@ -1,0 +1,20 @@
+//
+//  Logo Grid Element
+//  ---------------------------------------------
+
+//  Variables
+//  ----------------------------------
+
+@import 'variables.scss';
+
+
+//  Styles
+//  ----------------------------------
+
+@mixin logo-grid-element() {
+
+  @include media('mobile') {
+
+  }
+
+}

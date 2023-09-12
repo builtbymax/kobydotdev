@@ -1,0 +1,20 @@
+//
+//  Teaser Element
+//  ---------------------------------------------
+
+//  Variables
+//  ----------------------------------
+
+@import 'variables.scss';
+
+
+//  Styles
+//  ----------------------------------
+
+@mixin teaser-element() {
+
+  @include media('mobile') {
+
+  }
+
+}

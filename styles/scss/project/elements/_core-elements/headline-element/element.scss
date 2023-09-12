@@ -1,0 +1,20 @@
+//
+//  Headline Element
+//  ---------------------------------------------
+
+//  Variables
+//  ----------------------------------
+
+@import 'variables.scss';
+
+
+//  Styles
+//  ----------------------------------
+
+@mixin headline-element() {
+
+  @include media('mobile') {
+
+  }
+
+}

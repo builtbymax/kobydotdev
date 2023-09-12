@@ -1,0 +1,32 @@
+//
+//  Sections
+//  ---------------------------------------------
+
+
+//  Styles
+//  ---------------------------------------------
+
+//  ---------------------------------------------
+//
+//
+//  🛑 EXAMPLES 🛑
+//
+//
+//  ---------------------------------------------
+
+// All styles added here or in files with the same level (needs to be imported in _overrides.scss)
+// will be rendered after all core component styles. This is useful for overriding styles from core style definitions.
+// Or for adding new styles to core components / utilities.
+
+// @include media('mobile') {
+
+//   section.section-container{
+//     padding: 167px 0;
+
+//     &.background-color-1{
+//       --section__background-color-1__test-css__color: deeppink;
+//     }
+
+//   }
+
+// }

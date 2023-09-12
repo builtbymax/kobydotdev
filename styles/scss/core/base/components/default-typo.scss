@@ -1,0 +1,34 @@
+//
+//  Typo
+// ---------------------------------------------
+
+$component__typo-default__font-family: $font-family__base !default;
+$component__typo-default__font-size: $font-size__base !default;
+$component__typo-default__line-height: $line-height__base !default;
+$component__typo-default__font-weight: $font-weight__regular !default;
+$component__typo-default__font-color: var(--font-color__base) !default;
+
+$component__typo-default__paragraph__padding: 6px 0 12px !default;
+$component__typo-default__paragraph__margin: 0 !default;
+$component__typo-default__paragraph__font-family: $component__typo-default__font-family !default;
+$component__typo-default__paragraph__font-size: $component__typo-default__font-size !default;
+$component__typo-default__paragraph__line-height: $component__typo-default__line-height !default;
+$component__typo-default__paragraph__font-weight: $component__typo-default__font-weight !default;
+$component__typo-default__paragraph__font-color: $component__typo-default__font-color !default;
+
+$component__typo-default__blockquote__text-transform: capitalize !default;
+$component__typo-default__blockquote__font-family: $component__typo-default__font-family !default;
+$component__typo-default__blockquote__font-size: $component__typo-default__font-size !default;
+$component__typo-default__blockquote__line-height: $component__typo-default__line-height !default;
+$component__typo-default__blockquote__font-weight: $font-weight__semi-bold !default;
+$component__typo-default__blockquote__font-color: $component__typo-default__font-color !default;
+$component__typo-default__blockquote__font-style: italic !default;
+
+$component__typo-default__inline-link__font-weight: $font-weight__semi-bold !default;
+$component__typo-default__inline-link__font-color: $component__typo-default__font-color !default;
+$component__typo-default__inline-link__text-decoration: underline !default;
+$component__typo-default__inline-link__transition: all 0.3s ease-in-out !default;
+$component__typo-default__inline-link__font-color__hover: $component__typo-default__font-color !default;
+$component__typo-default__inline-link__text-decoration__hover: none !default;
+
+$component__typo-default__rte__heading__margin: 0 0 15px !default;

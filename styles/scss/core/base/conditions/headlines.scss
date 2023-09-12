@@ -1,0 +1,166 @@
+//
+//  Headlines
+// ---------------------------------------------
+
+@mixin create-headline-group(
+  $hGroup: false,
+  $tag: false,
+  $general: false,
+) {
+
+  $hClass: '';
+  @if $headline__default__additional__class-name != '' {
+    $hClass: '#{$headline__default__additional__class-name}-';
+  }
+
+  @if ($hGroup != false) {
+    @include media('mobile') {
+      #{$tag}, .#{$hClass}#{$tag} {
+        @each $property, $value in $general {
+          @if ($property == font-size) {
+            @include font-size($value);
+          } @else if ($property == line-height) {
+            @include line-height($value);
+          } @else if ($property != null) {
+            #{$property}: $value;
+          }
+        }
+      }
+    }
+    @each $hKey, $hValue in $hGroup {
+      @if ($hKey != null) {
+        $getValues: map-get($hGroup, $hKey);
+        @include media('#{$hKey}') {
+          #{$tag}, .#{$hClass}#{$tag} {
+            @each $property, $value in $getValues {
+              @if ($property == font-size) {
+                @include font-size($value);
+              } @else if ($property == line-height) {
+                @include line-height($value);
+              } @else if ($property != null) {
+                #{$property}: $value;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin create-headline-groups($hGroups: false) {
+  $tag: '';
+  $hClass: '';
+  $viewports: ();
+  $general: map-get($hGroups, general);
+  $hGroupsWithoutGeneral: map-remove($hGroups, general);
+
+  // create the additional class name
+  @if $headline__default__additional__class-name != '' {
+    $hClass: '#{$headline__default__additional__class-name}-';
+  }
+
+  // create a viewport map
+  @each $viewport, $sizes in $sizes {
+    $viewports: add((
+        $viewport: ()
+      ),$viewports,
+    );
+  }
+
+  // create a map which has all the values for each headline set in a viewport
+  @each $headline, $headlineStyles in $hGroups {
+    @if ($headline != general) {
+      @each $viewport, $properties in $headlineStyles {
+        @if ($headlineStyles != 'false') {
+          @if (map-has-key($sizes, $viewport)) {
+            $viewportMap: map-get($viewports, $viewport);
+            $headlineMap: map-get($viewportMap, $headline);
+            @if ($headlineMap == null) { $headlineMap: (); }
+            $headlineMap: map-merge($headlineMap, $properties);
+            $viewportMap: map-merge($viewportMap, ($headline: $headlineMap));
+            $viewports: map-merge($viewports, ($viewport: $viewportMap));
+          } @else {
+            @error 'Error: The viewport #{$viewport} is not defined in the $sizes map.';
+          }
+        }
+      }
+    }
+  }
+
+  // generate the general headline styles
+  @include media('mobile') {
+    $hClassWithTag: '';
+    $headlineTags: map-new();
+
+    // create a map out of the hgroups where the value is not 'false' (so if headlines are set to false, they will be ignored)
+    @each $headline, $headlineStyles in $hGroupsWithoutGeneral {
+      @if ($headlineStyles != 'false') {
+        $headlineTags: append($headlineTags, $headline + ',');
+      }
+    }
+
+    @if $headlineTags != null {
+      @each $headlineTag in $headlineTags {
+        @if $headlineTag == nth($headlineTags, length($headlineTags)) {
+          $hClassWithTag: $hClassWithTag + '.' + '#{$hClass}#{$headlineTag} ';
+        } @else {
+          $hClassWithTag: $hClassWithTag + '.' + '#{$hClass}#{$headlineTag}, ';
+        }
+      }
+    }
+    @if ($general != null or $general != false) {
+      #{$headlineTags}, #{$hClassWithTag} {
+        @each $property, $value in $general {
+          @if ($property == font-size) {
+            @include font-size($value);
+          } @else if ($property == line-height) {
+            @include line-height($value);
+          } @else if ($property != null) {
+            #{$property}: $value;
+          }
+        }
+      }
+    }
+  }
+
+  // generate the headline styles for each viewport
+  @each $viewport, $properties in $viewports {
+    @include media('#{$viewport}') {
+      @each $headline, $headlineStyles in $properties {
+        $tag: $headline + ',';
+        @if ($headline != null) {
+          #{$tag}, .#{$hClass}#{$tag} {
+            @each $property, $value in $headlineStyles {
+              @if ($property == font-size) {
+                @include font-size($value);
+              } @else if ($property == line-height) {
+                @include line-height($value);
+              } @else if ($property != null) {
+                #{$property}: $value;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@if (map-get($appConfiguration, default-headlines) == true) {
+
+  // import all headline configurations
+  $headlines__default: (
+    h1: $h1,
+    h2: $h2,
+    h3: $h3,
+    h4: $h4,
+    h5: $h5,
+    h6: $h6,
+    general: $headlines__general,
+  );
+
+  // create headline groups (each from headlines)
+  @include create-headline-groups($headlines__default);
+
+}

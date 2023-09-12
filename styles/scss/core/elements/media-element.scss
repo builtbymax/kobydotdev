@@ -1,0 +1,58 @@
+//
+//  Element: "Media"
+//  ---------------------------------------------
+
+@if (map-get(map-get($appConfiguration, elements), 'media-element') == true) {
+
+  //  Variables
+  //  ---------------------------------------------
+
+  $media-element__container__width: 100% !default;
+
+  $media-element__container__media__width: 100% !default;
+  $media-element__container__media__position: relative !default;
+  $media-element__container__media__figure__display: flex !default;
+  $media-element__container__media__figure__flex-direction: column !default;
+  $media-element__container__media__img__overflow: hidden !default;
+  $media-element__container__media__img__border-radius: 8px !default;
+
+  $media-element__container__cta-container__margin: 30px 0 0 0 !default;
+
+
+  //  Styles
+  //  ---------------------------------------------
+
+  @include media('mobile') {
+
+    .media-element-container{
+      width: $media-element__container__width;
+
+      .media {
+        width: $media-element__container__media__width;
+        position: $media-element__container__media__position;
+
+        figure, picture, .video-embed {
+          display: $media-element__container__media__figure__display;
+          flex-direction: $media-element__container__media__figure__flex-direction;
+        }
+
+        img, video{
+          overflow: $media-element__container__media__img__overflow;
+          border-radius: $media-element__container__media__img__border-radius;
+        }
+      }
+
+      .cta-container {
+        margin: $media-element__container__cta-container__margin;
+      }
+    }
+
+  }
+
+  // max-767
+  @include media('tablet-down') {}
+
+  // min-768
+  @include media('tablet') {}
+
+}

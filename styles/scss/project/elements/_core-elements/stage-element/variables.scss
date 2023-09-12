@@ -1,0 +1,137 @@
+//
+//  Stage Element Variables
+//  ---------------------------------------------
+
+
+// $stage-element__container__width: 100%;
+
+// $stage-element__background-image-layout__class: 'is-background-image';
+
+// set both below to false if you don't want to use the background image layout at all
+
+// set to true if you want to use the background image layout on desktop
+// $stage-element__background-image-layout__mobile-view: false;
+// set to true if you want to use the background image layout on mobile
+// $stage-element__background-image-layout__desktop-view: false;
+
+// set to true if you want to use an overlay on the background image
+// $stage-element__background-image-layout__media__overlay: false;
+
+// $stage-element__content-size__display: flex;
+
+// $stage-element__content-block__width: 100%;
+
+// $stage-element__media-block__display: flex;
+// $stage-element__media-block__flex-direction: column;
+
+// $stage-element__media-block__picture-figure__display: flex;
+// $stage-element__media-block__picture-figure__flex-direction: column;
+// $stage-element__media-block__picture-figure__height: 100%;
+
+// $stage-element__media-block__image__height: 100%;
+// $stage-element__media-block__image__object-fit: cover;
+
+// tablet-down
+// $stage-element__content-size__flex-direction__tablet-down: column;
+// $stage-element__content-block__order__tablet-down: 2;
+// $stage-element__content-block__margin__tablet-down: 20px 0 0 0;
+// $stage-element__media-block__order__tablet-down: 1;
+// $stage-element__media-block__height__tablet-down: 350px;
+
+// $stage-element__background-image-layout__min-height__tablet-down: 600px;
+// $stage-element__background-image-layout__content-size__justify-content__tablet-down: center;
+// $stage-element__background-image-layout__content-size__align-items__tablet-down: center;
+// $stage-element__background-image-layout__content-block__height__tablet-down: 100%;
+// $stage-element__background-image-layout__content-block__font-color__tablet-down: base(2);
+
+// tablet
+// $stage-element__content-size__flex-direction__tablet: column; // change to row for 50/50 layout (and change the max-width variables below to your needs)
+// $stage-element__content-size__align-items__tablet: center;
+// $stage-element__content-size__justify-content__tablet: center;
+// $stage-element__content-size__gap__tablet: 60px;
+// $stage-element__content-size__max-width__tablet: calc(get($content-sizes, 'content-size-xxl') + ($content-size__gap__tablet * 2));
+// $stage-element__content-size__padding__tablet: 0 $content-size__gap__tablet;
+// $stage-element__content-size__position__tablet: relative;
+
+// $stage-element__content-block__width__tablet: 100%;
+// $stage-element__content-block__margin__tablet: 0 auto;
+// $stage-element__content-block__padding__tablet: 0 $content-size__gap__tablet;
+// $stage-element__content-block__max-width__tablet: calc(get($content-sizes, 'content-size-sl') + ($content-size__gap__tablet * 2));
+
+// $stage-element__content-block__headline-element-container__width__tablet: 100%;
+// $stage-element__content-block__headline-element-container__max-width__tablet: 850px;
+
+// $stage-element__media-block__width__tablet: 100%;
+// $stage-element__media-block__height__tablet: 800px;
+
+// $stage-element__background-image-layout__min-height__tablet: 900px;
+// $stage-element__background-image-layout__content-size__justify-content__tablet: center;
+// $stage-element__background-image-layout__content-size__align-items__tablet: center;
+// $stage-element__background-image-layout__content-block__font-color__tablet: base(2);
+
+// background image layout variables
+
+// $stage-element__background-image-layout__height: auto;
+// $stage-element__background-image-layout__display: flex;
+// $stage-element__background-image-layout__flex-direction: column;
+
+// $stage-element__background-image-layout__content-size__flex: 1;
+// $stage-element__background-image-layout__content-size__height: 100%;
+// $stage-element__background-image-layout__content-size__display: flex;
+// $stage-element__background-image-layout__content-size__flex-direction: column;
+
+// $stage-element__background-image-layout__content-block__position: relative;
+// $stage-element__background-image-layout__content-block__z-index: 2;
+// $stage-element__background-image-layout__content-block__height: 100%;
+// $stage-element__background-image-layout__content-block__font-color: base(2);
+
+// $stage-element__background-image-layout__media-block__position: absolute;
+// $stage-element__background-image-layout__media-block__left: 0;
+// $stage-element__background-image-layout__media-block__top: 0;
+// $stage-element__background-image-layout__media-block__width: 100%;
+// $stage-element__background-image-layout__media-block__height: 100%;
+// $stage-element__background-image-layout__media-block__flex: 1;
+// $stage-element__background-image-layout__media-block__display: flex;
+// $stage-element__background-image-layout__media-block__flex-direction: column;
+
+// $stage-element__background-image-layout__media-block__picture-figure__flex: 1;
+// $stage-element__background-image-layout__media-block__picture-figure__height: 100%;
+
+// $stage-element__background-image-layout__media-block__image__width: 100%;
+// $stage-element__background-image-layout__media-block__image__height: 100%;
+// $stage-element__background-image-layout__media-block__image__object-fit: cover;
+
+// $stage-element__background-image-layout__media-block__overlay__content: '';
+// $stage-element__background-image-layout__media-block__overlay__position: absolute;
+// $stage-element__background-image-layout__media-block__overlay__left: 0;
+// $stage-element__background-image-layout__media-block__overlay__top: 0;
+// $stage-element__background-image-layout__media-block__overlay__width: 100%;
+// $stage-element__background-image-layout__media-block__overlay__height: 100%;
+// $stage-element__background-image-layout__media-block__overlay__background-color: rgba(0,0,0,0.5);
+// $stage-element__background-image-layout__media-block__overlay__z-index: 1;
+
+//  ---------------------------------------------
+//
+//
+//  🛑 EXAMPLES 🛑
+//
+//
+//  ---------------------------------------------
+
+// (1) The default layout is a column layout for both mobile and desktop.
+// So you don't need to change anything if you want to use this layout.
+
+// (2) If you want to use the background image layout on desktop and mobile, you can use the following example:
+
+// $stage-element__background-image-layout__mobile-view: true;
+// $stage-element__background-image-layout__desktop-view: true;
+// $stage-element__background-image-layout__media__overlay: true;
+
+// (3) If you want to use a 50/50 layout on desktop, you can use the following example (and set the variables above to false):
+// Also make sure to change the max-width & padding variables to your needs.
+
+// $stage-element__content-size__flex-direction__tablet: row;
+// $stage-element__content-size__max-width__tablet: calc(get($content-sizes, 'content-size-xxl') + ($content-size__gap__tablet * 2));
+// $stage-element__content-size__padding__tablet: 0 $content-size__gap__tablet;
+// $stage-element__content-block__max-width__tablet: calc(get($content-sizes, 'content-size-sl') + ($content-size__gap__tablet * 2));
+// $stage-element__content-block__padding__tablet: 0 $content-size__gap__tablet;

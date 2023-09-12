@@ -1,0 +1,42 @@
+//
+//  Core Configuration
+//  @version: 1.0.0
+//  ---------------------------------------------
+
+$elements: (
+  'headline-element': false,
+  'text-media-element': false,
+  'media-element': false,
+  'text-element': false,
+  'accordion-element': false,
+  'banner-element': false,
+  'counter-element': false,
+  'teaser-element': false,
+  'card-element': false,
+  'download-element': false,
+  'logo-grid-element': false,
+  'stage-element': false,
+  'core-navigation-element': false,
+  'core-footer-element': false,
+) !default;
+
+$contents: (
+  'general': false,
+  'lists': false,
+  'cta-container': false,
+  'sections': false,
+  'media-element': false,
+  'accessibility': false,
+  'default-typo': false,
+) !default;
+
+$appConfiguration: (
+  css-colors: false,
+  elements: $elements,
+  contents: $contents,
+  flex-grid: false,
+  css-grid: false,
+  container-sizes: false,
+  default-cta: false,
+  default-headlines: false,
+) !default;

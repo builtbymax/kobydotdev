@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "./Logo";
+import LangSwitcher from "./LangSwitcher";
 
 export default function Navigation({ dict, lang }) {
   const navLinks = [
@@ -23,16 +24,25 @@ export default function Navigation({ dict, lang }) {
 
   return (
     <nav>
-      <Logo color="dark" />
-      <ul>
-        <li>
-          {navLinks.map((link, index) => (
-            <Link href={link.href} title={link.title} key={index}>
-              {link.title}
-            </Link>
-          ))}
-        </li>
-      </ul>
+      <div className="content-size-sl">
+        <div className="navigation-container">
+          <Logo color="light" />
+          <ul className="navigation-menu">
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <Link href={link.href} title={link.title}>
+                  {link.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ul className="additional-menu">
+            <li>
+              <LangSwitcher />
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   )
 };

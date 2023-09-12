@@ -1,0 +1,177 @@
+//
+//  Element: "Card"
+//  ---------------------------------------------
+
+@if (map-get(map-get($appConfiguration, elements), 'card-element') == true) {
+
+  //  Variables
+  //  -------------------------------------------
+
+  $card-element__container__class: 'card-element-container' !default;
+  $card-element__container__width: 100% !default;
+  $card-element__container__display: flex !default;
+  $card-element__container__flex-direction: column !default;
+  $card-element__container__align-items: flex-start !default;
+  $card-element__container__background-color: rgba(var(--base__color-1__rgb), 4%) !default;
+  $card-element__container__border: 0 none !default;
+  $card-element__container__border-radius: 8px !default;
+  $card-element__container__text-decoration: none !default;
+  $card-element__container__flex: 1 !default;
+
+  $card-element__container__padding__tablet-down: 14px !default;
+  $card-element__container__padding__tablet: 24px !default;
+  $card-element__container__padding__tablet-wide: 30px !default;
+
+  $card-element__container__media__margin-bottom: 20px !default;
+  $card-element__container__media__width: 100% !default;
+  $card-element__container__media__overflow: hidden !default;
+  $card-element__container__media__position: relative !default;
+  $card-element__container__media__border-radius: 4px !default;
+  $card-element__container__media__figure__display: flex !default;
+  $card-element__container__media__figure__flex-direction: column !default;
+
+  $card-element__container__content-block__padding: 0 !default;
+
+  $card-element__container__content-block__flex: 1 !default;
+  $card-element__container__content-block__display: flex !default;
+  $card-element__container__content-block__flex-direction: column !default;
+  $card-element__container__content-block__align-items: flex-start !default;
+
+  $card-element__container__content-block__copy-text__padding: 0 !default;
+  $card-element__container__content-block__copy-text__margin: 0 !default;
+  $card-element__container__content-block__copy-text__font-size: $font-size__base !default;
+  $card-element__container__content-block__copy-text__line-height: $line-height__base !default;
+  $card-element__container__content-block__copy-text__font-weight: false !default;
+  $card-element__container__content-block__copy-text__font-family: false !default;
+  $card-element__container__content-block__copy-text__text-color: false !default;
+
+  $card-element__container__content-block__cta-container__padding: 30px 0 0 0 !default;
+  $card-element__container__content-block__cta-container__margin: auto 0 0 0 !default;
+  $card-element__container__content-block__cta-container__width: 100% !default;
+
+  $card-element__container__content-block__headline__margin-bottom__tablet-down: 8px !default;
+  $card-element__container__content-block__headline__font-size__tablet-down: 18 !default;
+  $card-element__container__content-block__headline__line-height__tablet-down: 26 !default;
+  $card-element__container__content-block__headline__font-weight__tablet-down: false !default;
+  $card-element__container__content-block__headline__font-family__tablet-down: false !default;
+  $card-element__container__content-block__headline__text-color__tablet-down: false !default;
+
+  $card-element__container__content-block__headline__margin-bottom__tablet: 15px !default;
+  $card-element__container__content-block__headline__font-size__tablet: 24 !default;
+  $card-element__container__content-block__headline__line-height__tablet: 32 !default;
+  $card-element__container__content-block__headline__font-weight__tablet: false !default;
+  $card-element__container__content-block__headline__font-family__tablet: false !default;
+  $card-element__container__content-block__headline__text-color__tablet: false !default;
+
+  //  Styles
+  //  ---------------------------------------------
+
+  @include media('mobile') {
+
+    .#{$card-element__container__class}{
+      width: $card-element__container__width;
+      display: $card-element__container__display;
+      flex-direction: $card-element__container__flex-direction;
+      align-items: $card-element__container__align-items;
+      background-color: $card-element__container__background-color;
+      text-decoration: $card-element__container__text-decoration;
+      border: $card-element__container__border;
+      border-radius: $card-element__container__border-radius;
+      flex: $card-element__container__flex;
+
+      .media{
+        margin-bottom: $card-element__container__media__margin-bottom;
+        overflow: $card-element__container__media__overflow;
+        position: $card-element__container__media__position;
+        width: $card-element__container__media__width;
+        border-radius: $card-element__container__media__border-radius;
+
+        picture, figure {
+          display: $card-element__container__media__figure__display;
+          flex-direction: $card-element__container__media__figure__flex-direction;
+        }
+      }
+
+      .content-block{
+        padding: $card-element__container__content-block__padding;
+        flex: $card-element__container__content-block__flex;
+        display: $card-element__container__content-block__display;
+        flex-direction: $card-element__container__content-block__flex-direction;
+        align-items: $card-element__container__content-block__align-items;
+
+        .copy-text{
+          p{
+            padding: $card-element__container__content-block__copy-text__padding;
+            margin: $card-element__container__content-block__copy-text__margin;
+            @include typo(
+              $fontSizeValue: $card-element__container__content-block__copy-text__font-size,
+              $lineHeightValue: $card-element__container__content-block__copy-text__line-height,
+              $fontWeightValue: $card-element__container__content-block__copy-text__font-weight,
+              $fontFamilyValue: $card-element__container__content-block__copy-text__font-family,
+              $textColor: $card-element__container__content-block__copy-text__text-color,
+            )
+          }
+        }
+
+        .cta-container{
+          padding: $card-element__container__content-block__cta-container__padding;
+          margin: $card-element__container__content-block__cta-container__margin;
+          width: $card-element__container__content-block__cta-container__width;
+        }
+      }
+    }
+
+  }
+
+  // max-767
+  @include media('tablet-down') {
+
+    .#{$card-element__container__class}{
+      padding: $card-element__container__padding__tablet-down;
+      .content-block{
+        h2, h3, h4, h5, h6 {
+          margin-bottom: $card-element__container__content-block__headline__margin-bottom__tablet-down;
+          @include typo(
+            $fontSizeValue: $card-element__container__content-block__headline__font-size__tablet-down, 
+            $lineHeightValue: $card-element__container__content-block__headline__line-height__tablet-down,
+            $fontWeightValue: $card-element__container__content-block__headline__font-weight__tablet-down,
+            $fontFamilyValue: $card-element__container__content-block__headline__font-family__tablet-down,
+            $textColor: $card-element__container__content-block__headline__text-color__tablet-down,
+          )
+        }
+      }
+    }
+
+  }
+
+  // min-768
+  @include media('tablet') {
+
+    .#{$card-element__container__class}{
+      padding: $card-element__container__padding__tablet;
+      .content-block{
+        h2, h3, h4, h5, h6 {
+          margin-bottom: $card-element__container__content-block__headline__margin-bottom__tablet;
+          @include typo(
+            $fontSizeValue: $card-element__container__content-block__headline__font-size__tablet,
+            $lineHeightValue: $card-element__container__content-block__headline__line-height__tablet,
+            $fontWeightValue: $card-element__container__content-block__headline__font-weight__tablet,
+            $fontFamilyValue: $card-element__container__content-block__headline__font-family__tablet,
+            $textColor: $card-element__container__content-block__headline__text-color__tablet,
+          )
+        }
+      }
+    }
+
+  }
+
+  // min-1024
+  @include media('tablet-wide') {
+  
+    .#{$card-element__container__class}{
+      padding: $card-element__container__padding__tablet-wide;
+    }
+  
+  }
+
+}

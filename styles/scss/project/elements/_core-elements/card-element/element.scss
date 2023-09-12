@@ -1,0 +1,20 @@
+//
+//  Card Element
+//  ---------------------------------------------
+
+//  Variables
+//  ----------------------------------
+
+@import 'variables.scss';
+
+
+//  Styles
+//  ----------------------------------
+
+@mixin card-element() {
+
+  @include media('mobile') {
+
+  }
+
+}

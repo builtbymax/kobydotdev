@@ -1,0 +1,34 @@
+//
+//  Utilities: Media Queries
+//  ---------------------------------------------
+
+//  Usage: 
+//  → @include media('tablet') { ... } - for single media query
+//  → @include media(('tablet', 'tablet-down')) { ... } - for multiple media queries
+
+@use '../variables/grid.scss';
+
+@mixin media($inputSize) {
+  $media-query: '';
+  @each $size in $inputSize {
+    @each $key, $value in grid.$sizes {
+      $condition: min-width;
+      // check if key is equal to input size && if key doesn't contain "-down"
+      @if str-index($key, '-down') != null {
+        $condition: max-width;
+      }
+      @if $key == $size {
+        // check if item is last in inputSize -> if yes, don't add "and"
+        @if $size == nth($inputSize, length($inputSize)) {
+          $media-query: $media-query + '(#{$condition}: #{$value})';
+        } @else {
+          $media-query: $media-query + '(#{$condition}: #{$value}) and ';
+        }
+      }
+    }
+  }
+
+  @media #{$media-query} {
+    @content;
+  }
+}

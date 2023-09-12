@@ -1,0 +1,74 @@
+//
+//  Project Imports
+//  ---------------------------------------------
+
+//
+//  ⚠️ Attention:
+//
+//  Do not remove or change the order of the imports
+//  otherwise the compilation could fail / break
+//  The different sections are marked with comments
+//  It's important to keep the order of the imports
+//  because of the dependencies of the variables / maps.
+//
+//  If you want to remove something, you should check
+//  if there is an option in the config.scss file
+//  so you can disable the rendering there.
+//
+//  ---------------------------------------------
+
+// App configuration - import/remove components as needed (see config.scss)
+@import '../core/config.scss'; // ⚠️
+@import 'config.scss'; // 📝 
+
+//  ================    CORE ⚠️     =====================
+//
+// The core mixins are imported at the beginning to allow usage in variables + basic variables
+@import '../core/base/utilities/_utilities.scss';
+@import '../core/base/variables/_base.scss';
+//
+//  ================    CORE-END    =====================
+
+//  ================    PROJECT 📝    ===================
+//
+// All overrides for default variables & maps
+@import 'overrides/variables/_variables.scss';
+//
+//  ================    PROJECT-END     =================
+
+//  ================    CORE ⚠️     =====================
+//
+// Core variables, maps & configurations
+@import '../core/base/variables/_variables.scss';
+@import '../core/base/components/_components.scss';
+@import '../core/base/maps/_maps.scss';
+@import '../core/base/conditions/_conditions.scss';
+//
+//  ================    CORE-END    =====================
+
+//  ================    PROJECT 📝    ===================
+//
+// All Override styles 
+@import 'overrides/_overrides.scss';
+
+// All additional styles, configurations, and mixins which used in the project
+@import 'additional/_additional.scss';
+
+// All Elements are imported here (overrides for core elements & custom elements)
+@import 'elements/elements.scss';
+//
+//  ================    PROJECT-END     =================
+
+//  ================    CORE ⚠️     =====================
+//
+// The core assets are imported at the end to allow overriding of variables and mixins
+@import '../core/core.scss';
+//
+//  ================    CORE-END    =====================
+
+//  ================    PROJECT 📝    ===================
+//
+// All custom Element overrides are imported here
+@import 'elements/overrides.scss';
+//
+//  ================    PROJECT-END     =================
