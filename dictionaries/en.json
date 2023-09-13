@@ -37,6 +37,12 @@
           "text": "Over the years I saw many things that were going into the wrong direction from the early beginning of a project. I saw many things going right and many projects which lacked on the ‘small things to compete’. I want that yours can learn from that experience."
         }
       ]
+    },
+    "projects": {
+      "headline": {
+        "headline": "Projects",
+        "subline": "My personal projects I work on in my freetime."
+      }
     }
   }
 }
