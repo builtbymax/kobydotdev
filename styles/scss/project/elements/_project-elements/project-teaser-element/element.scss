@@ -1,0 +1,72 @@
+//
+//  Project Teaser Element
+//  ---------------------------------------------
+
+//  Variables
+//  ----------------------------------
+
+
+//  Styles
+//  ----------------------------------
+
+@include media('mobile') {
+
+  .project-teaser-element {
+    width: 100%;
+    flex: 1;
+    aspect-ratio: 1 / 1;
+    padding: 35px 30px;
+    position: relative;
+    border-radius: 8px;
+    background-color: var(--base__color-6);
+    transition: background 0.25s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    --project-teaser__icon__color: rgba(var(--base__color-1__rgb), 65%);
+
+    //  Border Teaser Element
+    //  ----------------------------------
+
+    &::before {
+      content: "";
+      display: block;
+      height: calc(100% + 2px);
+      width: calc(100% + 2px);
+      border-radius: 8px;
+      inset: -1px;
+      position: absolute;
+      z-index: -2;
+      right: -1px;
+      top: -1px;
+      bottom: -1px;
+      left: -1px;
+      user-select: none;
+      pointer-events: none;
+      transition: background 0.2s ease-in-out;
+      will-change: background;
+      contain: size;
+
+      background: radial-gradient(
+        300px circle at var(--x__mouse__coordinate) var(--y__mouse__coordinate),
+        rgba(var(--base__color-1__rgb), .5) 0,
+        rgba(var(--base__color-1__rgb), .8) 50%,
+        transparent 100%
+      );
+    }
+  }
+
+}
+
+// min-1024
+@include media('tablet-wide') {
+  
+    .teaser-element {
+      &:hover{
+        background-color: var(--base__color-4);
+        --teaser__icon__color: var(--base__color-1);
+      }
+    }
+
+}

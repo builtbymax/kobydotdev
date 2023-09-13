@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect } from 'react';
-import styles from './TeaserBorderGradient.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -47,8 +46,8 @@ export default function Teaser({ lang }) {
 
   const TeaserElement = ({ title, logo}) => {
     return (
-      <Link data-gradient-teaser href={`${lang}/halftime`} className={styles['teaser-element']}>
-        <div className={styles['icon']}>
+      <Link data-gradient-teaser href={`${lang}/halftime`} className="project-teaser-element">
+        <div className="icon">
           <Image src={logo} alt={title} width={200} height={100} />
         </div>
       </Link>
