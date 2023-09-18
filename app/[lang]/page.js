@@ -4,6 +4,7 @@ import Headline from '@/components/content-elements/HeadlineContainer';
 import Section from '@/components/common/Section';
 import TextMedia from '@/components/content-elements/TextMedia';
 import TeaserBorderGradient from '@/components/content-elements/TeaserBorderGradient';
+import Footer from '@/components/footer/Footer';
 
 export default async function Home({ params: { lang } }) {
   const dict = await getDictionary(lang);
@@ -59,6 +60,7 @@ export default async function Home({ params: { lang } }) {
           </div>
         </div>
       </Section>
+      <Footer dict={dict} lang={lang} />
     </>
   )
 }

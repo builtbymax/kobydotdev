@@ -58,7 +58,7 @@ export default function Teaser({ lang }) {
     <>
       {teaserList.map((teaser, index) => {
         return (
-          <div className="grid-col gd-xs-12 gd-m-6" key={index}>
+          <div className="grid-col gd-xs-6 gd-m-6" key={index}>
             <TeaserElement title={teaser.title} logo={teaser.logo} />
           </div>
         )

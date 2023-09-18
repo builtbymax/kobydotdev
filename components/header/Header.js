@@ -11,7 +11,7 @@ export default function Header({ dict, lang }) {
       </div>
       <div className="content-size-sl header-content-size">
         <div className="header-content">
-          <AvailableBlock text={dict.home.header['available']} lang={lang} />
+          <AvailableBlock text={dict.common['available']} lang={lang} />
           <div className="headline">
             <h1>
               <b>{dict.home.header['headline-1']}</b>

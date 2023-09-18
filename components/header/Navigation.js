@@ -1,4 +1,4 @@
-import Logo from "./Logo";
+import Logo from "../common/Logo";
 import LangSwitcher from "./LangSwitcher";
 
 export default function Navigation({ dict, lang }) {

@@ -1,17 +1,23 @@
 {
   "common": {
+    "available": "Available for freelance work",
     "navigation": {
       "home": "Home",
       "projects": "Projects",
       "interview": "Interview",
       "contact": "Contact"
+    },
+    "footer": {
+      "home": "Home",
+      "imprint": "Legal Notice",
+      "privacy": "Privacy Policy",
+      "copy": "Maximilian Kobus"
     }
   },
   "home": {
     "header": {
       "headline-1": "Hi, I'm Maximilian.",
-      "headline-2": "I work as a Front-End Developer & Digital Designer.",
-      "available": "Available for freelance work"
+      "headline-2": "I work as a Front-End Developer & Digital Designer."
     },
     "interview-teaser": {
       "headline": "Interview",
