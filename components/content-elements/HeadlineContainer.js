@@ -1,4 +1,4 @@
-export default function Headline({ headline, subline, tag = 'h2', inlineComponent = true, alignment = 'left'}) {
+export default function Headline({ headline, subline, tag = 'h2', inlineComponent = true, alignment = 'left', innerCopy = false}) {
   let headlineElement;
   let sublineElement;
   const HTag = `${tag}`;
@@ -15,8 +15,15 @@ export default function Headline({ headline, subline, tag = 'h2', inlineComponen
     sublineElement = <p className="subline">{subline}</p>;
   }
 
+  const classNames = [
+    'headline-element-container',
+    `alignment-${alignment}`,
+    inlineComponent ? 'inline-component' : 'standalone',
+    innerCopy ? 'inner-copy-width' : 'default-width',
+  ].join(' ');
+
   return (
-    <div className={`headline-element-container alignment-${alignment} ${inlineComponent ? 'inline-component' : 'standalone'}`}>
+    <div className={classNames}>
       {headlineElement}
       {sublineElement}
     </div>

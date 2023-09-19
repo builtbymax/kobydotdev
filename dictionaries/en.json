@@ -50,5 +50,17 @@
         "subline": "My personal projects I work on in my freetime."
       }
     }
+  },
+  "interview": {
+    "header": {
+      "headline": "Interview",
+      "subline": "If you want to hear more about me as a person and personal views, here is a basic Q&A for you to catch up."
+    },
+    "content": {
+      "textBlock": {
+        "headline": "Über mich",
+        "text": "Mein Name ist Maximilian - oder koby. Ich bin 28 Jahre alt und arbeite zurzeit in München als Front-End Entwickler & Web-Designer bei @SNK. Ich lebe seit ungefähr 9 Jahren in München, ursprünglich komme ich aber aus dem schönen Dresden."
+      }
+    }
   }
 }
