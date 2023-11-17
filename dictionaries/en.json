@@ -21,26 +21,26 @@
     },
     "interview-teaser": {
       "headline": "Interview",
-      "text": "My name is Maximilian. I work as a front-end developer and web designer at SNK in Munich.",
+      "text": "My name is Maximilian. I work as a Front-End Developer and Designer at SNK in Munich.",
       "link": "Read more"
     },
     "services": {
       "headline": {
         "headline": "Services",
-        "subline": "I create professional experiences now for more than 10 years."
+        "subline": "Transforming Ideas into Exceptional Digital Experiences."
       },
       "teaser": [
         {
           "headline": "Development",
-          "text": "Creating your User Interface designs, Marketing- and Landingpages or CMS-based company website would be a blast for me. I love to create websites with small tweaks like animations or 3D samples."
+          "text": "As an experienced Front-End Developer with over a decade of industry experience, I have had the privilege of working on numerous projects catering to businesses of all sizes. This extensive exposure has given me deep insights into user expectations, allowing me to deliver digital designs that captivate and engage users effectively."
         },
         {
           "headline": "Digital Design",
-          "text": "I am a Front-End Developer since more than 10 years, worked on more than enough projects with small, medium sized and large group of businesses to get feeling what the user expects from these."
+          "text": "With my expertise in User Interface design, I excel at crafting exceptional websites, whether it's creating captivating Marketing and Landing pages or developing CMS-based company websites. My passion lies in creating visually stunning designs with meticulous attention to detail, including engaging animations and 3D samples."
         },
         {
           "headline": "UX & Solutions",
-          "text": "Over the years I saw many things that were going into the wrong direction from the early beginning of a project. I saw many things going right and many projects which lacked on the ‘small things to compete’. I want that yours can learn from that experience."
+          "text": "Having witnessed various projects evolve over the years, I have gained valuable experience in identifying potential pitfalls and preventing them right from the outset. I have observed both successful ventures and those lacking essential elements needed for success. It is my goal to ensure that your project learns from my experiences, enhancing its chances of achieving optimal results."
         }
       ]
     },

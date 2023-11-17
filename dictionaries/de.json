@@ -27,20 +27,20 @@
     "services": {
       "headline": {
         "headline": "Leistungen",
-        "subline": "Ich arbeite in Professionellen Kundenprojekten seit mehr als 10 Jahren."
+        "subline": "Aus Ideen herausragende digitale Erlebnisse schaffen."
       },
       "teaser": [
         {
           "headline": "Entwicklung",
-          "text": "Ich entwickle moderne Webseiten und Web-Apps mit HTML, CSS und JavaScript."
+          "text": "Als erfahrener Front-End Entwickler mit über zehn Jahren Erfahrung habe ich bereits an zahlreichen Projekten gearbeitet, sowohl für kleine und mittelständische Unternehmen als auch für große Konzerne. Dadurch habe ich ein tiefes Verständnis dafür entwickelt, was Benutzer von digitalen Designs erwarten."
         },
         {
           "headline": "Digital Design",
-          "text": "Ich gestalte moderne und ansprechende Webseiten und Web-Apps."
+          "text": "Mit meiner Expertise im Bereich User Interface Design begeistere ich mich für die Erstellung herausragender Websites. Egal ob es um fesselnde Marketing- und Landingpages oder die Entwicklung von CMS-basierten Unternehmenswebsites geht – ich liebe es, Websites mit kleinen Feinheiten wie Animationen oder 3D-Beispielen zu gestalten."
         },
         {
           "headline": "UX & Solutions",
-          "text": "Ich entwickle WordPress Themes und Plugins."
+          "text": "Im Laufe der Jahre habe ich viele Projekte gesehen, die bereits von Anfang an in die falsche Richtung steuerten. Es gab jedoch auch zahlreiche erfolgreiche Projekte sowie solche, die an kleinen Details gescheitert sind. Mein Ziel ist es, dass Ihr Projekt von meinen Erfahrungen profitiert und von Anfang an in die richtige Richtung lenkt, um optimale Ergebnisse zu erzielen."
         }
       ]
     },

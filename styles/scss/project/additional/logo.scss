@@ -1,0 +1,22 @@
+//
+//  Logo Wrapper
+//  ----------------------------------
+
+//  Variables
+//  ----------------------------------
+
+
+//  Styles
+//  ----------------------------------
+
+@include media('mobile') {
+
+  .logo{
+    $size: 30px;
+    height: $size;
+    width: $size;
+    display: flex;
+    svg, img { height: 100%; width: 100%; }
+  }
+
+}

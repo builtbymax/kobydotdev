@@ -9,13 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@formatjs/intl-localematcher": "^0.4.2",
-    "eslint": "8.49.0",
-    "eslint-config-next": "13.4.19",
+    "@formatjs/intl-localematcher": "^0.5.2",
+    "eslint": "8.53.0",
+    "eslint-config-next": "14.0.3",
     "negotiator": "^0.6.3",
-    "next": "13.4.19",
+    "next": "14.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.66.1"
+    "sass": "^1.69.5"
   }
 }
