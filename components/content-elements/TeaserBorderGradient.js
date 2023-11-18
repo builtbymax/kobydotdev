@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function Teaser({ lang }) {
+export default function Teaser({ lang, projects }) {
 
   useEffect(() => {
     const getMousePosition = () => {
@@ -25,28 +25,20 @@ export default function Teaser({ lang }) {
     getMousePosition();
   }, []);
 
-  const teaserList = [
-    {
-      title: 'halftime.space',
-      logo: '/assets/logo-halftime.svg',
-    },
-    {
-      title: 'halftime.space',
-      logo: '/assets/logo-taskline.svg',
-    },
-    {
-      title: 'halftime.space',
-      logo: '/assets/logo-convertr.svg',
-    },
-    {
-      title: 'halftime.space',
-      logo: '/assets/logo-pfau.svg',
-    },
-  ];
+  const teaserList = [];
+  projects.forEach((project) => {
+    teaserList.push({
+      title: project.link.title,
+      logo: project.link.logo,
+      slug: project.link.slug,
+      external: project.link.external,
+    });
+  });
 
-  const TeaserElement = ({ title, logo}) => {
+  const TeaserElement = ({ title, logo, slug, external }) => {
+    const url = external ? slug : `/${lang}/projects/${slug}`;
     return (
-      <Link data-gradient-teaser href={`${lang}/halftime`} className="project-teaser-element">
+      <Link data-gradient-teaser href={url} {...(external && {rel: 'noopener', target: '_blank'})} className="project-teaser-element">
         <div className="icon">
           <Image src={logo} alt={title} width={200} height={100} />
         </div>
@@ -59,7 +51,7 @@ export default function Teaser({ lang }) {
       {teaserList.map((teaser, index) => {
         return (
           <div className="grid-col gd-xs-6 gd-m-6" key={index}>
-            <TeaserElement title={teaser.title} logo={teaser.logo} />
+            <TeaserElement title={teaser.title} logo={teaser.logo} slug={teaser.slug} external={teaser.external} />
           </div>
         )
       })}

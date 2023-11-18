@@ -47,14 +47,14 @@
     "projects": {
       "headline": {
         "headline": "Projekte",
-        "subline": "Ich arbeite in Professionellen Kundenprojekten seit mehr als 10 Jahren."
+        "subline": "Auszug meiner vielfältigen Design- und Entwicklungsprojekte: Präsentation meines Portfolios"
       }
     }
   },
   "interview": {
     "header": {
       "headline": "Interview",
-      "subline": "Deutscher satz welcher das Interview beschreibt.... "
+      "subline": "Wenn du mehr über mich als Person und meine persönlichen Ansichten erfahren möchtest, habe ich hier eine grundlegende Fragen- und Antworten-Runde für dich, um auf dem neuesten Stand zu bleiben."
     },
     "content": {
       "textBlock": {
@@ -62,5 +62,51 @@
         "text": "Mein Name ist Maximilian - oder koby. Ich bin 28 Jahre alt und arbeite zurzeit in München als Front-End Entwickler & Web-Designer bei @SNK. Ich lebe seit ungefähr 9 Jahren in München, ursprünglich komme ich aber aus dem schönen Dresden."
       }
     }
-  }
+  },
+  "projects": [
+    {
+      "link": {
+        "slug": "halftime",
+        "title": "halftime.space",
+        "external": false,
+        "logo": "/assets/logo-halftime.svg"
+      },
+      "content": {
+        "headline": "halftime.space",
+        "subline": "Eine Plattform zum Speichern und Kuratieren Ihrer Inspirationen."
+      }
+    },
+    {
+      "link": {
+        "slug": "taskline",
+        "title": "Taskline",
+        "external": false,
+        "logo": "/assets/logo-taskline.svg"
+      },
+      "content": {
+        "headline": "taskline",
+        "subline": "Eine Todo-App für Ihre Aufgaben."
+      }
+    },
+    {
+      "link": {
+        "slug": "convertr",
+        "title": "Convertr",
+        "external": false,
+        "logo": "/assets/logo-convertr.svg"
+      },
+      "content": {
+        "headline": "Convertr",
+        "subline": "Eine macOS-App zum Konvertieren von SVGs in Data-URI Strings."
+      }
+    },
+    {
+      "link": {
+        "slug": "https://www.tischlereipfau.de/",
+        "title": "Tischlerei Pfau",
+        "external": true,
+        "logo": "/assets/logo-pfau.svg"
+      }
+    }
+  ]
 }

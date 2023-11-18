@@ -56,7 +56,7 @@ export default async function Home({ params: { lang } }) {
         <Headline headline={dict.home['projects'].headline.headline} subline={dict.home['projects'].headline.subline}/>
         <div className="teaser-element-section">
           <div className="grid-row">
-            <TeaserBorderGradient lang={lang} />
+            <TeaserBorderGradient lang={lang} projects={dict.projects} />
           </div>
         </div>
       </Section>

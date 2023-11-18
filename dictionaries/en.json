@@ -47,7 +47,7 @@
     "projects": {
       "headline": {
         "headline": "Projects",
-        "subline": "My personal projects I work on in my freetime."
+        "subline": "A Selection of my Diverse Design and Development Projects: Showcasing my Portfolio."
       }
     }
   },
@@ -59,8 +59,54 @@
     "content": {
       "textBlock": {
         "headline": "Über mich",
-        "text": "Mein Name ist Maximilian - oder koby. Ich bin 28 Jahre alt und arbeite zurzeit in München als Front-End Entwickler & Web-Designer bei @SNK. Ich lebe seit ungefähr 9 Jahren in München, ursprünglich komme ich aber aus dem schönen Dresden."
+        "text": "My name is Maximilian - or Koby. I am 28 years old and currently work as a Front-End Developer & Web Designer at @SNK in Munich. I have been living in Munich for about 9 years, but originally I come from the beautiful city of Dresden."
       }
     }
-  }
+  },
+  "projects": [
+    {
+      "link": {
+        "slug": "halftime",
+        "title": "halftime.space",
+        "external": false,
+        "logo": "/assets/logo-halftime.svg"
+      },
+      "content": {
+        "headline": "halftime.space",
+        "subline": "A platform for saving and curating your inspirations."
+      }
+    },
+    {
+      "link": {
+        "slug": "taskline",
+        "title": "Taskline",
+        "external": false,
+        "logo": "/assets/logo-taskline.svg"
+      },
+      "content": {
+        "headline": "taskline",
+        "subline": "A task management app for your tasks."
+      }
+    },
+    {
+      "link": {
+        "slug": "convertr",
+        "title": "Convertr",
+        "external": false,
+        "logo": "/assets/logo-convertr.svg"
+      },
+      "content": {
+        "headline": "Convertr",
+        "subline": "A macOS-App for convert svgs to Data-URI strings."
+      }
+    },
+    {
+      "link": {
+        "slug": "https://www.tischlereipfau.de/",
+        "title": "Tischlerei Pfau",
+        "external": true,
+        "logo": "/assets/logo-pfau.svg"
+      }
+    }
+  ]
 }
