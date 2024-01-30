@@ -1,54 +1,23 @@
-import Logo from "../common/Logo";
-import LangSwitcher from "./LangSwitcher";
+import { ContentSize } from '@/components/UI/Section';
+import { Logo } from '@/components/common/Logo';
+import { LocaleSwitch } from "@/components/header/LocaleSwitch";
 
-export default function Navigation({ dict, lang }) {
+const Navigation = () => {
   return (
     <nav>
-      <div className="content-size-sl">
+      <ContentSize>
         <div className="navigation-container">
-          <Logo color="light" />
-          <ul className="additional-menu">
-            <li>
-              <LangSwitcher />
-            </li>
-          </ul>
-        </div>
-      </div>
+            <Logo color="light" />
+            <ul className="additional-menu">
+              <li>
+                <LocaleSwitch />
+              </li>
+            </ul>
+          </div>
+      </ContentSize>
     </nav>
-  )
+  );
 };
+Navigation.displayName = 'Navigation';
 
-/*
-import Link from "next/link";
-const NavigationMenu = () => {
-  const navLinks = [
-    {
-      href: `/${lang}/`,
-      title: dict.common.navigation['home'],
-    },
-    {
-      href: `/${lang}/projects`,
-      title: dict.common.navigation['projects'],
-    },
-    {
-      href: `/${lang}/interview`,
-      title: dict.common.navigation['interview'],
-    },
-    {
-      href: `/${lang}/contact`,
-      title: dict.common.navigation['contact'],
-    },
-  ];
-  return (
-    <ul className="navigation-menu">
-      {navLinks.map((link, index) => (
-        <li key={index}>
-          <Link href={link.href} title={link.title}>
-            {link.title}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  )
-};
-*/
+export { Navigation };

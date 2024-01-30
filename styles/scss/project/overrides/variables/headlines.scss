@@ -38,6 +38,42 @@ $headline__h3__default__line-height__tablet-down: 30;
 $headline__h3__default__font-size__tablet: 28;
 $headline__h3__default__line-height__tablet: 38;
 
+//  H3
+//  ---------------------------------------------
+
+$h3: (
+  mobile: (
+    font-family: $font-family__base,
+  ),
+);
+
+//  H4
+//  ---------------------------------------------
+
+$h4: (
+  mobile: (
+    font-family: $font-family__base,
+  ),
+);
+
+//  H5
+//  ---------------------------------------------
+
+$h5: (
+  mobile: (
+    font-family: $font-family__base,
+  ),
+);
+
+//  H6
+//  ---------------------------------------------
+
+$h6: (
+  mobile: (
+    font-family: $font-family__base,
+  ),
+);
+
 
 // H4
 //  ---------------------------------------------
