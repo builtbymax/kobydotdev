@@ -1,4 +1,4 @@
-export default function TextBlock({ headline, text, cta}){
+const TextBlock = ({ headline, text}) => {
   return (
     <article className="text-block-inner-container">
       <h3>{headline}</h3>
@@ -6,3 +6,6 @@ export default function TextBlock({ headline, text, cta}){
     </article>
   );
 };
+TextBlock.displayName = 'TextBlock';
+
+export { TextBlock };

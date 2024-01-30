@@ -1,6 +1,7 @@
-import { Header } from '@/components/header/Header';
+import { Header } from '@/components/Elements/Header/Header';
 import { getDictionary } from '/dictionary';
-import { Footer } from '@/components/footer/Footer';
+import { Footer } from '@/components/Elements/Footer';
+import { ContentSize, Section } from '@/components/UI/Section';
 
 export default async function Interview({ params: { lang } }) {
   const dict = await getDictionary(lang);
@@ -8,8 +9,12 @@ export default async function Interview({ params: { lang } }) {
     <>
       <Header dict={dict} lang={lang} layout={1} />
       <main>
-        {dict.interview.content.textBlock.headline}
-        {dict.interview.content.textBlock.text}
+        <Section>
+          <ContentSize>
+            {dict.interview.content.textBlock.headline}
+            {dict.interview.content.textBlock.text}
+          </ContentSize>
+        </Section>
       </main>
       <Footer dict={dict} lang={lang} />
     </>

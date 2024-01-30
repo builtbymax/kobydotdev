@@ -1,8 +1,8 @@
-import { Header } from '@/components/header/Header';
+import { Header } from '@/components/Elements/Header/Header';
 import { getDictionary } from '/dictionary';
 import { TextMedia } from '@/components/Elements/TextMedia';
-import TeaserBorderGradient from '@/components/content-elements/TeaserBorderGradient';
-import { Footer } from '@/components/footer/Footer';
+import { TeaserBorderGradient } from '@/components/Elements/TeaserBorderGradient';
+import { Footer } from '@/components/Elements/Footer';
 import { Section, ContentSize } from '@/components/UI/Section';
 import { Headline, HeadlineContainer, Subline } from '@/components/UI/Headline';
 import { GridColumn, GridRow } from '@/components/UI/Grid';

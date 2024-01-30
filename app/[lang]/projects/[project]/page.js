@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
-import { Header } from '@/components/header/Header';
+import { Header } from '@/components/Elements/Header/Header';
 import { getDictionary } from '/dictionary';
-import { Footer } from '@/components/footer/Footer';
+import { Footer } from '@/components/Elements/Footer';
 
 export async function generateStaticParams({ params: { lang, project } }) {
   const dict = await getDictionary(lang);

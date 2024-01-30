@@ -1,6 +1,6 @@
 import { Headline, Subline } from '@/components/UI/Headline';
 import { ContentSize } from '@/components/UI/Section';
-import { AvailableBlock } from '@/components/common/AvailableBlock';
+import { AvailableBlock } from '@/components/Common/AvailableBlock';
 import { Navigation } from './Navigation';
 import Image from 'next/image';
 

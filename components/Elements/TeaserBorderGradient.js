@@ -4,8 +4,7 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function Teaser({ lang, projects }) {
-
+const TeaserBorderGradient = ({ lang, projects }) => {
   useEffect(() => {
     const getMousePosition = () => {
       const boxNodeList = document.querySelectorAll('[data-gradient-teaser]');
@@ -23,7 +22,7 @@ export default function Teaser({ lang, projects }) {
       });
     };
     getMousePosition();
-  }, []);
+  });
 
   const teaserList = [];
   projects.forEach((project) => {
@@ -58,3 +57,6 @@ export default function Teaser({ lang, projects }) {
     </>
   );
 };
+TeaserBorderGradient.displayName = 'TeaserBorderGradient';
+
+export { TeaserBorderGradient };

@@ -1,8 +1,8 @@
 import { GridColumn, GridRow } from '../UI/Grid';
 import { ArrowExternal } from '../UI/Icons';
 import { ContentSize } from '../UI/Section';
-import { AvailableBlock } from '@/components/common/AvailableBlock';
-import { Logo } from '../common/Logo';
+import { AvailableBlock } from '@/components/Common/AvailableBlock';
+import { Logo } from '../Common/Logo';
 import Link from 'next/link';
 
 const Footer = ({ dict, lang }) => {
@@ -20,7 +20,7 @@ const Footer = ({ dict, lang }) => {
     {
       title: dict.common.footer['privacy'],
       href: `/${lang}/privacy`,
-    }
+    },
   ];
 
   const ExtLink = ({ href, title }) => {
