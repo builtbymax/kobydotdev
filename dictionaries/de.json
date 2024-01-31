@@ -1,6 +1,7 @@
 {
   "common": {
     "available": "Verfügbar für Projekte",
+    "new": "Neu",
     "navigation": {
       "home": "Startseite",
       "projects": "Projekte",
@@ -66,6 +67,24 @@
   "projects": [
     {
       "link": {
+        "slug": "https://www.annkatrinmerk.com/",
+        "title": "Ann-Katrin Merk - Coaching",
+        "external": true,
+        "logo": "/assets/logo-anki.svg",
+        "new": true
+      }
+    },
+    {
+      "link": {
+        "slug": "https://playground.koby.work",
+        "title": "Digital Playground",
+        "external": true,
+        "logo": "/assets/logo-playground.svg",
+        "new": true
+      }
+    },
+    {
+      "link": {
         "slug": "halftime",
         "title": "halftime.space",
         "external": false,
@@ -74,6 +93,15 @@
       "content": {
         "headline": "halftime.space",
         "subline": "Eine Plattform zum Speichern und Kuratieren Ihrer Inspirationen."
+      }
+    },
+    {
+      "link": {
+        "slug": "https://www.tischlereipfau.de/",
+        "title": "Tischlerei Pfau",
+        "external": true,
+        "logo": "/assets/logo-pfau.svg",
+        "new": false
       }
     },
     {
@@ -98,14 +126,6 @@
       "content": {
         "headline": "Convertr",
         "subline": "Eine macOS-App zum Konvertieren von SVGs in Data-URI Strings."
-      }
-    },
-    {
-      "link": {
-        "slug": "https://www.tischlereipfau.de/",
-        "title": "Tischlerei Pfau",
-        "external": true,
-        "logo": "/assets/logo-pfau.svg"
       }
     }
   ]

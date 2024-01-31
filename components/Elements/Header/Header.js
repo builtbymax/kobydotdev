@@ -10,7 +10,12 @@ const Header = ({ dict, lang, layout = 0 }) => {
     return (
       <>
         <div className="header-background">
-          <Image src="/images/header-background.min.svg" width={982} height={517} alt="Header Background" priority />
+          <div className="background-text">
+            <Image src="/images/header-background.min.svg" width={982} height={517} alt="Header Background" priority />
+          </div>
+          <div className="overlay">
+            <Image src="/images/logo-3d-render.png" width={1000} height={1000} alt="Header Background" priority />
+          </div>
         </div>
         <ContentSize className="header-content-size">
           <div className="header-content">

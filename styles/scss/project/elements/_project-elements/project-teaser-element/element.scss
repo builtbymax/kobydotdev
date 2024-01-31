@@ -29,6 +29,19 @@
         max-width: 100%;
       }
     }
+
+    .tag{
+      &.layout-0{
+        position: absolute;
+        z-index: 1;
+        background-color: rgba(var(--project__color-1__rgb), .5);
+        color: var(--base__color-1);
+        width: auto;
+        padding: 6px 10px;
+        border-radius: 3px;
+        font-weight: $font-weight__bold;
+      }
+    }
   }
 
 }
@@ -43,6 +56,14 @@
         max-height: 60px;
       }
     }
+
+    .tag{
+      &.layout-0{
+        top: 10px;
+        left: 10px;
+        @include font(10, 10);
+      }
+    }
   }
 
 }
@@ -52,6 +73,14 @@
   
   .project-teaser-element {
     padding: 35px 30px;
+
+    .tag{
+      &.layout-0{
+        top: 20px;
+        left: 20px;
+        @include font(12, 12);
+      }
+    }
 
     //  Border Teaser Element
     //  ----------------------------------

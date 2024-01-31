@@ -3,8 +3,9 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { GridColumn } from '../UI/Grid';
 
-const TeaserBorderGradient = ({ lang, projects }) => {
+const TeaserBorderGradient = ({ lang, projects, projectTagLabel }) => {
   useEffect(() => {
     const getMousePosition = () => {
       const boxNodeList = document.querySelectorAll('[data-gradient-teaser]');
@@ -31,16 +32,18 @@ const TeaserBorderGradient = ({ lang, projects }) => {
       logo: project.link.logo,
       slug: project.link.slug,
       external: project.link.external,
+      new: project.link.new,
     });
   });
 
-  const TeaserElement = ({ title, logo, slug, external }) => {
+  const TeaserElement = ({ title, logo, slug, external, newTag }) => {
     const url = external ? slug : `/${lang}/projects/${slug}`;
     return (
       <Link data-gradient-teaser href={url} {...(external && {rel: 'noopener', target: '_blank'})} className="project-teaser-element">
         <div className="icon">
           <Image src={logo} alt={title} width={200} height={100} />
         </div>
+        {newTag && <div className="tag layout-0">{projectTagLabel}</div>}
       </Link>
     );
   };
@@ -49,9 +52,9 @@ const TeaserBorderGradient = ({ lang, projects }) => {
     <>
       {teaserList.map((teaser, index) => {
         return (
-          <div className="grid-col gd-xs-6 gd-m-6" key={index}>
-            <TeaserElement title={teaser.title} logo={teaser.logo} slug={teaser.slug} external={teaser.external} />
-          </div>
+          <GridColumn key={index} columnSize={{ xs: 6, m: index < 2 ? 6 : 4 }}>
+            <TeaserElement title={teaser.title} logo={teaser.logo} slug={teaser.slug} external={teaser.external} newTag={teaser.new} />
+          </GridColumn>
         )
       })}
     </>

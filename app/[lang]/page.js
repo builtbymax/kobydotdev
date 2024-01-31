@@ -70,7 +70,7 @@ export default async function Home({ params: { lang } }) {
           </HeadlineContainer>
           <div className="teaser-element-section">
             <GridRow>
-              <TeaserBorderGradient lang={lang} projects={dict.projects} />
+              <TeaserBorderGradient lang={lang} projects={dict.projects} projectTagLabel={dict.common.new} />
             </GridRow>
           </div>
         </ContentSize>

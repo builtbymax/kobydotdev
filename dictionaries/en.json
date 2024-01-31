@@ -1,6 +1,7 @@
 {
   "common": {
     "available": "Available for freelance work",
+    "new": "New",
     "navigation": {
       "home": "Home",
       "projects": "Projects",
@@ -66,10 +67,29 @@
   "projects": [
     {
       "link": {
+        "slug": "https://www.annkatrinmerk.com/",
+        "title": "Ann-Katrin Merk - Coaching",
+        "external": true,
+        "logo": "/assets/logo-anki.svg",
+        "new": true
+      }
+    },
+    {
+      "link": {
+        "slug": "https://playground.koby.work",
+        "title": "Digital Playground",
+        "external": true,
+        "logo": "/assets/logo-playground.svg",
+        "new": true
+      }
+    },
+    {
+      "link": {
         "slug": "halftime",
         "title": "halftime.space",
         "external": false,
-        "logo": "/assets/logo-halftime.svg"
+        "logo": "/assets/logo-halftime.svg",
+        "new": false
       },
       "content": {
         "headline": "halftime.space",
@@ -78,10 +98,20 @@
     },
     {
       "link": {
+        "slug": "https://www.tischlereipfau.de/",
+        "title": "Tischlerei Pfau",
+        "external": true,
+        "logo": "/assets/logo-pfau.svg",
+        "new": false
+      }
+    },
+    {
+      "link": {
         "slug": "taskline",
         "title": "Taskline",
         "external": false,
-        "logo": "/assets/logo-taskline.svg"
+        "logo": "/assets/logo-taskline.svg",
+        "new": false
       },
       "content": {
         "headline": "taskline",
@@ -93,19 +123,12 @@
         "slug": "convertr",
         "title": "Convertr",
         "external": false,
-        "logo": "/assets/logo-convertr.svg"
+        "logo": "/assets/logo-convertr.svg",
+        "new": false
       },
       "content": {
         "headline": "Convertr",
         "subline": "A macOS-App for convert svgs to Data-URI strings."
-      }
-    },
-    {
-      "link": {
-        "slug": "https://www.tischlereipfau.de/",
-        "title": "Tischlerei Pfau",
-        "external": true,
-        "logo": "/assets/logo-pfau.svg"
       }
     }
   ]
