@@ -3,9 +3,11 @@ import { ContentSize } from '@/components/UI/Section';
 import { AvailableBlock } from '@/components/Common/AvailableBlock';
 import { Navigation } from './Navigation';
 import Image from 'next/image';
+import { LogoRender } from './LogoRender';
 
 const Header = ({ dict, lang, layout = 0 }) => {
 
+  // <Image src="/images/logo-3d-render.png" width={1000} height={1000} alt="Header Background" priority />
   const HomeLayout = () => {
     return (
       <>
@@ -14,7 +16,7 @@ const Header = ({ dict, lang, layout = 0 }) => {
             <Image src="/images/header-background.min.svg" width={982} height={517} alt="Header Background" priority />
           </div>
           <div className="overlay">
-            <Image src="/images/logo-3d-render.png" width={1000} height={1000} alt="Header Background" priority />
+            <LogoRender />
           </div>
         </div>
         <ContentSize className="header-content-size">
