@@ -6,18 +6,13 @@ import Image from 'next/image';
 import { LogoRender } from './LogoRender';
 
 const Header = ({ dict, lang, layout = 0 }) => {
-
-  // <Image src="/images/logo-3d-render.png" width={1000} height={1000} alt="Header Background" priority />
   const HomeLayout = () => {
     return (
       <>
         <div className="header-background">
-          <div className="background-text">
-            <Image src="/images/header-background.min.svg" width={982} height={517} alt="Header Background" priority />
-          </div>
-          <div className="overlay">
-            <LogoRender />
-          </div>
+          <LogoRender />
+          <div className="gradient-overlay grd-top"></div>
+          <div className="gradient-overlay grd-bottom"></div>
         </div>
         <ContentSize className="header-content-size">
           <div className="header-content">
@@ -57,3 +52,9 @@ const Header = ({ dict, lang, layout = 0 }) => {
 Header.displayName = 'Header';
 
 export { Header };
+
+
+//<div className="background-text">
+//<Image src="/images/header-background.min.svg" width={982} height={517} alt="Header Background" priority />
+//</div>
+//<Image src="/images/logo-3d-render.png" width={1000} height={1000} alt="Header Background" priority />
