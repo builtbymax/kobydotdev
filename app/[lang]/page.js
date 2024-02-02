@@ -7,6 +7,14 @@ import { Section, ContentSize } from '@/components/UI/Section';
 import { Headline, HeadlineContainer, Subline } from '@/components/UI/Headline';
 import { GridColumn, GridRow } from '@/components/UI/Grid';
 
+export const metadata = {
+  title: 'Homepage | koby.dev | Front-End developer & digital designer',
+  openGraph: {
+    images: ['/og-image-koby.jpg'],
+  },
+  robots: 'index, follow',
+};
+
 export default async function Home({ params: { lang } }) {
   const dict = await getDictionary(lang);
 
