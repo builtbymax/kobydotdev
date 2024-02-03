@@ -1,0 +1,14 @@
+//
+//  Content
+//  ---------------------------------------------
+
+//  Styles
+//  ---------------------------------------------
+
+@include media('mobile') {
+
+  .copy-text{
+    span.utf{ font-family: 'Arial', sans-serif; }
+  }
+
+}
