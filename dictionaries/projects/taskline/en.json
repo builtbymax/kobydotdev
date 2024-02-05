@@ -1,0 +1,80 @@
+{
+  "taskline": {
+    "header": {
+      "title": "Taskline",
+      "subline": "A to-do list for everyday life and beyond."
+    },
+    "content": [
+      {
+        "component": "ContentText",
+        "title": "What exactly is taskline?",
+        "text": "Taskline is a to-do list that focuses on the essentials. It is easy to use and provides a clear overview of all upcoming tasks. The app is designed for daily use and also aims to help maintain an overview of long-term goals and projects.{{Break}}I developed Taskline for myself, and the project is implemented using Next.js and Supabase."
+      },
+      {
+        "component": "ContentGridImage",
+        "gridSize": {
+          "m": 6
+        },
+        "asset": [
+          {
+            "width": 1000,
+            "height": 1000,
+            "type": "image",
+            "url": "/assets/content/projects/taskline/content-logo.jpg",
+            "alt": "Image shows Maximilian with his Setup",
+            "quality": 90
+          }
+        ]
+      },
+      {
+        "component": "ContentImageDefault",
+        "asset":{
+          "width": 1859,
+          "height": 1500,
+          "type": "image",
+          "url": "/assets/content/projects/taskline/content-dashboard.jpg",
+          "alt": "taskline dashboard",
+          "quality": 100
+        }
+      },
+      {
+        "component": "ContentImageDefault",
+        "asset":{
+          "width": 1565,
+          "height": 350,
+          "type": "image",
+          "url": "/assets/content/projects/taskline/content-row.png",
+          "alt": "taskline dashboard",
+          "quality": 100
+        }
+      },
+      {
+        "component": "ContentGridImage",
+        "gridSize": {
+          "m": 2
+        },
+        "asset": [
+          {
+            "width": 145,
+            "height": 226,
+            "type": "image",
+            "url": "/assets/content/projects/taskline/content-menu.png",
+            "alt": "Image shows Maximilian with his Setup",
+            "quality": 100
+          }
+        ]
+      },
+      {
+        "component": "ContentImageDefault",
+        "asset":{
+          "width": 1859,
+          "height": 1500,
+          "type": "image",
+          "url": "/assets/content/projects/taskline/content-modal.jpg",
+          "alt": "taskline dashboard",
+          "quality": 100
+        }
+      }
+    ]
+  }
+}

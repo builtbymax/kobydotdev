@@ -37,7 +37,7 @@ const ImageAsset = ({ image, ...props }) => {
       // blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM8PjW6HgAGGgI4F5s4KwAAAABJRU5ErkJggg=="
       quality={props.quality}
       priority={props.priority}
-      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
+      sizes="(max-width: 768px) 100vw, (max-width: 1023px) 50vw, (min-width: 1024px) 1200px"
       {...props}
     />
   );

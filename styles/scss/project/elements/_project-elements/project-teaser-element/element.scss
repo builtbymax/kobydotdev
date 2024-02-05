@@ -41,6 +41,21 @@
         border-radius: 3px;
         font-weight: $font-weight__bold;
       }
+      &.layout-1{
+        position: absolute;
+        z-index: 1;
+        background-color: var(--base__color-7);
+        color: var(--base__color-1);
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+        font-weight: $font-weight__bold;
+      }
     }
   }
 
@@ -58,7 +73,7 @@
     }
 
     .tag{
-      &.layout-0{
+      &.layout-0, &.layout-1{
         top: 10px;
         left: 10px;
         @include font(10, 10);
@@ -75,7 +90,7 @@
     padding: 35px 30px;
 
     .tag{
-      &.layout-0{
+      &.layout-0, &.layout-1{
         top: 20px;
         left: 20px;
         @include font(12, 12);

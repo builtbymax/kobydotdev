@@ -47,7 +47,7 @@
     "projects": {
       "headline": {
         "headline": "Projects",
-        "subline": "A Selection of my Diverse Design and Development Projects: Showcasing my Portfolio."
+        "subline": "A Selection of my Design and Development Projects"
       }
     }
   },
@@ -103,19 +103,6 @@
       "content": {
         "headline": "taskline",
         "subline": "A task management app for your tasks."
-      }
-    },
-    {
-      "link": {
-        "slug": "convertr",
-        "title": "Convertr",
-        "external": false,
-        "logo": "/assets/logo-convertr.svg",
-        "new": false
-      },
-      "content": {
-        "headline": "Convertr",
-        "subline": "A macOS-App for convert svgs to Data-URI strings."
       }
     }
   ]

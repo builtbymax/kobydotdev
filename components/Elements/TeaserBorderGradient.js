@@ -3,7 +3,8 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { GridColumn } from '../UI/Grid';
+import { GridColumn } from '@/components/UI/Grid';
+import { ArrowExternal } from '@/components/UI/Icons';
 
 const TeaserBorderGradient = ({ lang, projects, projectTagLabel }) => {
   useEffect(() => {
@@ -43,7 +44,8 @@ const TeaserBorderGradient = ({ lang, projects, projectTagLabel }) => {
         <div className="icon">
           <Image src={logo} alt={title} width={200} height={100} />
         </div>
-        {newTag && <div className="tag layout-0">{projectTagLabel}</div>}
+        {/* newTag && <div className="tag layout-0">{projectTagLabel}</div>*/}
+        {external && <div className="tag layout-1"><ArrowExternal /></div>}
       </Link>
     );
   };

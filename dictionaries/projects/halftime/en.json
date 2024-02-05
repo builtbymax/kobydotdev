@@ -1,0 +1,91 @@
+{
+  "halftime": {
+    "header": {
+      "title": "halftime.space",
+      "subline": "Storage space for inspirations, text, and media."
+    },
+    "content": [
+      {
+        "component": "ContentText",
+        "title": "What exactly is halftime?",
+        "text": "Halftime was born out of an idea to develop a tool for myself that would make it easier to save and find images, inspirations, and learning materials. I wanted a central place where I could store and view my files. It should also be possible to add details and organize them. While Dropbox is certainly a good option for that, I wanted a simpler user interface and better organization. That's why I decided to create my own solution. The development is still ongoing, but I am already excited about the results."
+      },
+      {
+        "component": "ContentGridImage",
+        "gridSize": {
+          "m": 6
+        },
+        "asset": [
+          {
+            "width": 1200,
+            "height": 1200,
+            "type": "image",
+            "url": "/assets/content/projects/halftime/content-logo-image.jpg",
+            "alt": "Image shows Maximilian with his Setup",
+            "quality": 90
+          }
+        ]
+      },
+      {
+        "component": "ContentImageDefault",
+        "asset":{
+          "width": 1600,
+          "height": 1558,
+          "type": "image",
+          "url": "/assets/content/projects/halftime/content-screen-dashboard.jpg",
+          "alt": "Halftime dashboard",
+          "quality": 100
+        }
+      },
+      {
+        "component": "ContentImageDefault",
+        "asset":{
+          "width": 1600,
+          "height": 1991,
+          "type": "image",
+          "url": "/assets/content/projects/halftime/content-screen-detail.jpg",
+          "alt": "Halftime dashboard",
+          "quality": 100
+        }
+      },
+      {
+        "component": "ContentImageDefault",
+        "asset":{
+          "width": 1500,
+          "height": 414,
+          "type": "image",
+          "url": "/assets/content/projects/halftime/content-teaser.png",
+          "alt": "Halftime dashboard",
+          "quality": 100
+        }
+      },
+      {
+        "component": "ContentImageDefault",
+        "asset":{
+          "width": 1500,
+          "height": 414,
+          "type": "image",
+          "url": "/assets/content/projects/halftime/content-teaser-2.png",
+          "alt": "Halftime dashboard",
+          "quality": 100
+        }
+      },
+      {
+        "component": "ContentGridImage",
+        "gridSize": {
+          "m": 6
+        },
+        "asset": [
+          {
+            "width": 440,
+            "height": 359,
+            "type": "image",
+            "url": "/assets/content/projects/halftime/content-exports.png",
+            "alt": "Image shows Maximilian with his Setup",
+            "quality": 100
+          }
+        ]
+      }
+    ]
+  }
+}

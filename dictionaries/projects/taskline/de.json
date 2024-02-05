@@ -1,0 +1,80 @@
+{
+  "taskline": {
+    "header": {
+      "title": "Taskline",
+      "subline": "Todo-Liste für den Alltag & darüber hinaus."
+    },
+    "content": [
+      {
+        "component": "ContentText",
+        "title": "Was ist taskline?",
+        "text": "Taskline ist eine Todo-Liste, die sich auf das Wesentliche konzentriert. Sie ist einfach zu bedienen und bietet eine klare Übersicht über alle anstehenden Aufgaben. Die App ist für den täglichen Gebrauch konzipiert und soll zusätzlich den Überblick über langfristige Ziele und Projekte ermöglichen.{{Break}} Ich habe Taskline für mich entwickelt, das Projekt ist umgesetzt mit Nexts.js und Supabase."
+      },
+      {
+        "component": "ContentGridImage",
+        "gridSize": {
+          "m": 6
+        },
+        "asset": [
+          {
+            "width": 1000,
+            "height": 1000,
+            "type": "image",
+            "url": "/assets/content/projects/taskline/content-logo.jpg",
+            "alt": "Image shows Maximilian with his Setup",
+            "quality": 90
+          }
+        ]
+      },
+      {
+        "component": "ContentImageDefault",
+        "asset":{
+          "width": 1859,
+          "height": 1500,
+          "type": "image",
+          "url": "/assets/content/projects/taskline/content-dashboard.jpg",
+          "alt": "taskline dashboard",
+          "quality": 100
+        }
+      },
+      {
+        "component": "ContentImageDefault",
+        "asset":{
+          "width": 1565,
+          "height": 350,
+          "type": "image",
+          "url": "/assets/content/projects/taskline/content-row.png",
+          "alt": "taskline dashboard",
+          "quality": 100
+        }
+      },
+      {
+        "component": "ContentGridImage",
+        "gridSize": {
+          "m": 2
+        },
+        "asset": [
+          {
+            "width": 145,
+            "height": 226,
+            "type": "image",
+            "url": "/assets/content/projects/taskline/content-menu.png",
+            "alt": "Image shows Maximilian with his Setup",
+            "quality": 100
+          }
+        ]
+      },
+      {
+        "component": "ContentImageDefault",
+        "asset":{
+          "width": 1859,
+          "height": 1500,
+          "type": "image",
+          "url": "/assets/content/projects/taskline/content-modal.jpg",
+          "alt": "taskline dashboard",
+          "quality": 100
+        }
+      }
+    ]
+  }
+}
