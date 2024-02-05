@@ -12,12 +12,12 @@
       {
         "component": "ContentText",
         "title": "Kontakt",
-        "text": "Telefon: ['+491629020826', ['tel:01629020826', '_self', 'content-tel']] {{Break}} E-Mail: ['hello@koby.dev', ['mailto:hello@koby.dev', '_self', 'content-mail']]"
+        "text": "Telefon: ['+491629020826', ['tel:+49629020826', '_self', 'content-tel']] {{Break}} E-Mail: ['hello@koby.dev', ['mailto:hello@koby.dev', '_self', 'content-mail']]"
       },
       {
         "component": "ContentText",
         "title": "EU-Streitschlichtung",
-        "text": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr.{{Break}} Unsere E-Mail-Adresse finden Sie oben im Impressum."
+        "text": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: ['ec.europa.eu/consumers/odr', ['https://ec.europa.eu/consumers/odr', '_blank', 'content-link']].{{Break}} Unsere E-Mail-Adresse finden Sie oben im Impressum."
       },
       {
         "component": "ContentText",
@@ -42,7 +42,7 @@
       {
         "component": "ContentText",
         "title": "Quelle",
-        "text": "['https://www.e-recht24.de', ['https://www.e-recht24.de', '_blank', 'content-link']]"
+        "text": "['www.e-recht24.de', ['https://www.e-recht24.de', '_blank', 'content-link']]"
       }
     ]
   }

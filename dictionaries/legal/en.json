@@ -17,7 +17,7 @@
       {
         "component": "ContentText",
         "title": "EU Dispute Resolution",
-        "text": "The European Commission provides a platform for online dispute resolution (ODR): https://ec.europa.eu/consumers/odr.{{Break}} Our email address can be found in the imprint above."
+        "text": "The European Commission provides a platform for online dispute resolution (ODR): ['ec.europa.eu/consumers/odr', ['https://ec.europa.eu/consumers/odr', '_blank', 'content-link']].{{Break}} Our email address can be found in the section above."
       },
       {
         "component": "ContentText",

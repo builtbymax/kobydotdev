@@ -77,8 +77,8 @@ const replaceVariables = (str) => {
  * @param {string} tag - The link tag to be replaced.
  * @returns {string} - The replaced HTML anchor tag.
  */
-const replaceLinks = (tag) => {
-  return tag.replace(/\['(\w+)',\s*\['(https?:\/\/\S+)',\s*'(\S+)',\s*'(\S+)'\]\]/, (_, title, href, target, className) => {
+const replaceLinks = (str) => {
+  return str.replace(/\['([\w\.\+\/\-\:\@]+)',\s*\['((tel:|mailto:|http:|https:)\S+)',\s*'(\S+)',\s*'(\S+)'\]\]/g, (_, title, href, hrefAttr, target, className) => {
     return `<a href="${href}" target="${target}" class="${className}">${title}</a>`;
   });
 };
