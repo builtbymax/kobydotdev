@@ -10,8 +10,7 @@ const Header = ({ dict, lang, layout = 0, headline = '', subline = '' }) => {
       <>
         <div className="header-background">
           <LogoRender />
-          <div className="gradient-overlay grd-top"></div>
-          <div className="gradient-overlay grd-bottom"></div>
+          <div className="gradient-overlay grd-radial"></div>
         </div>
         <ContentSize className="header-content-size">
           <div className="header-content">

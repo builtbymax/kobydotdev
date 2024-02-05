@@ -50,14 +50,19 @@
         pointer-events: none;
         z-index: 0;
         &.grd-top{
-          height: 350px;
+          height: 300px;
           top: 0;
-          background: linear-gradient(180deg, rgba(var(--base__color-2__rgb), 1) 20%, rgba(var(--base__color-2__rgb), 0) 60%)
+          background: linear-gradient(180deg, rgba(var(--base__color-2__rgb), 1) 65%, rgba(#252525, 0) 100%)
         }
         &.grd-bottom{
           height: 350px;
           bottom: 0;
           background: linear-gradient(180deg, rgba(var(--base__color-2__rgb), 0) 0, rgba(var(--base__color-2__rgb), 1) 60%);
+        }
+        &.grd-radial{
+          height: calc(100% + 120px);
+          top: -60px;
+          background: radial-gradient(ellipse at center, rgba(var(--base__color-2__rgb), 0) 0%, rgba(var(--base__color-2__rgb), 1) 55%);
         }
       }
 
