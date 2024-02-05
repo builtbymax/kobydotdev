@@ -1,0 +1,102 @@
+{
+  "interview": {
+    "header": {
+      "title": "Interview",
+      "subline": "If you want to learn more about me as a person and my personal views, here's a basic Q&A session to keep you updated."
+    },
+    "content": [
+      {
+        "component": "ContentText",
+        "title": "Hi, I'm Max.",
+        "text": "My name is Maximilian - or <Bold>koby</Bold>. I am {{Age}} years old and have been working as a Front-End Developer & Web Designer at ['SNK', ['https://www.snk.de', '_blank', 'content-link']] (formerly kirchbergerknorr GmbH) since 2014. I have been living in Munich for {{Time}} years now, but I originally come from beautiful Dresden.",
+        "link": {
+          "text": "Link to SNK website",
+          "external": true,
+          "url": "https://www.snk.de"
+        }
+      },
+      {
+        "component": "ContentImageDefault",
+        "asset":{
+          "width": 1200,
+          "height": 700,
+          "type": "image",
+          "url": "/assets/interview-content-image__00.jpg",
+          "alt": "Image shows Maximilian with his Setup",
+          "quality": 90
+        }
+      },
+      {
+        "component": "ContentText",
+        "title": "Current",
+        "text": "I work at SNK as a Front-End Developer in the TYPO3 area. I program front-end applications and work hand in hand with TYPO3 back-end developers. In my free time, I also focus on web and UI design."
+      },
+      {
+        "component": "ContentText",
+        "title": "What do I like most about my work?",
+        "text": "The constant variety. The web feels like it's evolving a little bit every day. There are so many opportunities to learn new things, discover new corners in development. Additionally, I also like that good work is often rewarded. Quality pays off - just like in craftsmanship. Those who work foresightedly and modernly will be rewarded in the future, in terms of system support. That's why I myself rely on modern web technologies and tools. I constantly strive to improve my quality and use as few external libraries as necessary. Vanilla JS and custom LESS-CSS / SASS-CSS are the best methods for me when it comes to minimal applications. In addition, JavaScript frameworks like NextJS, Vue, and Svelte are also super interesting for scalable applications."
+      },
+      {
+        "component": "ContentGridImage",
+        "gridSize": {
+          "m": 6,
+          "l": 4
+        },
+        "asset": [
+          {
+            "width": 800,
+            "height": 800,
+            "type": "image",
+            "url": "/assets/interview-content-image__00.jpg",
+            "alt": "Image shows Maximilian with his Setup",
+            "quality": 90
+          },
+          {
+            "width": 800,
+            "height": 800,
+            "type": "image",
+            "url": "/assets/interview-content-image__01.jpg",
+            "alt": "Image shows Maximilian with his Setup",
+            "quality": 90
+          }
+        ]
+      },
+      {
+        "component": "ContentText",
+        "title": "Setup",
+        "text": "My setup is relatively simple: <Bold><Utf></Utf> Apple</Bold>. {{Break}} I work with a MacBook Pro (M1 Pro), an iPad Pro 12.9″ (2020), and an iPhone 12 Pro - so I'm perfectly connected in the Apple ecosystem. Additionally, I like to have external monitors during work. The image below shows part of my home office."
+      },
+      {
+        "component": "ContentImageDefault",
+        "asset":{
+          "width": 1200,
+          "height": 700,
+          "type": "image",
+          "url": "/assets/interview-content-image__01.jpg",
+          "alt": "Image shows Maximilian with his Setup",
+          "quality": 90
+        }
+      },
+      {
+        "component": "ContentText",
+        "title": "Daily Tools",
+        "text": "Tools that get a double click from me every day are definitely: <Bold>Slack, VSCode, Dropbox, Spotify, Mail & Calendar</Bold>. On days when there's a lot of design on the agenda, <Bold>Figma</Bold> is permanently open for me."
+      },
+      {
+        "component": "ContentText",
+        "title": "Vision for the future",
+        "text": "For me, the future means digitization. This means, in particular, that every person should have unlimited access to the internet. Volume contracts and areas without sufficiently fast internet should be a thing of the past in the near future. I look forward to developments such as autonomous driving and increased use of artificial intelligence in everyday life. Further development of smart home technology is also a very exciting topic for me. {{Break}}{{Break}} The COVID-19 pandemic made many digitalization issues clearly visible - as a result, many things have already been steered in the right direction. This should and must continue to be worked on and maintained."
+      },
+      {
+        "component": "ContentText",
+        "title": "What I always have with me...",
+        "text": "In my backpack, you can always find AirPods and my BOSE QC35. I always have a sketch block and pens for sketches & scribbles. Of course, my iPhone and iPad are a must. For longer journeys, I also like to take my Nintendo Switch with me."
+      },
+      {
+        "component": "ContentText",
+        "title": "When I'm not working...",
+        "text": "I try to make good use of the weather by the Isar River or in the mountains. Otherwise, I simply enjoy spending time on the couch watching football, basketball & tennis on TV or Netflix. When time allows, I am also a big fan of gaming & e-sports. I actively play Rocket League, Destiny 2, Trackmania. But I've also spent many nights playing games like The Witcher 3, Skyrim, or Horizon Zero Dawn. .. and besides all that, I'm practicing learning Croatian. {{Break}}{{Break}} <Bold>Doviđenja. ✌🏻</Bold>"
+      }
+    ]
+  }
+}

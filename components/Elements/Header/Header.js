@@ -2,10 +2,9 @@ import { Headline, Subline } from '@/components/UI/Headline';
 import { ContentSize } from '@/components/UI/Section';
 import { AvailableBlock } from '@/components/Common/AvailableBlock';
 import { Navigation } from './Navigation';
-import Image from 'next/image';
 import { LogoRender } from './LogoRender';
 
-const Header = ({ dict, lang, layout = 0 }) => {
+const Header = ({ dict, lang, layout = 0, headline = '', subline = '' }) => {
   const HomeLayout = () => {
     return (
       <>
@@ -29,13 +28,13 @@ const Header = ({ dict, lang, layout = 0 }) => {
     )
   };
 
-  const SubLayout = () => {
+  const SubLayout = ({ headline, subline }) => {
     return (
       <ContentSize className="header-content-size">
         <div className="header-content">
           <div className="headline">
-            <Headline as="h1">{dict.interview.header['headline']}</Headline>
-            <Subline>{dict.interview.header['subline']}</Subline>
+            <Headline as="h1">{headline}</Headline>
+            <Subline>{subline}</Subline>
           </div>
         </div>
       </ContentSize>
@@ -45,7 +44,7 @@ const Header = ({ dict, lang, layout = 0 }) => {
   return (
     <header className={`layout-${layout}`}>
       <Navigation />
-      {layout === 0 ? <HomeLayout /> : layout === 1 && <SubLayout />}
+      {layout === 0 ? <HomeLayout /> : layout === 1 && <SubLayout headline={headline} subline={subline} />}
     </header>
   );
 };

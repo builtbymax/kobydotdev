@@ -73,3 +73,9 @@
 @if map-get($elements, 'stage-element') == true {
   @include stage-element();
 }
+
+//  Content Elements
+//  ---------------------------------------------
+@if map-get($elements, 'content-elements') == true {
+  @include content-elements();
+}

@@ -1,0 +1,71 @@
+//
+//  Content Elements: Interview, Projects detail
+//  ---------------------------------------------
+
+//  Variables
+//  ----------------------------------
+
+@import 'variables.scss';
+
+
+//  Styles
+//  ----------------------------------
+
+@mixin content-elements() {
+
+  @include media('mobile') {
+
+    .inner-section-wrapper{
+      :first-child{ padding-top: 0; }
+      :last-child{ padding-bottom: 0; }
+    }
+
+    .inner-section-element{ width: 100%; }
+
+    .text-element-container{
+      .copy-text{
+        width: 100%;
+        max-width: 800px;
+      }
+    }
+
+    .media-element-container{
+      .media{
+        img{
+          object-fit: cover;
+          width: 100%;
+          border-radius: 5px;
+        }
+      }
+    }
+
+  }
+
+  // max-768
+  @include media('tablet-down') {
+
+    .inner-section-element{
+      padding: 25px 0;
+    }
+
+  }
+
+  // min-768
+  @include media('tablet') {
+
+    .inner-section-element{
+      padding: 35px 0;
+    }
+  
+  }
+
+  // min-1024
+  @include media('tablet-wide') {
+
+    .inner-section-element{
+      padding: 45px 0;
+    }
+  
+  }
+
+}

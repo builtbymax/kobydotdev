@@ -11,7 +11,6 @@
     "footer": {
       "home": "Home",
       "imprint": "Legal Notice",
-      "privacy": "Privacy Policy",
       "copy": "Maximilian Kobus"
     }
   },
@@ -51,24 +50,6 @@
         "subline": "A Selection of my Diverse Design and Development Projects: Showcasing my Portfolio."
       }
     }
-  },
-  "interview": {
-    "header": {
-      "headline": "Interview",
-      "subline": "If you want to hear more about me as a person and personal views, here is a basic Q&A for you to catch up."
-    },
-    "content": [
-      {
-        "component": "ContentText",
-        "title": "Aktuelles",
-        "text": "Ich <Utf></Utf><Bold>arbeite</Bold> bei {{Age}} als <Italic>Front-End</Italic> <Underline>Entwickler</Underline> ['SNK', ['https://www.snk.de', '_blank', 'content-link'] im Bereich TYPO3. Ich programmiere Front-End Anwendungen und arbeite Hand-in-Hand mit den TYPO3 Back-End Entwicklern zusammen. In meiner Privaten Zeit konzentriere ich mich zusätzlich noch auf Web- & UI-Design."
-      },
-      {
-        "component": "ContentText",
-        "title": "Was gefällt mir an meiner Arbeit am meisten?",
-        "text": "Die ständige Abwechslung. Das Web entwickelt sich gefühlt jeden Tag ein Stück weiter. Es gibt so viele Möglichkeiten neue Dinge zu lernen. Neue Ecken in der Entwicklung zu entdecken. Zusätzlich gefällt mir aber auch, das gute Arbeit oft belohnt wird. Qualität zahlt sich aus - eben genauso wie im Handwerk. Wer vorausschauend und modern arbeitet wird dafür in der Zukunft, im Support des Systems, belohnt. Daher setze auch ich selbst auf moderne Web-Technologien und Tools. Ich versuche mich ständig in meiner Qualität zu steigern und so wenig externe Libraries zu verwenden wie nötig. Vanilla JS und Custom LESS-CSS / SASS-CSS sind für mich die besten Methoden, wenn es um minimale Anwendungen geht. Zusätzlich sind aber auch JavaScript Frameworks wie NextJS, Vue und Svelte super interessant für skalierbare Anwendungen."
-      }
-    ]
   },
   "projects": [
     {

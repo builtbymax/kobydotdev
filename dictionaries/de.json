@@ -11,7 +11,6 @@
     "footer": {
       "home": "Startseite",
       "imprint": "Impressum",
-      "privacy": "Datenschutz",
       "copy": "Maximilian Kobus"
     }
   },
@@ -51,81 +50,6 @@
         "subline": "Auszug meiner vielfältigen Design- und Entwicklungsprojekte: Präsentation meines Portfolios"
       }
     }
-  },
-  "interview": {
-    "header": {
-      "headline": "Interview",
-      "subline": "Wenn du mehr über mich als Person und meine persönlichen Ansichten erfahren möchtest, habe ich hier eine grundlegende Fragen- und Antworten-Runde für dich, um auf dem neuesten Stand zu bleiben."
-    },
-    "content": [
-      {
-        "type": "html",
-        "headline": "Hi, ich bins Max.",
-        "text": "<component>Mein Name ist Maximilian - oder <bold>koby</bold>. Ich bin {{Age}} Jahre alt und arbeite seit 2014 als Front-End Entwickler & Web-Designer bei <link>@SNK</link> (ehemals kirchbergerknorr GmbH). Ich lebe jetzt {{Time}} Jahre in München, ursprünglich komme ich aber aus dem schönen Dresden.</component>",
-        "link": {
-          "text": "Link zur Website von SNK",
-          "external": true,
-          "url": "https://www.snk.de"
-        }
-      },
-      {
-        "type": "image",
-        "alt": "Image shows Maximilian with his Setup",
-        "url": "/images/content/interview-content-image__00.jpg",
-        "color": false,
-        "shadow": true,
-        "size": {
-          "w": "1200",
-          "h": "700"
-        }
-      },
-      {
-        "type": "html",
-        "headline": "Aktuelles",
-        "text": "<component>Ich arbeite bei SNK als Front-End Entwickler im Bereich TYPO3. Ich programmiere Front-End Anwendungen und arbeite Hand-in-Hand mit den TYPO3 Back-End Entwicklern zusammen. In meiner Privaten Zeit konzentriere ich mich zusätzlich noch auf Web- & UI-Design.</component>"
-      },
-      {
-        "type": "html",
-        "headline": "Was gefällt mir an meiner Arbeit am meisten?",
-        "text": "<component>Die ständige Abwechslung. Das Web entwickelt sich gefühlt jeden Tag ein Stück weiter. Es gibt so viele Möglichkeiten neue Dinge zu lernen. Neue Ecken in der Entwicklung zu entdecken. Zusätzlich gefällt mir aber auch, das gute Arbeit oft belohnt wird. Qualität zahlt sich aus - eben genauso wie im Handwerk. Wer vorausschauend und modern arbeitet wird dafür in der Zukunft, im Support des Systems, belohnt. Daher setze auch ich selbst auf moderne Web-Technologien und Tools. Ich versuche mich ständig in meiner Qualität zu steigern und so wenig externe Libraries zu verwenden wie nötig. Vanilla JS und Custom LESS-CSS / SASS-CSS sind für mich die besten Methoden, wenn es um minimale Anwendungen geht. Zusätzlich sind aber auch JavaScript Frameworks wie NextJS, Vue und Svelte super interessant für skalierbare Anwendungen.</component>"
-      },
-      {
-        "type": "html",
-        "headline": "Setup",
-        "text": "<component>Mein Setup ist relativ einfach erklärt: <bold><utf></utf> Apple</bold>. <break/> Ich arbeite mit einem MacBook Pro (M1 Pro), einem iPad Pro 12,9″ (2020) und einem iPhone 12 Pro - dadurch bin ich im Apple Ökosystem perfekt vernetzt. Zusätzlich habe ich gerne externe Bildschirme während der Arbeit. Im unteren Bild ist ein Auszug aus meinem Home Office.</component>"
-      },
-      {
-        "type": "image",
-        "alt": "Image shows Maximilian's Setup in the Home Office",
-        "url": "/images/content/interview-content-image__01.jpg",
-        "color": false,
-        "shadow": true,
-        "size": {
-          "w": "1200",
-          "h": "550"
-        }
-      },
-      {
-        "type": "html",
-        "headline": "Tägliche Tools",
-        "text": "<component>Tools, welche jeden Tag bei mir den Doppelklick erhalten sind aufjedenfall: <bold>Slack, VSCode, Dropbox, Spotify, Mail & Kalender</bold>. An Tagen in denen mal viel Design auf dem Programm steht, ist <bold>Figma</bold> bei mir dauerhaft geöffnet.</component>"
-      },
-      {
-        "type": "html",
-        "headline": "Zukunftsvision",
-        "text": "<component>Zukunft bedeutet für mich Digitalisierung. Das bedeutet insbesondere, das jeder Mensch unbegrenzt Zugang zum Internet erhalten sollte. Volumenverträge und Gebiete ohne ausreichend schnelles Internet sollten in naher Zukunft der Vergangenheit angehören. Ich freue mich auf Entwicklungen wie Autonomes fahren und vermehrte Nutzung von künstlicher Intelligenz im alltäglichen Umgang. Auch weiterentwicklung von Smart Home Technlogie ist für mich ein sehr spannendes Thema. <break/><break/> Durch die COVID-19 Pandemie wurden viele Digitalisierungsthemen klar und deutlich sichtbar - dadurch wurde vieles schon in die richtige Richtung manövriert. Daran sollte und muss weiter gearbeitet und festgehalten werden.</component>"
-      },
-      {
-        "type": "html",
-        "headline": "Was ich immer dabei habe...",
-        "text": "<component>Im Rucksack sind bei mir immer zu finden: AirPods und meine BOSE QC35. Ich habe immer einen Zeichenblock und Stifte für Skizzen & Scribbles dabei. Mein iPhone und iPad dürfen natürlich nie fehlen. Für längere Fahrten nehme ich auch gerne mal meine Nintendo Switch mit.</component>"
-      },
-      {
-        "type": "html",
-        "headline": "Wenn ich nicht arbeite...",
-        "text": "<component>Versuche ich natürlich gutes Wetter an der Isar oder in den Bergen zu nutzen. Ansonsten Verbringe ich gern einfach Zeit auf der Couch mit Fußball, Basketball & Tennis im TV oder Netflix. Wenn es die Zeit zulässt bin ich auch ein großer Freund von Gaming & E-Sports. Aktiv spiele ich Rocket League, Destiny2, Trackmania. Aber auch mit Spielen wie The Witcher 3, Skyrim oder Horizon Zero Dawn habe ich schon so einige Nächte rumgebracht. .. neben alle dem übe mich daran Kroatisch zu lernen. <break/><break/> <bold>Doviđenja. ✌🏻</bold></component>"
-      }
-    ]
   },
   "projects": [
     {

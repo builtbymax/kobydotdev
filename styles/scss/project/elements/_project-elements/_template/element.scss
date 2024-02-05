@@ -1,0 +1,35 @@
+//
+//  Text Element: TextComponent.js
+//  ---------------------------------------------
+
+//  Variables
+//  ----------------------------------
+
+@import 'variables.scss';
+
+
+//  Styles
+//  ----------------------------------
+
+@mixin text-element() {
+
+  @include media('mobile') {
+    
+  }
+
+  // max-768
+  @include media('tablet-down') {
+
+  }
+
+  // min-768
+  @include media('tablet') {
+  
+  }
+
+  // min-1024
+  @include media('tablet-wide') {
+  
+  }
+
+}
