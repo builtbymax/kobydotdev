@@ -17,10 +17,6 @@ const Footer = ({ dict, lang }) => {
       title: dict.common.footer['imprint'],
       href: `/${lang}/legal`,
     },
-    {
-      title: dict.common.footer['privacy'],
-      href: `/${lang}/privacy`,
-    },
   ];
 
   const ExtLink = ({ href, title }) => {
