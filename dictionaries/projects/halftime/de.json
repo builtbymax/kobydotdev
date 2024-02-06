@@ -4,6 +4,40 @@
       "title": "halftime.space",
       "subline": "Speicherplatz für Inspirationen, Text & Medien."
     },
+    "details": {
+      "client": "Privates Projekt",
+      "role": "Entwicklung & Design",
+      "tech": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs",
+          "link": "https://nextjs.org/"
+        },
+        {
+          "name": "Supabase",
+          "icon": "supabase",
+          "link": "https://supabase.io/"
+        },
+        {
+          "name": "SCSS",
+          "icon": "sass",
+          "link": "https://sass-lang.com/"
+        }
+      ],
+      "tools": [
+        {
+          "name": "Figma",
+          "icon": "figma",
+          "link": "https://www.figma.com/"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel",
+          "link": "https://vercel.com/"
+        }
+      ],
+      "link": null
+    },
     "content": [
       {
         "component": "ContentText",

@@ -7,6 +7,7 @@ import { ContentText } from '@/components/Elements/Content/ContentText';
 import { Media } from '@/components/UI/Media';
 import { GridColumn, GridRow } from '@/components/UI/Grid';
 import clsx from 'clsx';
+import { TechStackIcons } from '@/components/Elements/Projects/TechStackIcons';
 
 export async function generateMetadata({ params }) {
   const lang = params?.lang || 'en';
@@ -71,12 +72,38 @@ export default async function Project({ params: { lang, project } }) {
     };
   };
 
+  const ProjectDetail = ({ content }) => {
+    return (
+      <div className='inner-section-element project-detail-element'>
+        <ul className="tech-list">
+          {content.tech.map((tech, index) => {
+            return <li key={index}>
+              <span className="icon"><TechStackIcons techStack={tech.icon} /></span>
+              <span className="name">{tech.name}</span>
+            </li>;
+          })}
+          {content.tools.map((tool, index) => {
+            return <li key={index}>
+              <span className="icon"><TechStackIcons techStack={tool.icon} /></span>
+              <span className="name">{tool.name}</span>
+            </li>;
+          })}
+        </ul>
+        <ul className="detail-list">
+          <li><span className="project-tag">{content.client}</span></li>
+          <li><span className="project-tag">{content.role}</span></li>
+        </ul>
+      </div>
+    );
+  };
+
   return (
     <>
       <Header headline={projectContent.header.title} subline={projectContent.header.subline} lang={lang} layout={1} />
       <main>
-        <Section>
+        <Section spacing={{ top: false }}>
           <ContentSize className="inner-section-wrapper">
+            <ProjectDetail content={projectContent.details} />
             {projectContent.content.map((content, index) => {
               return <ContentElement key={index} content={content} />;
             })}
