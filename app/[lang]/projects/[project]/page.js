@@ -8,6 +8,19 @@ import { Media } from '@/components/UI/Media';
 import { GridColumn, GridRow } from '@/components/UI/Grid';
 import clsx from 'clsx';
 
+export async function generateMetadata({ params }) {
+  const lang = params?.lang || 'en';
+  const project = params?.project;
+  const titleProj = project.charAt(0).toUpperCase() + project.slice(1);
+  const title = lang === 'de' ? `Projekt: ${titleProj}` : `Project: ${titleProj}`;
+
+  return {
+    title: title,
+    description: lang === 'de' ? `Mehr über das Projekt ${titleProj} erfahren.` : `Learn more about the project ${titleProj}.`,
+    robots: 'index, follow',
+  }
+}
+
 export async function generateStaticParams({ params: { lang, project } }) {
   const projects = [
     { lang: 'en', project: 'halftime' },

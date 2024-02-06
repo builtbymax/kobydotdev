@@ -7,6 +7,16 @@ import { Media } from '@/components/UI/Media';
 import clsx from 'clsx';
 import { GridColumn, GridRow } from '@/components/UI/Grid';
 
+export async function generateMetadata({ params }) {
+  const lang = params?.lang || 'en';
+
+  return {
+    title: lang === 'de' ? `Interview` : `Interview`,
+    description: lang === 'de' ? 'Mehr über mich erfahren, ein Interview mit Maximilian Kobus - Front-End Entwickler aus München.' : 'Learn more about me, an interview with Maximilian Kobus - Front-End developer from Munich.',
+    robots: 'index, follow',
+  }
+}
+
 export default async function Interview({ params: { lang } }) {
   const dict = await getDictionary(lang);
   const contentArr = dict.interview.content;

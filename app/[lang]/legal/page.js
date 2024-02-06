@@ -2,8 +2,17 @@ import { Header } from '@/components/Elements/Header/Header';
 import { getDictionary } from '/dictionary';
 import { Footer } from '@/components/Elements/Footer';
 import { ContentSize, Section } from '@/components/UI/Section';
-import { Headline, HeadlineContainer, Subline } from '@/components/UI/Headline';
 import { ContentText } from '@/components/Elements/Content/ContentText';
+
+export async function generateMetadata({ params }) {
+  const lang = params?.lang || 'en';
+
+  return {
+    title: lang === 'de' ? `Impressum` : `Legal notice`,
+    description: lang === 'de' ? 'Impressum von Maximilian Kobus - Front-End Entwickler aus München.' : 'Legal notice of Maximilian Kobus - Front-End developer from Munich.',
+    robots: 'index, follow',
+  }
+}
 
 export default async function Legal({ params: { lang } }) {
   const dict = await getDictionary(lang);

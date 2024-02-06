@@ -38,7 +38,7 @@ const LocaleSwitch = () => {
         {i18n.locales.map((locale) => {
           return (
             <li key={locale}>
-              <Link href={redirectedPathName(locale)} className={activeLocale === locale ? 'active' : ''}>{locale}</Link>
+              <Link scroll={false} href={redirectedPathName(locale)} className={activeLocale === locale ? 'active' : ''}>{locale}</Link>
             </li>
           )
         })}
