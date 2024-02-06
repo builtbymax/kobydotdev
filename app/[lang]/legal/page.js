@@ -11,6 +11,9 @@ export async function generateMetadata({ params }) {
     title: lang === 'de' ? `Impressum` : `Legal notice`,
     description: lang === 'de' ? 'Impressum von Maximilian Kobus - Front-End Entwickler aus München.' : 'Legal notice of Maximilian Kobus - Front-End developer from Munich.',
     robots: 'index, follow',
+    openGraph: {
+      images: ['/og-image-koby.jpg'],
+    },
   }
 }
 

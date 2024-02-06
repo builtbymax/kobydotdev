@@ -14,6 +14,9 @@ export async function generateMetadata({ params }) {
   return {
     title: lang === 'de' ? `Startseite ${titleSuffix}` : `Home ${titleSuffix}`,
     robots: 'index, follow',
+    openGraph: {
+      images: ['/og-image-koby.jpg'],
+    },
   }
 }
 
