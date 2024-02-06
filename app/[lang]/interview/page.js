@@ -14,6 +14,9 @@ export async function generateMetadata({ params }) {
     title: lang === 'de' ? `Interview` : `Interview`,
     description: lang === 'de' ? 'Mehr über mich erfahren, ein Interview mit Maximilian Kobus - Front-End Entwickler aus München.' : 'Learn more about me, an interview with Maximilian Kobus - Front-End developer from Munich.',
     robots: 'index, follow',
+    openGraph: {
+      images: ['/og-image-koby.jpg'],
+    },
   }
 }
 

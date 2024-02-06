@@ -19,6 +19,9 @@ export async function generateMetadata({ params }) {
     title: title,
     description: lang === 'de' ? `Mehr über das Projekt ${titleProj} erfahren.` : `Learn more about the project ${titleProj}.`,
     robots: 'index, follow',
+    openGraph: {
+      images: ['/og-image-koby.jpg'],
+    },
   }
 }
 
