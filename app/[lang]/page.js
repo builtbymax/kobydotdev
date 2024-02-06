@@ -34,7 +34,7 @@ export default async function Home({ params: { lang } }) {
               title: dict.home['interview-teaser'].link,
             }}
             img={{
-              src: '/assets/content-interview-teaser-image-2.jpg',
+              src: '/assets/content-interview-teaser-home.jpg',
               alt: 'Interview Teaser',
               width: 700,
               height: 700,
