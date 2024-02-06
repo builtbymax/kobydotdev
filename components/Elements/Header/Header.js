@@ -1,6 +1,6 @@
 import { Headline, Subline } from '@/components/UI/Headline';
 import { ContentSize } from '@/components/UI/Section';
-import { AvailableBlock } from '@/components/Common/AvailableBlock';
+import { AvailableBlock } from '@/components/General/AvailableBlock';
 import { Navigation } from './Navigation';
 import { LogoRender } from './LogoRender';
 

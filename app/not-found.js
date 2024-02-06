@@ -1,4 +1,4 @@
-import { ErrorComponent } from '@/components/Common/404';
+import { ErrorComponent } from '@/components/General/ErrorRender';
 import { ContentSize, Section } from '@/components/UI/Section';
 
 export const metadata = {

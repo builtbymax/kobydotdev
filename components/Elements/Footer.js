@@ -1,8 +1,8 @@
-import { GridColumn, GridRow } from '../UI/Grid';
-import { ArrowExternal } from '../UI/Icons';
-import { ContentSize } from '../UI/Section';
-import { AvailableBlock } from '@/components/Common/AvailableBlock';
-import { Logo } from '../Common/Logo';
+import { GridColumn, GridRow } from '@/components/UI/Grid';
+import { ArrowExternal } from '@/components/UI/Icons';
+import { ContentSize } from '@/components/UI/Section';
+import { AvailableBlock } from '@/components/General/AvailableBlock';
+import { Logo } from '@/components/General/Logo';
 import Link from 'next/link';
 
 const Footer = ({ dict, lang }) => {
