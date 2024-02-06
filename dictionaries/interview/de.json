@@ -37,31 +37,6 @@
         "text": "Die ständige Abwechslung. Das Web entwickelt sich gefühlt jeden Tag ein Stück weiter. Es gibt so viele Möglichkeiten neue Dinge zu lernen. Neue Ecken in der Entwicklung zu entdecken. Zusätzlich gefällt mir aber auch, das gute Arbeit oft belohnt wird. Qualität zahlt sich aus - eben genauso wie im Handwerk. Wer vorausschauend und modern arbeitet wird dafür in der Zukunft, im Support des Systems, belohnt. Daher setze auch ich selbst auf moderne Web-Technologien und Tools. Ich versuche mich ständig in meiner Qualität zu steigern und so wenig externe Libraries zu verwenden wie nötig. Vanilla JS und Custom LESS-CSS / SASS-CSS sind für mich die besten Methoden, wenn es um minimale Anwendungen geht. Zusätzlich sind aber auch JavaScript Frameworks wie NextJS, Vue und Svelte super interessant für skalierbare Anwendungen."
       },
       {
-        "component": "ContentGridImage",
-        "gridSize": {
-          "m": 6,
-          "l": 4
-        },
-        "asset": [
-          {
-            "width": 800,
-            "height": 800,
-            "type": "image",
-            "url": "/assets/interview-content-image__00.jpg",
-            "alt": "Image shows Maximilian with his Setup",
-            "quality": 90
-          },
-          {
-            "width": 800,
-            "height": 800,
-            "type": "image",
-            "url": "/assets/interview-content-image__01.jpg",
-            "alt": "Image shows Maximilian with his Setup",
-            "quality": 90
-          }
-        ]
-      },
-      {
         "component": "ContentText",
         "title": "Setup",
         "text": "Mein Setup ist relativ einfach erklärt: <Bold><Utf></Utf> Apple</Bold>. {{Break}} Ich arbeite mit einem MacBook Pro (M1 Pro), einem iPad Pro 12,9″ (2020) und einem iPhone 12 Pro - dadurch bin ich im Apple Ökosystem perfekt vernetzt. Zusätzlich habe ich gerne externe Bildschirme während der Arbeit. Im unteren Bild ist ein Auszug aus meinem Home Office."
