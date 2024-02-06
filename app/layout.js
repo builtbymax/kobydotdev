@@ -1,6 +1,6 @@
 import '@/styles/scss/project/app.scss';
 import '@/styles/fonts/fontface.css';
-
+import Script from 'next/script'
 
 export const viewport = {
   width: 'device-width',
@@ -19,10 +19,11 @@ export const icons = {
   androidChrome192: '/android-chrome-192x192.png',
 };
 
-//<script defer="" type="text/javascript" src="https://api.pirsch.io/pirsch.js" id="pirschjs" data-code="oDV9BmgdHavR1TYRutic0jlReSS5t30S"></script>
-
 export default function Root({ children }) {
   return (
-    <>{children}</>
+    <>
+    <Script type="text/javascript" src="https://api.pirsch.io/pirsch.js" id="pirschjs" data-code="oDV9BmgdHavR1TYRutic0jlReSS5t30S"></Script>
+    {children}
+    </>
   );
 }
