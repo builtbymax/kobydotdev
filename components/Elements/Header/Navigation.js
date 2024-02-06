@@ -1,5 +1,5 @@
 import { ContentSize } from '@/components/UI/Section';
-import { Logo } from '@/components/Common/Logo';
+import { Logo } from '@/components/General/Logo';
 import { LocaleSwitch } from "@/components/Elements/Header/LocaleSwitch";
 
 const Navigation = () => {
