@@ -26,7 +26,15 @@ const tagMap = {
 
 const variableMap = {
   Age: () => {
-    return new Date().getFullYear() - 1994;
+    const birthDate = new Date(1994, 9, 18);
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+
+    return age;
   },
   Time: () => {
     return new Date().getFullYear() - 2014;
